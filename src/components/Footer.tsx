@@ -11,7 +11,7 @@ export const Footer = () => {
             href="https://github.com/samuelnakazawa"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition duration-300"
+            className="text-gray-400 hover:text-[#c95bf5] transition duration-300"
           >
             GitHub
           </a>
@@ -19,13 +19,13 @@ export const Footer = () => {
             href="https://www.linkedin.com/in/samuel-nakazawa-960301141/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition duration-300"
+            className="text-gray-400 hover:text-[#c95bf5] transition duration-300"
           >
             LinkedIn
           </a>
           <a
             href="mailto:samuelnakazawa895@gmail.com"
-            className="text-gray-400 hover:text-white transition duration-300"
+            className="text-gray-400 hover:text-[#c95bf5] transition duration-300"
           >
             E-mail
           </a>
