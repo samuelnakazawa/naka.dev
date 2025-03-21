@@ -1,14 +1,14 @@
-import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
-import { Footer, Header } from "@/components";
+import { BackgroundBeamsWithCollision } from '../components/ui';
+import { Footer, Header, HeroSection } from '@/components';
 
 export default function Home() {
   return (
     <BackgroundBeamsWithCollision>
       <div className="w-full h-screen grid grid-rows-[auto_1fr_auto] bg-black">
-<Header />
+        <Header />
         {/* Body */}
         <main className="flex flex-col items-center justify-center p-8">
-          <div>teste</div>
+          <HeroSection />
         </main>
 
         <Footer />
