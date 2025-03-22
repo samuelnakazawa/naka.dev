@@ -1,4 +1,4 @@
-import { TextHoverEffect, MenuItem } from './ui';
+import { TextHoverEffect, MenuItem, GitHubButton } from './ui';
 import { menuItems } from './constants';
 
 export const Header = () => {
@@ -12,6 +12,9 @@ export const Header = () => {
         {menuItems.map((type, index) => (
           <MenuItem key={index} type={type} />
         ))}
+      </div>
+      <div>
+        <GitHubButton />
       </div>
     </header>
   );
