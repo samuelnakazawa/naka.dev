@@ -17,7 +17,7 @@ export const HeroSection = () => {
           <img
             src="/images/samuelnakazawa.jpeg"
             alt="Samuel Nakazawa"
-            className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover image-effect"
+            className="rounded-full w-64 h-64 md:w-64 md:h-64 object-cover image-effect"
           />
         </div>
       </div>

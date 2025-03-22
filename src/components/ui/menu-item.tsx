@@ -23,7 +23,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type }) => {
 
   return (
     <div
-      className="relative after:content-[''] after:block after:bg-[#c95bf5]  after:rounded-[16px] after:h-[5px] after:w-0 after:absolute after:left-0 after:-bottom-[8px] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+      className="relative after:content-[''] after:block after:bg-[#c95bf5]  after:rounded-[16px] after:h-[5px] after:w-0 after:absolute after:left-0 after:-bottom-[8px] after:transition-all after:duration-300 after:ease-out hover:after:w-full cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
