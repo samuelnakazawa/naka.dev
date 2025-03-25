@@ -31,7 +31,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <a className="flex items-center relative cursor-p">
+        <a className="flex items-center relative cursor-pointer">
           <img src={icon} alt={text} className="w-[1em] h-[1em] invert" />
           <p className="invert text-[0.5em] ml-[0.5em]">{text}</p>
 
