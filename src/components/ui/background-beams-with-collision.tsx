@@ -70,24 +70,24 @@ export const BackgroundBeamsWithCollision = ({
     <div
       ref={parentRef}
       className={cn(
-        'h-screen md:h-screen bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden',
-        // h-screen if you want bigger
+        'relative flex w-full justify-center overflow-hidden',
+        'min-h-[100vh] bg-gradient-to-b from-neutral-900 via-black to-black',
         className
       )}
     >
-      {/* {beams.map((beam) => (
+      {beams.map((beam) => (
         <CollisionMechanism
           key={beam.initialX + 'beam-idx'}
           beamOptions={beam}
           containerRef={containerRef}
           parentRef={parentRef}
         />
-      ))} */}
+      ))}
 
       {children}
       <div
         ref={containerRef}
-        className="absolute bottom-0 bg-neutral-100 w-full inset-x-0 pointer-events-none"
+        className="absolute bottom-0 bg-black w-full inset-x-0 pointer-events-none"
         style={{
           boxShadow:
             '0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset',
@@ -125,6 +125,25 @@ const CollisionMechanism = React.forwardRef<
   });
   const [beamKey, setBeamKey] = useState(0);
   const [cycleCollisionDetected, setCycleCollisionDetected] = useState(false);
+  const [containerHeight, setContainerHeight] = useState(0);
+
+  useEffect(() => {
+    if (parentRef.current) {
+      // update height everytime the component is mounted or resized
+      const updateHeight = () => {
+        setContainerHeight(parentRef.current?.scrollHeight || 0);
+      };
+
+      updateHeight();
+
+      const resizeObserver = new ResizeObserver(updateHeight);
+      if (parentRef.current) {
+        resizeObserver.observe(parentRef.current);
+      }
+
+      return () => resizeObserver.disconnect();
+    }
+  }, [parentRef]);
 
   useEffect(() => {
     const checkCollision = () => {
@@ -152,7 +171,7 @@ const CollisionMechanism = React.forwardRef<
     const animationInterval = setInterval(checkCollision, 50);
 
     return () => clearInterval(animationInterval);
-  }, [cycleCollisionDetected, containerRef]);
+  }, [cycleCollisionDetected, containerRef, parentRef]);
 
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
@@ -180,7 +199,8 @@ const CollisionMechanism = React.forwardRef<
         }}
         variants={{
           animate: {
-            translateY: beamOptions.translateY || '1800px',
+            // use container height or 100vh(fallback)
+            translateY: `${containerHeight + 200}px`,
             translateX: beamOptions.translateX || '0px',
             rotate: beamOptions.rotate || 0,
           },
