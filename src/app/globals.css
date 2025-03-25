@@ -143,3 +143,46 @@
 .menu-item:hover::after {
   @apply w-full;
 }
+/* scrollbar */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c95bf5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9e3fd3;
+}
+
+/* icons */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltip {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.skill-icon {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}

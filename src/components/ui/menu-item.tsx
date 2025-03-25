@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
-type MenuItemType = 'home' | 'about' | 'projects' | 'resume' | 'blog';
+import { MenuItemType } from '../../types/components';
 
 interface MenuItemProps {
   type: MenuItemType;
@@ -23,7 +22,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type }) => {
 
   return (
     <div
-      className="relative after:content-[''] after:block after:bg-[#c95bf5]  after:rounded-[16px] after:h-[5px] after:w-0 after:absolute after:left-0 after:-bottom-[8px] after:transition-all after:duration-300 after:ease-out hover:after:w-full cursor-pointer"
+      className="relative group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -32,9 +31,15 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <a className="flex items-center">
+        <a className="flex items-center relative cursor-p">
           <img src={icon} alt={text} className="w-[1em] h-[1em] invert" />
           <p className="invert text-[0.5em] ml-[0.5em]">{text}</p>
+
+          <span
+            className="absolute left-1/2 -bottom-[10px] h-[3px] bg-[#c95bf5] rounded-full 
+                          w-0 group-hover:w-[120%] -translate-x-1/2 
+                          transition-all duration-300 ease-out"
+          ></span>
         </a>
       </motion.div>
     </div>
