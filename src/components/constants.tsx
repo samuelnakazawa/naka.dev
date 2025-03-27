@@ -33,3 +33,91 @@ export const skills: Skill[] = [
   { name: 'Github', iconPath: skillIconPaths['Github'] },
   { name: 'Grafana', iconPath: skillIconPaths['Grafana'] },
 ];
+
+//links
+
+export const profileLinks = {
+  linkedin: 'https://www.linkedin.com/in/samuel-nakazawa-960301141/',
+  github: 'https://github.com/samuelnakazawa',
+  instagram: 'https://www.instagram.com/samuelnkz/',
+  medium: 'https://medium.com/@samuelnakazawa895',
+};
+
+export const socialLinks = [
+  {
+    name: 'GitHub',
+    url: profileLinks['github'],
+    icon: (
+      <img
+        src={'/github-2.svg'}
+        alt={`github icon`}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ),
+  },
+  {
+    name: 'LinkedIn',
+    url: profileLinks['linkedin'],
+    icon: (
+      <img
+        src={'/linkedin.svg'}
+        alt={`linkedin icon`}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ),
+  },
+  {
+    name: 'Instagram',
+    url: profileLinks['instagram'],
+    icon: (
+      <img
+        src={'/instagram.svg'}
+        alt={`Instagram icon`}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ),
+  },
+  {
+    name: 'Medium',
+    url: profileLinks['medium'],
+    icon: (
+      <img
+        src={'/medium.svg'}
+        alt={`Medium icon`}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ),
+  },
+];

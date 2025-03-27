@@ -29,9 +29,9 @@ export const TextHoverEffect = ({
   return (
     <svg
       ref={svgRef}
-      width="4em"
-      height="4em"
-      viewBox="0 0 100 50"
+      width="5em"
+      height="5em"
+      viewBox="0 0 20 50"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
