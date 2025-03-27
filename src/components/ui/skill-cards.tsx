@@ -53,13 +53,6 @@ export const SkillCard = ({ skill, className }: SkillCardProps) => {
         </div>
 
         <h3 className="text-xl font-semibold mb-2 text-white px-3">{skill.name}</h3>
-
-        <div className="w-full bg-gray-800/50 rounded-full h-2.5 overflow-hidden  ">
-          <div
-            className="bg-[linear-gradient(to_right,#c95bf5,#9d4edd)] h-2.5 rounded-full transition-all duration-500 ease-out"
-            aria-hidden="true"
-          />
-        </div>
       </div>
     </div>
   );
