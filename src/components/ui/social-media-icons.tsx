@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { socialLinks } from '../constants';
+import { socialLinks } from '@/components/constants';
 
 export const SocialIcons = () => {
   const validLinks = socialLinks.filter((link) => link.url && typeof link.url === 'string');

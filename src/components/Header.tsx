@@ -35,7 +35,7 @@ export const Header = () => {
       ></div>
       <div className="relative max-w-6xl mx-auto flex items-center justify-between py-4">
         <Link className="text-xl font-medium text-gray-200 hover:text-[#c95bf5] z-10" href="/">
-          <TextHoverEffect text={'中澤'} duration={0} />
+          <TextHoverEffect text={'中澤'} duration={0.4} />
         </Link>
 
         {/* Menu Desktop */}

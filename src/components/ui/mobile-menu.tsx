@@ -1,7 +1,7 @@
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MenuItem, SocialIcons } from './';
-import { menuItems } from '../constants';
+import { menuItems } from '@/components/constants';
 
 export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   return (

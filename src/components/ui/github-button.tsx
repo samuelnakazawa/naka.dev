@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+import { Tooltip } from './';
+
 export const GitHubButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -27,14 +29,7 @@ export const GitHubButton = () => {
         alt={'star my project :)'}
         className="w-[3em] h-[3em] transition-transform duration-500 ease-in-out hover:scale-110"
       />
-
-      <span
-        className={`absolute top-16 left-0 ml-2 whitespace-nowrap bg-black text-white text-sm px-3 py-1 rounded-lg transition-opacity duration-300 ease-in-out ${
-          isHovered ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        See this project on GitHub
-      </span>
+      {isHovered && <Tooltip text={'Project repository'} />}
     </motion.a>
   );
 };

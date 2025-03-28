@@ -7,3 +7,4 @@ export * from './skill-cards';
 export * from './social-media-icons';
 export * from './hamburguer-button';
 export * from './mobile-menu';
+export * from './tooltip';

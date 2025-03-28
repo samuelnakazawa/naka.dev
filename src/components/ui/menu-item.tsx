@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import { MenuItemType } from '../../types/components';
+import { MenuItemType } from '@/types/components';
 
 interface MenuItemProps {
   type: MenuItemType;
   hideIcon?: boolean;
+  onClick?: () => void;
 }
 
 export const MenuItem: React.FC<MenuItemProps> = ({ type, hideIcon, onClick }) => {

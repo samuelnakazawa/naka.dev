@@ -1,6 +1,8 @@
 'use client';
-import { Skill } from '@/types';
 import { useState } from 'react';
+
+import { Skill } from '@/types';
+import { Tooltip } from './';
 
 interface SkillCardProps {
   skill: Skill;
@@ -32,13 +34,7 @@ export const SkillCard = ({ skill, className }: SkillCardProps) => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"></div>
       </div>
 
-      {/* Tooltip */}
-      {showTooltip && (
-        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-[#c95bf5] text-white text-xs font-medium px-2 py-1 rounded whitespace-nowrap z-10">
-          {skill.name}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full w-0 h-0 border-l-4 border-r-4 border-b-0 border-t-4 border-l-transparent border-r-transparent border-t-[#c95bf5]"></div>
-        </div>
-      )}
+      {showTooltip && <Tooltip text={skill.name} />}
 
       <div className="relative flex flex-col items-center z-[2]">
         <div className="w-16 h-16 mb-4 flex items-center justify-center">
