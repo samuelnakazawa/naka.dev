@@ -25,7 +25,7 @@ export const GitHubButton = () => {
       <img
         src={'/star.svg'}
         alt={'star my project :)'}
-        className="w-[3em] h-[3em] invert transition-transform duration-500 ease-in-out hover:scale-110"
+        className="w-[3em] h-[3em] transition-transform duration-500 ease-in-out hover:scale-110"
       />
 
       <span

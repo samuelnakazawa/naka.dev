@@ -1,7 +1,9 @@
 'use client';
+import { useEffect, useState, useRef } from 'react';
+import Link from 'next/link';
+
 import { TextHoverEffect, GitHubButton, MobileMenu, HamburgerButton, MenuItem } from './ui';
 import { menuItems } from './constants';
-import { useEffect, useState, useRef } from 'react';
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,11 +34,9 @@ export const Header = () => {
         } transition-opacity duration-300`}
       ></div>
       <div className="relative max-w-6xl mx-auto flex items-center justify-between py-4">
-        <TextHoverEffect
-          text={'中澤'}
-          duration={0}
-          className="text-xl font-medium text-gray-200 hover:text-[#c95bf5] z-10"
-        />
+        <Link className="text-xl font-medium text-gray-200 hover:text-[#c95bf5] z-10" href="/">
+          <TextHoverEffect text={'中澤'} duration={0} />
+        </Link>
 
         {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-6 z-10">
@@ -54,7 +54,7 @@ export const Header = () => {
           <HamburgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
         </div>
       </div>
-      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(!isMenuOpen)} />
     </header>
   );
 };

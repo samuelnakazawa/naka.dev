@@ -41,7 +41,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                 </button>
               </div>
 
-              {/* Itens do menu */}
               <nav className="flex-1 flex flex-col gap-2">
                 {menuItems.map((type, index) => (
                   <MenuItem

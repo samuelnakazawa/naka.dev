@@ -1,4 +1,6 @@
-export const menuItems = ['home', 'about', 'projects', 'resume', 'blog'];
+export const menuItems = ['home', 'about', 'resume'];
+// export const menuItems = ['home', 'about', 'projects', 'resume', 'blog']; further use this one
+
 export const carouselText = [
   'Frontend Engineer',
   'React & Typescript',
