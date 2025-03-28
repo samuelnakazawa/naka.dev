@@ -5,9 +5,10 @@ import { MenuItemType } from '../../types/components';
 
 interface MenuItemProps {
   type: MenuItemType;
+  hideIcon?: boolean;
 }
 
-export const MenuItem: React.FC<MenuItemProps> = ({ type }) => {
+export const MenuItem: React.FC<MenuItemProps> = ({ type, hideIcon }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const menuData = {
@@ -32,7 +33,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type }) => {
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <a className="flex items-center relative cursor-pointer">
-          <img src={icon} alt={text} className="w-[1.2em] h-[1.2em] invert" />
+          {!hideIcon && <img src={icon} alt={text} className="w-[1.2em] h-[1.2em] invert" />}
           <p className="invert text-[1.2em] ml-[0.5em]">{text}</p>
 
           <span
