@@ -8,3 +8,4 @@ export * from './social-media-icons';
 export * from './hamburguer-button';
 export * from './mobile-menu';
 export * from './tooltip';
+export * from './pdf-viewer';
