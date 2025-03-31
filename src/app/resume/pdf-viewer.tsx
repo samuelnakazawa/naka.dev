@@ -14,8 +14,6 @@ export function PdfViewer() {
 
   return (
     <div className="flex flex-col items-center py-8 px-4 min-h-screen">
-      <h1 className="text-4xl font-bold text-[#c95bf5] mb-8">Resume</h1>
-
       <div className="flex gap-2 mb-4 flex-wrap justify-center">
         <a
           href={pdfFile}

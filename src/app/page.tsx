@@ -1,6 +1,6 @@
 'use client';
 import { SkillCard } from '@/components/ui';
-import { HeroSection } from '@/components';
+import { HeroSection } from '@/components/layout';
 import { skills } from '@/components/constants';
 import { useState } from 'react';
 

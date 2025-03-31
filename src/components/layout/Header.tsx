@@ -2,8 +2,9 @@
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 
-import { TextHoverEffect, GitHubButton, MobileMenu, HamburgerButton, MenuItem } from './ui';
-import { menuItems } from './constants';
+import { GitHubButton, MobileMenu, HamburgerButton, MenuItem } from '@/components/ui';
+import { TextHoverEffect } from '@/components/utils';
+import { menuItems } from '@/components/constants';
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);

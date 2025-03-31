@@ -1,4 +1,4 @@
-import { profileLinks } from './constants';
+import { profileLinks } from '@/components/constants';
 
 export const Footer = () => {
   return (

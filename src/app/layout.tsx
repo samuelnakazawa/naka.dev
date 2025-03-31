@@ -3,8 +3,8 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { BackgroundBeamsWithCollision } from '@/components/ui';
-import { Header, Footer } from '@/components';
+import { BackgroundBeamsWithCollision } from '@/components/utils';
+import { Header, Footer } from '@/components/layout';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 

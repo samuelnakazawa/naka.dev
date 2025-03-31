@@ -1,5 +1,5 @@
 'use-client';
-import { PdfViewer } from '@/components/ui';
+import { PdfViewer } from './pdf-viewer';
 
 export default function Resume() {
   return (
