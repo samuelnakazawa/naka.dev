@@ -1,0 +1,36 @@
+{
+  "header": {
+    "items": {
+      "home": { "text": "Home", "icon": "/home.svg", "path": "/" },
+      "about": { "text": "About", "icon": "/user.svg", "path": "/about" },
+      "resume": { "text": "Resume", "icon": "/resume.svg", "path": "/resume" }
+    },
+    "button": "Source code",
+    "menu-open": "Open menu",
+    "menu-close": "Close menu"
+  },
+  "hero": {
+    "h1": "Hello",
+    "h2": "I'm",
+    "carrousel": [
+      "Frontend Engineer",
+      "React & Typescript",
+      "Sleepyhead",
+      "Cat Person",
+      "Knowledge Seeker"
+    ]
+  },
+  "footer": {
+    "rightsHolder": "Samuel Nakazawa. All rights reserved"
+  },
+  "home": {
+    "skillset": "Professional Skillset",
+    "show-more-button": "Show more",
+    "show-less-button": "Show less"
+  },
+  "resume": {
+    "cv-button": "Download CV",
+    "loading": "Loading PDF",
+    "error": "Error loading PDF"
+  }
+}

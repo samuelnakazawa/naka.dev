@@ -1,0 +1,35 @@
+{
+  "header": {
+    "items": {
+      "home": { "text": "Início", "icon": "/home.svg", "path": "/" },
+      "about": { "text": "Sobre", "icon": "/user.svg", "path": "/about" },
+      "resume": { "text": "Currículo", "icon": "/resume.svg", "path": "/resume" }
+    },
+    "button": "Código fonte",
+    "menu-open": "Abrir menu",
+    "menu-close": "Fechar menu"
+  },
+  "hero": {
+    "h1": "Olá",
+    "h2": "Sou",
+    "carrousel": [
+      "Desenvolvedor Frontend",
+      "React & Typescript",
+      "Pai de Gato",
+      "Entusiasta de Tecnologia"
+    ]
+  },
+  "footer": {
+    "rightsHolder": "Samuel Nakazawa. Todos os direitos reservados"
+  },
+  "home": {
+    "skillset": "Habilidades Profissionais",
+    "show-more-button": "Mostrar mais",
+    "show-less-button": "Mostrar menos"
+  },
+  "resume": {
+    "cv-button": "Baixar Currículo",
+    "loading": "Carregando PDF",
+    "error": "Erro ao carregar PDF"
+  }
+}
