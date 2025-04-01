@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { Tooltip } from './';
+import { useLanguageStore } from '@/stores/language';
 
 export const GitHubButton = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useLanguageStore();
 
   const buttonVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -23,13 +25,14 @@ export const GitHubButton = () => {
       variants={buttonVariants}
       initial="hidden"
       animate="visible"
+      aria-label={t.header.button}
     >
       <img
         src={'/star.svg'}
         alt={'star my project :)'}
         className="w-[3em] h-[3em] transition-transform duration-500 ease-in-out hover:scale-110"
       />
-      {isHovered && <Tooltip text={'Project repository'} />}
+      {isHovered && <Tooltip text={t.header.button} />}
     </motion.a>
   );
 };

@@ -1,20 +1,22 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { useLanguageStore } from '@/stores/language';
 
-export const CarouselWords = ({ words }) => {
+export const CarouselWords = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useLanguageStore();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % t.hero.carrousel.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [words.length]);
+  }, [t.hero.carrousel.length]);
 
   return (
-    <div className="relative h-12 overflow-hidden">
-      {words.map((word, index) => (
+    <div className="relative h-15 overflow-hidden">
+      {t.hero.carrousel.map((word, index) => (
         <div
           key={word}
           aria-label={word}

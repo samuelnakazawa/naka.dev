@@ -1,6 +1,8 @@
 import { profileLinks } from '@/components/constants';
+import { useLanguageStore } from '@/stores/language';
 
 export const Footer = () => {
+  const { t } = useLanguageStore();
   return (
     <footer className="w-full text-white pt-16 pb-6 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-[#251240] via-[#1a0a2a] to-[#050209]">
       <div className="max-w-6xl mx-auto">
@@ -8,7 +10,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between text-center md:text-left">
           <p className="text-sm text-gray-300">
-            &copy; {new Date().getFullYear()} Samuel Nakazawa. Todos os direitos reservados.
+            &copy; {`${new Date().getFullYear()} ${t.footer.rightsHolder}`}
           </p>
 
           <div className="flex gap-6 mt-4 md:mt-0 justify-center md:justify-end">

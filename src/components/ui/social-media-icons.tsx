@@ -78,7 +78,6 @@ export const SocialIcons = () => {
               </motion.div>
             </div>
 
-            {/* Tooltip */}
             <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 text-xs text-white bg-neutral-800 px-2 py-1 rounded whitespace-nowrap transition-opacity duration-200">
               {link.name}
             </span>
