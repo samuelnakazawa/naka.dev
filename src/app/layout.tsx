@@ -26,7 +26,7 @@ export default function RootLayout({
   const pathname = usePathname();
 
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <BackgroundBeamsWithCollision>
           <div className="w-full grid grid-rows-[auto_1fr_auto] bg-transparent min-h-screen">
