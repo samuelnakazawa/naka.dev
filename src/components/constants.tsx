@@ -1,13 +1,3 @@
-export const menuItems = ['home', 'about', 'resume'];
-// export const menuItems = ['home', 'about', 'projects', 'resume', 'blog']; further use this one
-
-export const carouselText = [
-  'Frontend Engineer',
-  'React & Typescript',
-  'Sleepyhead',
-  'Cat Person',
-  'Knowledge Seeker',
-];
 export const skillIconPaths: Record<SkillName, string> = {
   JavaScript: '/javascript.svg',
   TypeScript: '/typescript.svg',

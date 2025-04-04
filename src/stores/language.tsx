@@ -1,15 +1,8 @@
 // stores/language.ts
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import { translationSchema } from '@/locales/schemas';
 import en from '@/locales/en/en-US.json';
 import pt from '@/locales/pt/pt-BR.json';
-
-// Validação (opcional em produção)
-if (process.env.NODE_ENV === 'development') {
-  translationSchema.parse(en);
-  translationSchema.parse(pt);
-}
 
 type Language = 'en' | 'pt';
 

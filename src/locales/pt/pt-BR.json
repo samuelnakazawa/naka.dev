@@ -1,9 +1,10 @@
 {
   "header": {
     "items": {
-      "home": { "text": "Início", "icon": "/home.svg", "path": "/" },
-      "about": { "text": "Sobre", "icon": "/user.svg", "path": "/about" },
-      "resume": { "text": "Currículo", "icon": "/resume.svg", "path": "/resume" }
+      "home": { "text": "Início", "path": "/" },
+      "about": { "text": "Sobre", "path": "/about" },
+      "resume": { "text": "Currículo", "path": "/resume" },
+      "contact": { "text": "Contato", "path": "/contact" }
     },
     "button": "Código fonte",
     "menu-open": "Abrir menu",

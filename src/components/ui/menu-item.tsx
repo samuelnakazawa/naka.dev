@@ -6,17 +6,15 @@ import { motion } from 'framer-motion';
 import { useLanguageStore } from '@/stores/language';
 
 interface MenuItemProps {
-  type: keyof typeof menuItems; // 'home' | 'about' | 'resume'
-  hideIcon?: boolean;
+  type: keyof typeof menuItems;
   onClick?: () => void;
 }
 
-export const MenuItem: React.FC<MenuItemProps> = ({ type, hideIcon, onClick }) => {
+export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useLanguageStore();
 
-  // Obtém os dados do item do menu baseado no tipo e idioma atual
-  const { text, icon, path } = t.header.items[type];
+  const { text, path } = t.header.items[type];
 
   return (
     <div
@@ -31,9 +29,6 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type, hideIcon, onClick }) =
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <Link href={path} className={'flex items-center gap-2'}>
-          {!hideIcon && (
-            <Image src={icon} alt={text} width={16} height={16} className="w-[1.2em] h-[1.2em]" />
-          )}
           <p className="text-white text-[1.2em] ml-[0.5em]">{text}</p>
           <span
             className="absolute left-1/2 -bottom-[10px] h-[3px] bg-[#c95bf5] rounded-full 

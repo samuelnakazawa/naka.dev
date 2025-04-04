@@ -1,9 +1,10 @@
 {
   "header": {
     "items": {
-      "home": { "text": "Home", "icon": "/home.svg", "path": "/" },
-      "about": { "text": "About", "icon": "/user.svg", "path": "/about" },
-      "resume": { "text": "Resume", "icon": "/resume.svg", "path": "/resume" }
+      "home": { "text": "Home", "path": "/" },
+      "about": { "text": "About", "path": "/about" },
+      "resume": { "text": "Resume", "path": "/resume" },
+      "contact": { "text": "Contact", "path": "/contact" }
     },
     "button": "Source code",
     "menu-open": "Open menu",
