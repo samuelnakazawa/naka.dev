@@ -125,17 +125,6 @@
   }
 }
 
-.image-effect {
-  filter: grayscale(100%) brightness(75%);
-  transition: filter 0.5s ease-in-out;
-  mix-blend-mode: screen;
-}
-
-.image-effect:hover {
-  filter: grayscale(0%) brightness(100%);
-  mix-blend-mode: screen;
-}
-
 .menu-item::after {
   @apply content-[''] block bg-[#c95bf5] rounded-[16px] h-[5px] w-0 absolute left-0 -bottom-[1px] transition-all duration-300 ease-out;
 }

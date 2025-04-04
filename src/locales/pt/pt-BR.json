@@ -31,6 +31,37 @@
   "resume": {
     "cv-button": "Baixar Currículo",
     "loading": "Carregando PDF",
-    "error": "Erro ao carregar PDF"
+    "error": "Erro ao carregar PDF",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "contact": {
+    "title": "Bora trocar uma ideia?",
+    "description": "Seja para discutir um projeto inovador, tirar dúvidas técnicas ou simplesmente trocar ideias sobre tecnologia, minha caixa de entrada está sempre aberta.",
+    "messageAnswer": "Respondo todas as mensagens pessoalmente",
+    "phrase": "Grandes parcerias começam com um simples olá",
+    "form": {
+      "name": "Nome",
+      "name-placeholder": "Rock Lee",
+      "email": "Email",
+      "email-placeholder": "rocklee@konoha.com",
+      "message": "Mensagem",
+      "message-placeholder": "Como posso abrir os 8 portões internos?",
+      "submit-button": "Enviar Mensagem",
+      "send-new-message": "Enviar nova mensagem",
+      "submit-loading": "Enviando..."
+    },
+    "formValidation": {
+      "name-required": "Nome é obrigatório",
+      "name-min-length": "Nome deve ter pelo menos 2 caracteres",
+      "email-required": "Email é obrigatório",
+      "email-invalid": "Email inválido",
+      "message-required": "Mensagem é obrigatória",
+      "message-min-length": "Mensagem deve ter pelo menos 10 caracteres"
+    },
+    "success-message": "Mensagem enviada!",
+    "thank-you-message": "Obrigado pelo contato. Responderei em breve.",
+    "error-message": "Erro ao enviar mensagem. Tente novamente mais tarde.",
+    "follow-me": "Siga-me nas redes sociais"
   }
 }

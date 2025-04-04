@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="min-h-[calc(100vh-80px)] flex items-center justify-center px-6 bg-gradient-to-b from-[#050209] via-[#0a0512] to-[#120a1f]">
+      <section className="min-h-[calc(100vh-80px)] flex items-center justify-center px-6 ">
         <HeroSection />
       </section>
 

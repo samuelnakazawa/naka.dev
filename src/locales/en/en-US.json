@@ -32,6 +32,37 @@
   "resume": {
     "cv-button": "Download CV",
     "loading": "Loading PDF",
-    "error": "Error loading PDF"
+    "error": "Error loading PDF",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "contact": {
+    "title": "Let's chat!",
+    "description": "Whether to discuss an innovative project, answer technical questions, or simply exchange ideas about technology, my inbox is always open.",
+    "messageAnswer": "I personally reply to all messages",
+    "phrase": "Great partnerships begin with a simple hello",
+    "form": {
+      "name": "Name",
+      "name-placeholder": "John Cena",
+      "email": "Email",
+      "email-placeholder": "johncena@wwe.com",
+      "message": "Message",
+      "message-placeholder": "U can see me?",
+      "submit-button": "Send Message",
+      "send-new-message": "Send new message",
+      "submit-loading": "Sending..."
+    },
+    "formValidation": {
+      "name-required": "Name is required",
+      "name-min-length": "Name must be at least 2 characters",
+      "email-required": "Email is required",
+      "email-invalid": "Invalid email",
+      "message-required": "Message is required",
+      "message-min-length": "Message must be at least 10 characters"
+    },
+    "success-message": "Message sent!",
+    "thank-you-message": "Thank you for reaching out. I'll get back to you soon.",
+    "error-message": "Error sending message. Please try again later.",
+    "follow-me": "Follow me on social media"
   }
 }

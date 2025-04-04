@@ -1,4 +1,5 @@
 'use client';
+
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useRef, useState, useEffect } from 'react';
@@ -20,6 +21,7 @@ export const BackgroundBeamsWithCollision = ({
       duration: 7,
       repeatDelay: 3,
       delay: 2,
+      className: 'from-[#6b21a8] via-[#7e22ce] to-transparent',
     },
     {
       initialX: 600,
@@ -27,13 +29,14 @@ export const BackgroundBeamsWithCollision = ({
       duration: 3,
       repeatDelay: 3,
       delay: 4,
+      className: 'from-[#581c87] via-[#9333ea] to-transparent',
     },
     {
       initialX: 100,
       translateX: 100,
       duration: 7,
       repeatDelay: 7,
-      className: 'h-6',
+      className: 'h-6 from-[#4c1d95] via-[#7e22ce] to-transparent',
     },
     {
       initialX: 400,
@@ -41,20 +44,21 @@ export const BackgroundBeamsWithCollision = ({
       duration: 5,
       repeatDelay: 14,
       delay: 4,
+      className: 'from-[#3b0764] via-[#6b21a8] to-transparent',
     },
     {
       initialX: 800,
       translateX: 800,
       duration: 11,
       repeatDelay: 2,
-      className: 'h-20',
+      className: 'h-20 from-[#581c87] via-[#9333ea] to-transparent',
     },
     {
       initialX: 1000,
       translateX: 1000,
       duration: 4,
       repeatDelay: 2,
-      className: 'h-12',
+      className: 'h-12 from-[#3b0764] via-[#7e22ce] to-transparent',
     },
     {
       initialX: 1200,
@@ -62,7 +66,7 @@ export const BackgroundBeamsWithCollision = ({
       duration: 6,
       repeatDelay: 4,
       delay: 2,
-      className: 'h-6',
+      className: 'h-6 from-[#4c1d95] via-[#9333ea] to-transparent',
     },
   ];
 
@@ -71,7 +75,7 @@ export const BackgroundBeamsWithCollision = ({
       ref={parentRef}
       className={cn(
         'relative flex w-full justify-center overflow-hidden',
-        'min-h-[100vh] bg-gradient-to-b from-neutral-900 via-black to-black',
+        'min-h-[100vh] bg-gradient-to-b from-[#0f0524] via-[#1a0a2a] to-[#251240]',
         className
       )}
     >
@@ -129,7 +133,6 @@ const CollisionMechanism = React.forwardRef<
 
   useEffect(() => {
     if (parentRef.current) {
-      // update height everytime the component is mounted or resized
       const updateHeight = () => {
         setContainerHeight(parentRef.current?.scrollHeight || 0);
       };
@@ -199,7 +202,6 @@ const CollisionMechanism = React.forwardRef<
         }}
         variants={{
           animate: {
-            // use container height or 100vh(fallback)
             translateY: `${containerHeight + 200}px`,
             translateX: beamOptions.translateX || '0px',
             rotate: beamOptions.rotate || 0,
@@ -214,8 +216,8 @@ const CollisionMechanism = React.forwardRef<
           repeatDelay: beamOptions.repeatDelay || 0,
         }}
         className={cn(
-          'absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent',
-          beamOptions.className
+          'absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t',
+          beamOptions.className || 'from-[#6b21a8] via-[#9333ea] to-transparent'
         )}
       />
       <AnimatePresence>
