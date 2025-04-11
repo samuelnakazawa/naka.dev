@@ -64,5 +64,17 @@
     "thank-you-message": "Thank you for reaching out. I'll get back to you soon.",
     "error-message": "Error sending message. Please try again later.",
     "follow-me": "Follow me on social media"
+  },
+  "loader": {
+    "loading": "Loading...",
+    "error": "Error loading data",
+    "not-found": "Not found"
+  },
+
+  "notFound": {
+    "title": "Page not found",
+    "description": "Oops! look like you found a mysterious path. Let's get out of here.",
+    "go-home": "Go to home",
+    "go-back": "Go back to previous page"
   }
 }

@@ -63,5 +63,16 @@
     "thank-you-message": "Obrigado pelo contato. Responderei em breve.",
     "error-message": "Erro ao enviar mensagem. Tente novamente mais tarde.",
     "follow-me": "Siga-me nas redes sociais"
+  },
+  "loader": {
+    "loading": "Carregando...",
+    "error": "Error ao carregar informações",
+    "not-found": "Not found"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "Oops! Parece que você encontrou um caminho misterioso.",
+    "go-home": "Voltar para Home",
+    "go-back": "Voltar à página anterior"
   }
 }
