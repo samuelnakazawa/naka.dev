@@ -40,14 +40,6 @@ export function PdfViewer() {
   return (
     <div className="flex flex-col items-center py-8 px-4 w-full pdf-container">
       <div className="flex flex-wrap justify-center gap-4 mb-6 w-full max-w-4xl">
-        <a
-          href={pdfFile}
-          download="Samuel-Nakazawa-Curriculo.pdf"
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] text-white rounded-lg hover:from-[#b142e8] hover:to-[#8a3df5] transition-all shadow-lg flex-1 sm:flex-none justify-center"
-        >
-          <AiOutlineDownload size={18} /> {t.resume['cv-button']}
-        </a>
-
         <div className="flex items-center gap-1 bg-[#1a0a2a] border border-[#3a2a5a] rounded-lg overflow-hidden">
           <button
             onClick={() => setScale((prev) => Math.max(prev - 0.1, 0.5))}

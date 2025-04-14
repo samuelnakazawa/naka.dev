@@ -13,12 +13,8 @@
   "hero": {
     "h1": "Olá",
     "h2": "Sou",
-    "carrousel": [
-      "Desenvolvedor Frontend",
-      "React & Typescript",
-      "Pai de Gato",
-      "Entusiasta de Tecnologia"
-    ]
+    "h3": "Engenheiro Frontend",
+    "carrousel": ["React & Typescript", "Pai de Gato", "Entusiasta de Tecnologia"]
   },
   "footer": {
     "rightsHolder": "Samuel Nakazawa. Todos os direitos reservados"
@@ -73,6 +69,7 @@
     "title": "Página não encontrada",
     "description": "Oops! Parece que você encontrou um caminho misterioso.",
     "go-home": "Voltar para Home",
-    "go-back": "Voltar à página anterior"
+    "go-back": "Voltar à página anterior",
+    "error": "Erro 404"
   }
 }

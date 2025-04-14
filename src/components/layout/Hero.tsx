@@ -1,4 +1,4 @@
-import { CarouselWords, SocialIcons } from '@/components/ui';
+import { CarouselWords } from '@/components/ui';
 import { useLanguageStore } from '@/stores/language';
 export const HeroSection = () => {
   const { t } = useLanguageStore();
@@ -10,22 +10,14 @@ export const HeroSection = () => {
             {t.hero.h1} <span className="inline-block animate-bounce">🐱</span>
           </h1>
           <h2 className="text-2xl md:text-5xl text-white mt-4 mb-6 md:mb-8">
-            {t.hero.h2} <span className="text-[#c95bf5] font-bold">Samuel Nakazawa</span>
+            {t.hero.h2} <span className="text-[#c95bf5] font-bold">Samuel Nakazawa,</span>
           </h2>
+          <div className="h-14 md:h-16 mb-6 md:mb-0 text-2xl md:text-4xl text-white font-bold mt-4 mb-6 md:mb-4">
+            {t.hero.h3}
+          </div>
           <div className="h-14 md:h-16 mb-6 md:mb-0">
             <CarouselWords />
           </div>
-          <div className="md:mt-8">
-            <SocialIcons />
-          </div>
-        </div>
-
-        <div className="flex-1 flex justify-center md:justify-end mt-8 md:mt-0 w-full md:w-auto">
-          <img
-            src="/images/samuelnakazawa.jpeg"
-            alt="Samuel Nakazawa"
-            className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-[#c95bf5]/30"
-          />
         </div>
       </div>
     </section>

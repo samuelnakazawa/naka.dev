@@ -13,13 +13,8 @@
   "hero": {
     "h1": "Hello",
     "h2": "I'm",
-    "carrousel": [
-      "Frontend Engineer",
-      "React & Typescript",
-      "Sleepyhead",
-      "Cat Person",
-      "Knowledge Seeker"
-    ]
+    "h3": "Frontend Engineer",
+    "carrousel": ["React & Typescript", "Sleepyhead", "Cat Person", "Knowledge Seeker"]
   },
   "footer": {
     "rightsHolder": "Samuel Nakazawa. All rights reserved"
@@ -75,6 +70,7 @@
     "title": "Page not found",
     "description": "Oops! look like you found a mysterious path. Let's get out of here.",
     "go-home": "Go to home",
-    "go-back": "Go back to previous page"
+    "go-back": "Go back to previous page",
+    "error": "Error 404"
   }
 }

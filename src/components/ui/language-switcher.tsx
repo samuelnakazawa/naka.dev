@@ -13,8 +13,6 @@ export const LanguageSwitcher = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
-  console.log('aaaa ', lang);
-
   return (
     <motion.button
       onClick={() => setLang(lang === 'en' ? 'pt' : 'en')}

@@ -76,7 +76,6 @@ export default function NotFound() {
           </div>
         </motion.div>
 
-        {/* Seção direita - GIF com efeito espelhado */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -105,7 +104,7 @@ export default function NotFound() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        Error 404 • Página não encontrada
+        {t.notFound.error} • {t.notFound.title}
       </motion.div>
     </div>
   );
