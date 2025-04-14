@@ -3,7 +3,6 @@
     "items": {
       "home": { "text": "Início", "path": "/" },
       "about": { "text": "Sobre", "path": "/about" },
-      "resume": { "text": "Currículo", "path": "/resume" },
       "contact": { "text": "Contato", "path": "/contact" }
     },
     "button": "Código fonte",
@@ -25,11 +24,7 @@
     "show-less-button": "Mostrar menos"
   },
   "resume": {
-    "cv-button": "Baixar Currículo",
-    "loading": "Carregando PDF",
-    "error": "Erro ao carregar PDF",
-    "zoomIn": "Zoom in",
-    "zoomOut": "Zoom out"
+    "cv-button": "Baixar meu Currículo"
   },
   "contact": {
     "title": "Bora trocar uma ideia?",

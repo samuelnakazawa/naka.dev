@@ -3,7 +3,6 @@
     "items": {
       "home": { "text": "Home", "path": "/" },
       "about": { "text": "About", "path": "/about" },
-      "resume": { "text": "Resume", "path": "/resume" },
       "contact": { "text": "Contact", "path": "/contact" }
     },
     "button": "Source code",
@@ -25,11 +24,7 @@
     "show-less-button": "Show less"
   },
   "resume": {
-    "cv-button": "Download CV",
-    "loading": "Loading PDF",
-    "error": "Error loading PDF",
-    "zoomIn": "Zoom in",
-    "zoomOut": "Zoom out"
+    "cv-button": "Download my CV"
   },
   "contact": {
     "title": "Let's chat!",

@@ -9,7 +9,6 @@ import {
   MenuItem,
   LanguageSwitcher,
 } from '@/components/ui';
-import { TextHoverEffect } from '@/components/utils';
 import { menuItems } from '@/components/constants';
 import { useLanguageStore } from '@/stores/language';
 
@@ -44,7 +43,7 @@ export const Header = () => {
       ></div>
       <div className="relative max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
         <Link className="text-xl font-medium text-gray-200 hover:text-[#c95bf5] z-10" href="/">
-          <TextHoverEffect text={'中澤'} duration={0.4} />
+          中澤
         </Link>
 
         {/* Menu Desktop */}

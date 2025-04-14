@@ -28,11 +28,20 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname();
   const [isLoading, setIsLoading] = useState(false);
+  const [is404Page, setIs404] = useState(false);
+  const isHomePage = pathname === '/';
 
-  // Verifica se é uma página 404
-  const is404Page = pathname === '/not-found';
+  useEffect(() => {
+    fetch(pathname)
+      .then((res) => setIs404(res.status === 404))
+      .catch(() => setIs404(false));
+  }, [pathname]);
 
   <RouteChangeHandler onRouteChange={setIsLoading} />;
+
+  const shouldRenderFooter = !isHomePage;
+
+  console.log('shouldRenderFooter', shouldRenderFooter);
 
   useEffect(() => {
     setIsLoading(true);
@@ -59,7 +68,7 @@ export default function RootLayout({
           )}
         </AnimatePresence>
 
-        <BackgroundBeamsWithCollision>
+        <BackgroundBeamsWithCollision isHomePage={isHomePage}>
           <div className="w-full grid grid-rows-[auto_1fr_auto] bg-transparent min-h-screen">
             <Header />
             <AnimatePresence mode="wait">
@@ -89,8 +98,7 @@ export default function RootLayout({
                 {!isLoading && children}
               </motion.main>
             </AnimatePresence>
-            {/* Renderiza o Footer apenas se não for página 404 */}
-            {!is404Page && <Footer />}
+            {shouldRenderFooter && <Footer />}
           </div>
         </BackgroundBeamsWithCollision>
       </body>
