@@ -6,8 +6,11 @@ export const HomeSection = () => {
   const kanjiRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [showText, setShowText] = useState(false);
   const [typedText, setTypedText] = useState('');
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+
     const textToType = "Hello! I'm Samuel Nakazawa and this is my website :)";
     const cycleDuration = 10000;
     const kanjiDisplayTime = 4000;
@@ -40,6 +43,8 @@ export const HomeSection = () => {
   }, []);
 
   useEffect(() => {
+    if (!isClient) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return;
 
@@ -78,7 +83,7 @@ export const HomeSection = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  }, [isClient]);
 
   return (
     <div
@@ -87,37 +92,38 @@ export const HomeSection = () => {
     >
       <div className="flex flex-col items-center justify-center flex-grow w-full">
         <div className="relative flex flex-col items-center justify-center min-h-[300px] w-full">
-          {[...Array(4)].map((_, layer) => (
-            <div
-              key={layer}
-              ref={(el) => (kanjiRefs.current[layer] = el)}
-              className="absolute"
-              style={{
-                transformStyle: 'preserve-3d',
-                willChange: 'transform, opacity',
-                backfaceVisibility: 'hidden',
-                display: showText ? 'none' : 'block',
-              }}
-            >
-              <svg width="300" height="200" viewBox="0 0 100 100" className="text-[#c95bf5]">
-                {layer === 0 && (
-                  <text
-                    x="50%"
-                    y="50%"
-                    dy="0.35em"
-                    textAnchor="middle"
-                    fill="currentColor"
-                    fontSize="60"
-                    fontFamily="sans-serif"
-                  >
-                    中澤
-                  </text>
-                )}
-              </svg>
-            </div>
-          ))}
+          {isClient &&
+            [...Array(4)].map((_, layer) => (
+              <div
+                key={layer}
+                ref={(el) => (kanjiRefs.current[layer] = el)}
+                className="absolute"
+                style={{
+                  transformStyle: 'preserve-3d',
+                  willChange: 'transform, opacity',
+                  backfaceVisibility: 'hidden',
+                  display: showText ? 'none' : 'block',
+                }}
+              >
+                <svg width="300" height="200" viewBox="0 0 100 100" className="text-[#c95bf5]">
+                  {layer === 0 && (
+                    <text
+                      x="50%"
+                      y="50%"
+                      dy="0.35em"
+                      textAnchor="middle"
+                      fill="currentColor"
+                      fontSize="60"
+                      fontFamily="sans-serif"
+                    >
+                      中澤
+                    </text>
+                  )}
+                </svg>
+              </div>
+            ))}
 
-          {showText && (
+          {isClient && showText && (
             <div className="text-[#c95bf5] text-4xl md:text-5xl font-mono tracking-wider text-center max-w-2xl px-4">
               {typedText}
             </div>

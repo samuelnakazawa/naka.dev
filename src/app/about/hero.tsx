@@ -8,46 +8,77 @@ export function HeroSection() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="mb-24 max-w-6xl justify-between z-10 mx-auto pt-12 md:pt-20"
+      className="mb-32 max-w-6xl mx-auto pt-32 pb-20"
     >
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="flex-1 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#e2d9f3]">Hello, I'm Samuel</h2>
+      <div className="flex flex-col md:flex-row gap-12 items-start">
+        <div className="flex-1 space-y-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#f0e9ff] leading-tight">
+            Hello, I'm <span className="text-[#c95bf5]">Samuel Nakazawa</span>
+          </h1>
 
-          <div className="space-y-4 text-[#d8c7ff] leading-relaxed">
-            <p>
-              I'm a <span className="text-[#c95bf5]">Frontend Engineer</span> passionate about
-              teaching and learning about Web Development
+          <div className="space-y-6 text-[#d8c7ff] text-lg leading-relaxed">
+            <p className="max-w-2xl">
+              I'm a <span className="text-[#c95bf5] font-medium">Frontend Engineer</span> passionate
+              about creating exceptional digital experiences with focus on performance and
+              accessibility.
             </p>
 
             <p>
-              Currently at <span className="text-[#c95bf5]">Globo</span>.
+              Currently building products at{' '}
+              <span className="text-[#c95bf5] font-medium">Globo</span>.
             </p>
-            <p>
+
+            <p className="max-w-2xl">
               Let's talk about{' '}
-              <span className="text-[#c95bf5]">
-                Web Development, Acessibility, User Experience and Web Performance
+              <span className="text-[#c95bf5] font-medium">
+                React, TypeScript, Design Systems and Web Optimization
               </span>
             </p>
 
-            <div className="pt-4 border-t border-[#2d1b4a] ">
+            <div className="pt-6 border-t border-[#2d1b4a]/50 rounded-lg">
               <p className="text-[#b8a2e0]">
-                Outside of work, you'll find me exploring new web technologies, experimenting with
-                machine learning, or just petting cats around the neighborhood.
+                Outside of work, I enjoy exploring new web technologies, contributing to open
+                source, and mentoring junior developers.
               </p>
             </div>
-            <div className="md:mt-8">
+
+            <div className="pt-2">
               <SocialIcons />
             </div>
           </div>
         </div>
 
-        <div className="hidden md:block relative w-48 h-48">
-          <img
-            src="/images/samuelnakazawa.jpeg"
-            alt="Samuel Nakazawa"
-            className=" w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-[#c95bf5]/30"
-          />
+        <div className="hidden md:block relative w-64 h-64 lg:w-72 lg:h-72 mt-2">
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="relative w-full h-full group"
+            whileHover={{ y: -5 }}
+          >
+            <div
+              className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-[#c95bf5] to-[#7a36f4] opacity-0 
+                            group-hover:opacity-70 blur-sm group-hover:blur-xs transition-all duration-300"
+            ></div>
+
+            <div
+              className="absolute inset-0 rounded-lg bg-[#0a0512] shadow-[0_25px_50px_-12px_rgba(201,91,245,0.25)] 
+                            group-hover:shadow-[0_35px_60px_-15px_rgba(201,91,245,0.3)] transition-all duration-300"
+            ></div>
+
+            <div
+              className="relative z-10 w-full h-full bg-[#0a0512] rounded-lg overflow-hidden
+                            shadow-[0_10px_30px_-10px_rgba(201,91,245,0.3)]"
+            >
+              <img
+                src="/images/samuelnakazawa.jpeg"
+                alt="Samuel Nakazawa"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="absolute inset-0 rounded-lg border border-[#2d1b4a]/50 pointer-events-none"></div>
+          </motion.div>
         </div>
       </div>
     </motion.section>

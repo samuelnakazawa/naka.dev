@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef } from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
 import { education, experiences, cardSkills } from '@/components/constants';
