@@ -28,9 +28,8 @@
   },
   "contact": {
     "title": "Bora trocar uma ideia?",
-    "description": "Seja para discutir um projeto inovador, tirar dúvidas técnicas ou simplesmente trocar ideias sobre tecnologia, minha caixa de entrada está sempre aberta.",
-    "messageAnswer": "Respondo todas as mensagens pessoalmente",
-    "phrase": "Grandes parcerias começam com um simples olá",
+    "description": "Se quiser tirar dúvidas técnicas ou simplesmente trocar ideias sobre tecnologia, acessibilidade, performance ou experiencia do usuário, minha caixa de entrada está sempre aberta.",
+    "messageAnswer": "Pode ficar tranquilo(a)! Eu respondo todas as mensagens pessoalmente",
     "form": {
       "name": "Nome",
       "name-placeholder": "Rock Lee",
@@ -66,5 +65,9 @@
     "go-home": "Voltar para Home",
     "go-back": "Voltar à página anterior",
     "error": "Erro 404"
+  },
+  "home": {
+    "text": "Ola! Sou Samuel Nakazawa e este é meu site :)",
+    "button": "Descubra mais sobre mim"
   }
 }

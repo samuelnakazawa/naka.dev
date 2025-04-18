@@ -48,7 +48,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="hidden md:block relative w-64 h-64 lg:w-72 lg:h-72 mt-2">
+        <div className="hidden md:block relative w-64 h-64 lg:w-72 lg:h-72 mr-2 mt-2">
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}

@@ -121,23 +121,43 @@ export const experiences = [
     company: 'Globo',
     period: 'April 2023 – Present',
     description: [
-      'Developed responsive front-end interfaces and reusable components using React.',
-      'Built back-end services with Node.js and microservices architecture.',
-      "Leveraged Google Cloud's AutoML for machine learning model creation and training.",
-      'Designed comprehensive testing frameworks to ensure software reliability.',
+      'Globo is the largest media and television company in Latin America.',
+      {
+        main: 'During my tenure, I:',
+        items: [
+          'Developed AI-integrated interfaces for content production and distribution',
+          'Built microservices for large-scale applications',
+          {
+            text: 'Maintained, engineered, and provisioned systems for critical event coverage including:',
+            subitems: ['Brazilian municipal elections', 'The Olympics', 'Big Brother Brasil'],
+          },
+        ],
+      },
     ],
   },
   {
     id: 2,
     role: 'Mid-Level Software Engineer',
-    company: 'Cl&T',
+    company: 'CI&T',
     period: 'July 2021 – March 2023',
     description: [
-      "Developed internal tools for Globo's journalistic ecosystem using React and Node.js.",
-      'Integrated front-end solutions with larger editorial systems.',
-      'Implemented automated testing pipelines with GitLab-CI.',
-      'Created scalable web components using React.js.',
-      'Designed automation systems with Python for data processing.',
+      'CI&T is a global consultancy with clients including: Cielo, Google, HP, Itaú, Johnson & Johnson, Motorola, and Globo.',
+      {
+        main: 'During my time there, I:',
+        items: [
+          {
+            text: 'Designed automation systems including:',
+            subitems: [
+              'Data processing with Python',
+              "Content distribution system for Globo.com (Brazil's 3rd most-visited website)",
+            ],
+          },
+          {
+            text: 'Led technical migrations for the following projects using web scraping techniques:',
+            subitems: ['Memória Globo website', 'História Globo website'],
+          },
+        ],
+      },
     ],
   },
   {

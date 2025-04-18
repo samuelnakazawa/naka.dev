@@ -1,6 +1,55 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function Card({ id, role, company, period, description, hoveredCard, setHoveredCard }) {
+  const renderDescriptionItem = (item, index) => {
+    if (typeof item === 'string') {
+      return (
+        <li key={index} className="flex items-start">
+          <span className="mr-2 mt-1">•</span>
+          {item}
+        </li>
+      );
+    }
+
+    if (item.main) {
+      return (
+        <li key={index} className="mt-2">
+          <p className="font-medium">{item.main}</p>
+          <ul className="ml-4 mt-1 space-y-1">
+            {item.items.map((subitem, subIndex) => {
+              if (typeof subitem === 'string') {
+                return (
+                  <li key={subIndex} className="flex items-start">
+                    <span className="mr-2 mt-1">-</span>
+                    {subitem}
+                  </li>
+                );
+              }
+              if (subitem.text && subitem.subitems) {
+                return (
+                  <li key={subIndex} className="mt-1">
+                    <p>{subitem.text}</p>
+                    <ul className="ml-4 mt-1 space-y-1">
+                      {subitem.subitems.map((subsubitem, subsubIndex) => (
+                        <li key={subsubIndex} className="flex items-start">
+                          <span className="mr-2 mt-1">◦</span>
+                          {subsubitem}
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+              return null;
+            })}
+          </ul>
+        </li>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <div
       onMouseEnter={() => setHoveredCard(id)}
@@ -16,7 +65,7 @@ export function Card({ id, role, company, period, description, hoveredCard, setH
       {period && (
         <span
           className={`inline-block px-3 py-1 rounded-full text-sm mb-4 ${
-            hoveredCard === id ? 'bg-black/20' : 'bg-[#12071f] text-[#e2d9f3]'
+            hoveredCard === id ? 'bg-black/20' : 'bg-[#47434c] text-[#e2d9f3]'
           }`}
         >
           {period}
@@ -32,12 +81,7 @@ export function Card({ id, role, company, period, description, hoveredCard, setH
             transition={{ duration: 0.3 }}
             className="mt-4 space-y-2 overflow-hidden"
           >
-            {description.map((item, i) => (
-              <li key={i} className="flex items-start">
-                <span className="mr-2 mt-1">•</span>
-                {item}
-              </li>
-            ))}
+            {description.map((item, i) => renderDescriptionItem(item, i))}
           </motion.ul>
         ) : (
           <motion.div

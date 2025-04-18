@@ -125,6 +125,11 @@
   }
 }
 
+::selection {
+  background-color: #6b21a8;
+  color: #fff;
+}
+
 .menu-item::after {
   @apply content-[''] block bg-[#c95bf5] rounded-[16px] h-[5px] w-0 absolute left-0 -bottom-[1px] transition-all duration-300 ease-out;
 }

@@ -77,8 +77,6 @@ export function ContactForm() {
                 {`✉️  ${t.contact.messageAnswer}`}
               </span>
             </div>
-
-            <p className="text-[#c95bf5] font-medium italic">{`"${t.contact.phrase}"`}</p>
           </div>
         </div>
 

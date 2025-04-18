@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { useLanguageStore } from '@/stores/language';
 
 export const HomeSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -7,11 +8,14 @@ export const HomeSection = () => {
   const [showText, setShowText] = useState(false);
   const [typedText, setTypedText] = useState('');
   const [isClient, setIsClient] = useState(false);
+  const { t } = useLanguageStore();
+
+  const typeText = `${t.home.text}`;
 
   useEffect(() => {
     setIsClient(true);
 
-    const textToType = "Hello! I'm Samuel Nakazawa and this is my website :)";
+    const textToType = typeText;
     const cycleDuration = 10000;
     const kanjiDisplayTime = 4000;
     const typingTime = 3000;
@@ -145,7 +149,7 @@ export const HomeSection = () => {
             boxShadow: '0 0 15px rgba(201, 91, 245, 0.3)',
           }}
         >
-          Discover My Journey
+          {t.home.button}
         </a>
       </div>
     </div>

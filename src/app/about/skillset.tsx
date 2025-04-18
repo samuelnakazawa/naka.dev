@@ -10,7 +10,7 @@ export function SkillSection() {
   const { t } = useLanguageStore();
 
   return (
-    <section className="min-h-screen py-24 ">
+    <section className="min-h-screnn mb:min-h-[calc(100vh-80px)] py-24">
       <h2 className="text-3xl md:text-4xl font-bold mb-12 items-center text-[#c95bf5]">
         {t.home.skillset}
       </h2>

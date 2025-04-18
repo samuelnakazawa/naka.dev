@@ -7,7 +7,7 @@ export function InfoSection() {
   const pdfFile = '/documents/samuel-nakazawa-resume.pdf';
 
   return (
-    <div className="flex flex-col gap-4 justify-center items-center pb-24">
+    <div className="flex flex-col gap-4 justify-center items-center py-24 mb:py-12">
       <p className="text-3xl md:text-4xl font-bold mb-8 text-[#e2d9f3]"> For more informations </p>
       <div className="flex flex-row justify-center gap-16 w-full">
         <div className="w-full max-w-xs">
