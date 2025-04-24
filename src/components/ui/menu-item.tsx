@@ -38,11 +38,6 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
           >
             {text}
           </p>
-          <span
-            className={`block h-[2px] mt-1 ${
-              isActive ? 'bg-[#c95bf5] w-full' : 'bg-[#c95bf5] w-0 group-hover:w-full'
-            } transition-all duration-300 ease-out`}
-          ></span>
         </Link>
       </motion.div>
     </div>

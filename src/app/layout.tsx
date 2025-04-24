@@ -41,8 +41,6 @@ export default function RootLayout({
 
   const shouldRenderFooter = !isHomePage;
 
-  console.log('shouldRenderFooter', shouldRenderFooter);
-
   useEffect(() => {
     setIsLoading(true);
     const timer = setTimeout(() => setIsLoading(false), 1000);

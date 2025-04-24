@@ -7,8 +7,9 @@ import { Card } from '@/components/ui';
 
 export function ResumeSection() {
   const ref = useRef(null);
-
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+
   const handleCardHover = (id: number | null) => {
     setHoveredCard(id);
   };
@@ -20,6 +21,7 @@ export function ResumeSection() {
 
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
   return (
     <>
       <section className="mb-32" aria-labelledby="experience-heading" ref={ref}>
@@ -45,6 +47,8 @@ export function ResumeSection() {
               description={exp.description}
               hoveredCard={hoveredCard}
               setHoveredCard={handleCardHover}
+              activeCard={activeCard}
+              setActiveCard={setActiveCard}
             />
           ))}
         </div>
@@ -61,6 +65,8 @@ export function ResumeSection() {
             description={education.description}
             hoveredCard={hoveredCard}
             setHoveredCard={handleCardHover}
+            activeCard={activeCard}
+            setActiveCard={setActiveCard}
           />
         </div>
 
@@ -73,6 +79,8 @@ export function ResumeSection() {
             description={cardSkills.description}
             hoveredCard={hoveredCard}
             setHoveredCard={handleCardHover}
+            activeCard={activeCard}
+            setActiveCard={setActiveCard}
           />
         </div>
       </section>

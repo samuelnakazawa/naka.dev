@@ -49,50 +49,67 @@ export const HomeSection = () => {
   useEffect(() => {
     if (!isClient) return;
 
+    let animationFrameId: number;
+    const smoothingFactor = 0.15;
+    let targetRotateX = 0;
+    let targetRotateY = 0;
+    let currentRotateX = 0;
+    let currentRotateY = 0;
+
     const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current) return;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
 
-      const { left, top, width, height } = containerRef.current.getBoundingClientRect();
-      const x = e.clientX - left;
-      const y = e.clientY - top;
-      const centerX = width / 2;
-      const centerY = height / 2;
+      targetRotateX = ((e.clientY - centerY) / centerY) * 8;
+      targetRotateY = ((centerX - e.clientX) / centerX) * 8;
+    };
 
-      const rotateX = ((y - centerY) / centerY) * 15;
-      const rotateY = ((centerX - x) / centerX) * 15;
-      const translateX = (x - centerX) / 15;
-      const translateY = (y - centerY) / 15;
+    const updateAnimations = () => {
+      currentRotateX += (targetRotateX - currentRotateX) * smoothingFactor;
+      currentRotateY += (targetRotateY - currentRotateY) * smoothingFactor;
 
       kanjiRefs.current.forEach((el, index) => {
         if (!el) return;
 
-        const layerDepth = index * 0.2;
-        const scale = 1 - Math.abs(rotateY) * 0.01;
-        const opacity = 1 - index * 0.15;
+        const layerDepth = index * 0.1;
+        const translateX = currentRotateY * 8 * (1 + layerDepth);
+        const translateY = currentRotateX * 8 * (1 + layerDepth);
+
+        const glowIntensity = index === 0 ? 0.8 : 0.5 - index * 0.1;
 
         el.style.transform = `
-          perspective(1000px)
-          rotateX(${rotateX}deg)
-          rotateY(${rotateY}deg)
-          translateX(${translateX * (1 + layerDepth)}px)
-          translateY(${translateY * (1 + layerDepth)}px)
-          translateZ(${index * 20}px)
-          scale(${scale})
+          perspective(1500px)
+          rotateX(${currentRotateX}deg)
+          rotateY(${currentRotateY}deg)
+          translateX(${translateX}px)
+          translateY(${translateY}px)
+          translateZ(${index * 40}px)
         `;
-        el.style.opacity = `${opacity}`;
-        el.style.filter = `blur(${index * 0.5}px) drop-shadow(0 0 5px rgba(201, 91, 245, ${0.7 - index * 0.1}))`;
-        el.style.transition = `transform 0.6s cubic-bezier(0.17, 0.67, 0.21, 0.99), opacity 0.4s ease`;
+        el.style.opacity = `${1 - index * 0.08}`;
+        el.style.filter = `
+          blur(${index * 0.2}px) 
+          drop-shadow(0 0 10px rgba(201, 91, 245, ${glowIntensity}))
+          drop-shadow(0 0 20px rgba(201, 91, 245, ${glowIntensity * 0.5}))
+        `;
+        el.style.transition = `transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99), opacity 0.6s ease`;
       });
+
+      animationFrameId = requestAnimationFrame(updateAnimations);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    updateAnimations();
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, [isClient]);
 
   return (
     <div
       ref={containerRef}
-      className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden"
+      className="relative h-screen w-full flex flex-col items-center justify-center "
     >
       <div className="flex flex-col items-center justify-center flex-grow w-full">
         <div className="relative flex flex-col items-center justify-center min-h-[300px] w-full">
@@ -109,19 +126,35 @@ export const HomeSection = () => {
                   display: showText ? 'none' : 'block',
                 }}
               >
-                <svg width="300" height="200" viewBox="0 0 100 100" className="text-[#c95bf5]">
+                <svg
+                  width="300"
+                  height="200"
+                  viewBox="0 0 100 100"
+                  className="text-[#c95bf5]"
+                  style={{
+                    filter: layer === 0 ? 'url(#glow)' : 'none',
+                  }}
+                >
                   {layer === 0 && (
-                    <text
-                      x="50%"
-                      y="50%"
-                      dy="0.35em"
-                      textAnchor="middle"
-                      fill="currentColor"
-                      fontSize="60"
-                      fontFamily="sans-serif"
-                    >
-                      中澤
-                    </text>
+                    <>
+                      <defs>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                          <feGaussianBlur stdDeviation="4" result="blur" />
+                          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                      </defs>
+                      <text
+                        x="50%"
+                        y="50%"
+                        dy="0.35em"
+                        textAnchor="middle"
+                        fill="currentColor"
+                        fontSize="60"
+                        fontFamily="sans-serif"
+                      >
+                        中澤
+                      </text>
+                    </>
                   )}
                 </svg>
               </div>
