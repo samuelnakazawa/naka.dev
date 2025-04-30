@@ -1,10 +1,12 @@
-import { ContactForm } from '@/components/layout';
+import { ContactForm, Container } from '@/components/layout';
 export default function Contact() {
   return (
-    <section className="min-h-screen py-32 md:py-40 px-6 md:px-4">
-      <div className="max-w-6xl mx-auto">
-        <ContactForm />
-      </div>
-    </section>
+    <Container>
+      <section className="min-h-screen px-6 md:px-4">
+        <div className="max-w-6xl mx-auto">
+          <ContactForm />
+        </div>
+      </section>
+    </Container>
   );
 }

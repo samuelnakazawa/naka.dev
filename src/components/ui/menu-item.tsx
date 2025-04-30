@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useLanguageStore } from '@/stores/language';
 
@@ -13,8 +13,10 @@ interface MenuItemProps {
 export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useLanguageStore();
+  const pathname = usePathname();
 
   const { text, path } = t.header.items[type];
+  const isActive = pathname === path || (path !== '/' && pathname.startsWith(path));
 
   return (
     <div
@@ -28,13 +30,14 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <Link href={path} className={'flex items-center gap-2'}>
-          <p className="text-white text-[1.2em] ml-[0.5em]">{text}</p>
-          <span
-            className="absolute left-1/2 -bottom-[10px] h-[3px] bg-[#c95bf5] rounded-full 
-                          w-0 group-hover:w-[120%] -translate-x-1/2 
-                          transition-all duration-300 ease-out"
-          ></span>
+        <Link href={path} className="flex flex-col items-center">
+          <p
+            className={`text-[1.2em] px-2 ${
+              isActive ? 'text-[#c95bf5] font-medium' : 'text-white hover:text-[#c95bf5]'
+            }`}
+          >
+            {text}
+          </p>
         </Link>
       </motion.div>
     </div>

@@ -40,7 +40,7 @@ export const EmailTemplate = ({ name, email, message }: FormData) => (
           color: '#b8a2e0',
         }}
       >
-        Seu portfólio acaba de receber um novo contato
+        Nova mensagem
       </p>
     </div>
 

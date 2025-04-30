@@ -30,9 +30,9 @@ export const GitHubButton = () => {
       <img
         src={'/star.svg'}
         alt={'star my project :)'}
-        className="w-[3em] h-[3em] transition-transform duration-500 ease-in-out hover:scale-110"
+        className="w-[2em] h-[2em] transition-transform duration-500 ease-in-out hover:scale-110"
       />
-      {isHovered && <Tooltip text={t.header.button} />}
+      {isHovered && <Tooltip text={t.header.button} position={'bottom'} />}
     </motion.a>
   );
 };

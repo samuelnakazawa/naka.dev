@@ -3,43 +3,24 @@
     "items": {
       "home": { "text": "Início", "path": "/" },
       "about": { "text": "Sobre", "path": "/about" },
-      "resume": { "text": "Currículo", "path": "/resume" },
       "contact": { "text": "Contato", "path": "/contact" }
     },
     "button": "Código fonte",
     "menu-open": "Abrir menu",
     "menu-close": "Fechar menu"
   },
-  "hero": {
-    "h1": "Olá",
-    "h2": "Sou",
-    "carrousel": [
-      "Desenvolvedor Frontend",
-      "React & Typescript",
-      "Pai de Gato",
-      "Entusiasta de Tecnologia"
-    ]
-  },
   "footer": {
     "rightsHolder": "Samuel Nakazawa. Todos os direitos reservados"
   },
-  "home": {
+  "skill": {
     "skillset": "Habilidades Profissionais",
     "show-more-button": "Mostrar mais",
     "show-less-button": "Mostrar menos"
   },
-  "resume": {
-    "cv-button": "Baixar Currículo",
-    "loading": "Carregando PDF",
-    "error": "Erro ao carregar PDF",
-    "zoomIn": "Zoom in",
-    "zoomOut": "Zoom out"
-  },
   "contact": {
     "title": "Bora trocar uma ideia?",
-    "description": "Seja para discutir um projeto inovador, tirar dúvidas técnicas ou simplesmente trocar ideias sobre tecnologia, minha caixa de entrada está sempre aberta.",
-    "messageAnswer": "Respondo todas as mensagens pessoalmente",
-    "phrase": "Grandes parcerias começam com um simples olá",
+    "description": "Se quiser tirar dúvidas técnicas ou simplesmente trocar ideias sobre tecnologia, acessibilidade, performance ou experiencia do usuário, minha caixa de entrada está sempre aberta.",
+    "messageAnswer": "Pode ficar tranquilo(a)! Eu respondo todas as mensagens pessoalmente",
     "form": {
       "name": "Nome",
       "name-placeholder": "Rock Lee",
@@ -63,5 +44,124 @@
     "thank-you-message": "Obrigado pelo contato. Responderei em breve.",
     "error-message": "Erro ao enviar mensagem. Tente novamente mais tarde.",
     "follow-me": "Siga-me nas redes sociais"
+  },
+  "loader": {
+    "loading": "Carregando...",
+    "error": "Error ao carregar informações",
+    "not-found": "Not found"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "Oops! Parece que você encontrou um caminho misterioso.",
+    "go-home": "Voltar para Home",
+    "go-back": "Voltar à página anterior",
+    "error": "Erro 404"
+  },
+  "home": {
+    "text": "Ola! Sou Samuel Nakazawa e este é meu site :)",
+    "button": "Descubra mais sobre mim"
+  },
+  "about": {
+    "hero": {
+      "h1": "Olá! Sou",
+      "im": "Eu sou um ",
+      "span1": "Engenheiro Frontend",
+      "span2": "React, TypeScript, Design Systems e Optimização Web",
+      "text1": "apaixonado por criar experiencias digitais acessíveis e performáticas.",
+      "text2": "Atualmente atuo desenvolvendo produtos e plataformas na",
+      "text3": "Bora falar sobre",
+      "text4": "Fora do trabalho, eu gosto de explorar novas tecnologias, construir coisas, jogar games retrô e cuidar das minhas 5 gatas.",
+      "carrousel": ["React & Typescript", "Sleepyhead", "Cat Person", "Knowledge Seeker"]
+    },
+
+    "experience": {
+      "title": "Experiência Profissional",
+      "items": {
+        "globo": {
+          "role": "Engenheiro de Software",
+          "company": "Globo",
+          "period": "Abril de 2023 – Presente",
+          "description": [
+            "A Globo é a maior empresa de mídia e televisão da América Latina.",
+            {
+              "main": "Durante minha atuação, eu:",
+              "items": [
+                "Desenvolvi interfaces com integração de IA para produção e distribuição de conteúdo",
+                "Construí microsserviços para aplicações em larga escala",
+                {
+                  "text": "Mantive, desenvolvi e disponibilizei sistemas para coberturas de eventos críticos, incluindo:",
+                  "subitems": [
+                    "Eleições municipais brasileiras",
+                    "As Olimpíadas",
+                    "Big Brother Brasil"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "ciandt": {
+          "role": "Engenheiro de Software Pleno",
+          "company": "CI&T",
+          "period": "Julho de 2021 – Março de 2023",
+          "description": [
+            "A CI&T é uma consultoria global com clientes como: Cielo, Google, HP, Itaú, Johnson & Johnson, Motorola e Globo.",
+            {
+              "main": "Durante meu tempo lá, eu:",
+              "items": [
+                {
+                  "text": "Projetei sistemas de automação incluindo:",
+                  "subitems": [
+                    "Processamento de dados com Python",
+                    "Sistema de distribuição de conteúdo para o Globo.com (3º site mais visitado do Brasil)"
+                  ]
+                },
+                {
+                  "text": "Liderei migrações técnicas dos seguintes projetos usando técnicas de web scraping:",
+                  "subitems": ["Site Memória Globo", "Site História Globo"]
+                }
+              ]
+            }
+          ]
+        },
+        "agendaos": {
+          "role": "Desenvolvedor Front-End",
+          "company": "agendaOS",
+          "period": "Novembro de 2019 – Julho de 2021",
+          "description": [
+            "Desenvolvi e mantive a plataforma web agendaOS utilizando React.js e Redux.",
+            "Contribuí para o desenvolvimento inicial do aplicativo mobile com React Native."
+          ]
+        }
+      }
+    },
+    "education": {
+      "role": "Educação",
+      "item": {
+        "institution": "Faculdade de Tecnologia de Bragança Paulista",
+        "period": "2018–2020",
+        "description": [
+          "Tecnologia em Sistemas de Informação",
+          "Foco no desenvolvimento de sistemas e gestão da tecnologia da informação.",
+          "Concluí o curso com louvor em 2020."
+        ]
+      }
+    },
+    "languages": {
+      "title": "Idiomas",
+      "description": ["Idiomas: Inglês (Proficiência Profissional Completa)", "Português (Nativo)"]
+    },
+
+    "card": {
+      "resume": "Curriculo",
+      "click": "Selecione para ver + detalhes",
+      "hover": "Passe o mouse para ver + detalhes"
+    },
+
+    "info": {
+      "h1": "Para mais informações",
+      "chat": "Vamos conversar :)",
+      "cv-button": "Baixe meu currículo"
+    }
   }
 }

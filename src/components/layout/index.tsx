@@ -1,4 +1,5 @@
 export * from './Footer';
 export * from './Header';
-export * from './Hero';
+export * from './Home';
 export * from './Contact';
+export * from './Container';

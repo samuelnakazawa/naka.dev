@@ -17,4 +17,4 @@ export interface Skill {
   iconPath: string
 }
 
-export type MenuItemType = 'home' | 'about' | 'projects' | 'resume' | 'blog';
+export type MenuItemType = 'home' | 'about' | 'projects' |  'blog';
