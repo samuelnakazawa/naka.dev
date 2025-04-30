@@ -1,10 +1,10 @@
-export const Container = ({
-  children,
-  isHomePage,
-}: {
-  children: React.ReactNode;
-  isHomePage?: boolean;
-}) => {
+'use client';
+
+import { usePathname } from 'next/navigation';
+
+export const Container = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   return (
     <div
       className={

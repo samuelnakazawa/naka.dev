@@ -3,17 +3,20 @@
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useRef, useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const BackgroundBeamsWithCollision = ({
   children,
   className,
-  isHomePage,
 }: {
   children: React.ReactNode;
   className?: string;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
+
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   const beams = [
     {

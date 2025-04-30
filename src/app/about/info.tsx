@@ -1,3 +1,5 @@
+'use client';
+
 import { AiOutlineDownload } from 'react-icons/ai';
 import { useLanguageStore } from '@/stores/language';
 

@@ -1,3 +1,5 @@
+'use client';
+
 import { useLanguageStore } from '@/stores/language';
 
 export function useTranslatedExperiences() {

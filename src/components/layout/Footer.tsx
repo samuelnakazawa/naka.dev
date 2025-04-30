@@ -1,3 +1,5 @@
+'use client';
+
 import { profileLinks } from '@/components/constants';
 import { useLanguageStore } from '@/stores/language';
 
@@ -31,7 +33,7 @@ export const Footer = () => {
               <span className="hidden sm:inline">LinkedIn</span>
             </a>
             <a
-              href="mailto:samuelnakazawa895@gmail.com"
+              href="/contact"
               className="text-[#d8c7ff] hover:text-[#c95bf5] transition duration-300 flex items-center gap-1"
             >
               <span className="hidden sm:inline">E-mail</span>

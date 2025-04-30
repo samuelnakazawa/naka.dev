@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useLanguageStore } from '@/stores/language';
 import { SocialIcons } from '@/components/ui';

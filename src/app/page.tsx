@@ -1,15 +1,17 @@
-'use client';
+import type { Metadata } from 'next';
 
-import { usePathname } from 'next/navigation';
+export const metadata: Metadata = {
+  title: 'Samuel Nakazawa | Frontend Engineer',
+  description:
+    'Hi there! I am a frontend engineer currently working at Globo, former CI&T and Dextra.',
+};
+
 import { HomeSection, Container } from '@/components/layout';
 import { skills } from '@/components/constants';
-import { useState } from 'react';
 
 export default function Home() {
-  const pathname = usePathname();
-  const isHomePage = pathname === '/';
   return (
-    <Container isHomePage={isHomePage}>
+    <Container>
       <section className="min-h-[calc(100vh-80px)] flex items-center justify-center ">
         <HomeSection />
       </section>

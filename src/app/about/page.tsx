@@ -1,8 +1,13 @@
-'use client';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Samuel Nakazawa | About',
+  description: 'Learn more about me, my skills, and my experience.',
+  keywords: ['developer', 'portfolio', 'about', 'projects', 'globo', 'ciandt'],
+};
 
 import { HeroSection, ResumeSection, SkillSection, InfoSection } from './';
 import { Container } from '@/components/layout';
-import { useLanguageStore } from '@/stores/language';
 
 export default function LivingResume() {
   return (

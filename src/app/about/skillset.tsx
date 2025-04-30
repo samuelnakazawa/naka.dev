@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { skills } from '@/components/constants';
 import { SkillCard } from '@/components/ui';
