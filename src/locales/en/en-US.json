@@ -9,12 +9,7 @@
     "menu-open": "Open menu",
     "menu-close": "Close menu"
   },
-  "hero": {
-    "h1": "Hello",
-    "h2": "I'm",
-    "h3": "Frontend Engineer",
-    "carrousel": ["React & Typescript", "Sleepyhead", "Cat Person", "Knowledge Seeker"]
-  },
+
   "footer": {
     "rightsHolder": "Samuel Nakazawa. All rights reserved"
   },
@@ -22,9 +17,6 @@
     "skillset": "Professional Skillset",
     "show-more-button": "Show more",
     "show-less-button": "Show less"
-  },
-  "resume": {
-    "cv-button": "Download my CV"
   },
   "contact": {
     "title": "Let's chat!",
@@ -71,5 +63,108 @@
   "home": {
     "text": "Hello! I'm Samuel Nakazawa and this is my website :)",
     "button": "Discover My Journey"
+  },
+  "about": {
+    "hero": {
+      "h1": "Hello, I'm",
+      "im": "I'm a ",
+      "span1": "Frontend Engineer",
+      "span2": "React, TypeScript, Design Systems and Web Optimization",
+      "text1": "passionate about creating digital experiences with focus on performance and accessibility.",
+      "text2": "Currently building products and platforms at",
+      "text3": "Let's talk about",
+      "text4": "Outside of work, I enjoy exploring new web technologies, craft something, play retro games and pet my 5 cats.",
+      "carrousel": ["React & Typescript", "Sleepyhead", "Cat Person", "Knowledge Seeker"]
+    },
+
+    "experience": {
+      "title": "Professional Experience",
+      "items": {
+        "globo": {
+          "role": "Software Engineer",
+          "company": "Globo",
+          "period": "April 2023 – Present",
+          "description": [
+            "Globo is the largest media and television company in Latin America.",
+            {
+              "main": "During my tenure, I:",
+              "items": [
+                "Developed AI-integrated interfaces for content production and distribution",
+                "Built microservices for large-scale applications",
+                {
+                  "text": "Maintained, engineered, and provisioned systems for critical event coverage including:",
+                  "subitems": [
+                    "Brazilian municipal elections",
+                    "The Olympics",
+                    "Big Brother Brasil"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "ciandt": {
+          "role": "Mid-Level Software Engineer",
+          "company": "CI&T",
+          "period": "July 2021 – March 2023",
+          "description": [
+            "CI&T is a global consultancy with clients including: Cielo, Google, HP, Itaú, Johnson & Johnson, Motorola, and Globo.",
+            {
+              "main": "During my time there, I:",
+              "items": [
+                {
+                  "text": "Designed automation systems including:",
+                  "subitems": [
+                    "Data processing with Python",
+                    "Content distribution system for Globo.com (Brazil's 3rd most-visited website)"
+                  ]
+                },
+                {
+                  "text": "Led technical migrations for the following projects using web scraping techniques:",
+                  "subitems": ["Memória Globo website", "História Globo website"]
+                }
+              ]
+            }
+          ]
+        },
+        "agendaos": {
+          "role": "Front-End Developer",
+          "company": "agendaOS",
+          "period": "November 2019 – July 2021",
+          "description": [
+            "Developed and maintained agendaOS web platform using React.js and Redux.",
+            "Contributed to the initial development of the mobile application with React Native."
+          ]
+        }
+      }
+    },
+    "education": {
+      "role": "Education",
+      "item": {
+        "institution": "Faculdade de Tecnologia de Bragança Paulista",
+        "period": "2018-2020",
+        "description": [
+          "Technology in Information System",
+          "Focused on system development and information technology management.",
+          "Completed degree with honors in 2020."
+        ]
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "description": ["Languages: English (Full Professional Proficiency)", "Portuguese (Native)"]
+    },
+
+    "card": {
+      "resume": "Resume",
+      "click": "Select to see details",
+      "hover": "Hover to view details"
+    },
+
+    "info": {
+      "h1": "For more informations",
+      "chat": "Let's chat :)",
+      "cv-button": "Download my CV"
+    }
   }
 }

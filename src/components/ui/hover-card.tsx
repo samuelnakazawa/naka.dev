@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
+import { useLanguageStore } from '@/stores/language';
 
 export function Card({
   id,
@@ -14,6 +15,7 @@ export function Card({
 }) {
   const [isMobile, setIsMobile] = useState(false);
   const cardRef = useRef(null);
+  const { t } = useLanguageStore();
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -149,7 +151,7 @@ export function Card({
             }}
             className="text-[#d8c7ff] text-sm mt-2"
           >
-            {isMobile ? 'Click to see details' : 'Hover to view details'}
+            {isMobile ? `${t.about.card.click}` : `${t.about.card.hover}`}
           </motion.div>
         )}
       </AnimatePresence>

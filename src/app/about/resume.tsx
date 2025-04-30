@@ -2,8 +2,13 @@
 
 import { useState, useRef } from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
-import { education, experiences, cardSkills } from '@/components/constants';
+import {
+  useTranslatedExperiences,
+  useTranslatedEducation,
+  useTranslatedCardSkills,
+} from '@/hooks/useTranslatedContent';
 import { Card } from '@/components/ui';
+import { useLanguageStore } from '@/stores/language';
 
 export function ResumeSection() {
   const ref = useRef(null);
@@ -14,6 +19,11 @@ export function ResumeSection() {
     setHoveredCard(id);
   };
 
+  const experiences = useTranslatedExperiences();
+  const education = useTranslatedEducation();
+  const cardSkills = useTranslatedCardSkills();
+
+  const { t } = useLanguageStore();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
@@ -33,7 +43,7 @@ export function ResumeSection() {
           viewport={{ once: true, margin: '-100px' }}
           className="text-3xl md:text-4xl font-bold mb-12 text-[#e2d9f3]"
         >
-          Professional Journey
+          {t.about.card.resume}
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">

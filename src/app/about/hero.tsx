@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
+import { useLanguageStore } from '@/stores/language';
 import { SocialIcons } from '@/components/ui';
 
 export function HeroSection() {
+  const { t } = useLanguageStore();
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -13,33 +15,27 @@ export function HeroSection() {
       <div className="flex flex-col md:flex-row gap-12 items-start">
         <div className="flex-1 space-y-8">
           <h1 className="text-4xl md:text-5xl font-bold text-[#f0e9ff] leading-tight">
-            Hello, I'm <span className="text-[#c95bf5]">Samuel Nakazawa</span>
+            {t.about.hero.h1} <span className="text-[#c95bf5]">Samuel Nakazawa</span>
           </h1>
 
           <div className="space-y-6 text-[#d8c7ff] text-lg leading-relaxed">
             <p className="max-w-2xl">
-              I'm a <span className="text-[#c95bf5] font-medium">Frontend Engineer</span> passionate
-              about creating exceptional digital experiences with focus on performance and
-              accessibility.
+              {t.about.hero.im}
+              <span className="text-[#c95bf5] font-medium">{t.about.hero.span1}</span>{' '}
+              {t.about.hero.text1}
             </p>
 
             <p>
-              Currently building products at{' '}
-              <span className="text-[#c95bf5] font-medium">Globo</span>.
+              {t.about.hero.text2} <span className="text-[#c95bf5] font-medium">Globo</span>.
             </p>
 
             <p className="max-w-2xl">
-              Let's talk about{' '}
-              <span className="text-[#c95bf5] font-medium">
-                React, TypeScript, Design Systems and Web Optimization
-              </span>
+              {t.about.hero.text3}{' '}
+              <span className="text-[#c95bf5] font-medium">{t.about.hero.span2}</span>
             </p>
 
             <div className="pt-6 border-t border-[#2d1b4a]/50 rounded-lg">
-              <p className="text-[#b8a2e0]">
-                Outside of work, I enjoy exploring new web technologies, contributing to open
-                source, and mentoring junior developers.
-              </p>
+              <p className="text-[#b8a2e0]">{t.about.hero.text4}</p>
             </div>
 
             <div className="pt-2">
@@ -61,15 +57,9 @@ export function HeroSection() {
                             group-hover:opacity-70 blur-sm group-hover:blur-xs transition-all duration-300"
             ></div>
 
-            <div
-              className="absolute inset-0 rounded-lg bg-[#0a0512] shadow-[0_25px_50px_-12px_rgba(201,91,245,0.25)] 
-                            group-hover:shadow-[0_35px_60px_-15px_rgba(201,91,245,0.3)] transition-all duration-300"
-            ></div>
+            <div className="absolute inset-0 rounded-lg bg-[#0a0512] shadow-[0_25px_50px_-12px_rgba(201,91,245,0.25)] group-hover:shadow-[0_35px_60px_-15px_rgba(201,91,245,0.3)] transition-all duration-300"></div>
 
-            <div
-              className="relative z-10 w-full h-full bg-[#0a0512] rounded-lg overflow-hidden
-                            shadow-[0_10px_30px_-10px_rgba(201,91,245,0.3)]"
-            >
+            <div className="relative z-10 w-full h-full bg-[#0a0512] rounded-lg overflow-hidden shadow-[0_10px_30px_-10px_rgba(201,91,245,0.3)]">
               <img
                 src="/images/samuelnakazawa.jpeg"
                 alt="Samuel Nakazawa"
