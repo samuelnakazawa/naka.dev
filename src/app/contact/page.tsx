@@ -10,7 +10,7 @@ import { ContactForm, Container } from '@/components/layout';
 export default function Contact() {
   return (
     <Container>
-      <section className="min-h-screen px-6 md:px-4">
+      <section className="min-h-[calc(100vh-80px)]">
         <div className="max-w-6xl mx-auto">
           <ContactForm />
         </div>

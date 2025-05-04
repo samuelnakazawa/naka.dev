@@ -83,7 +83,7 @@ export const BackgroundBeamsWithCollision = ({
         className
       )}
     >
-      {!isHomePage &&
+      {/* {!isHomePage &&
         beams.map((beam) => (
           <CollisionMechanism
             key={beam.initialX + 'beam-idx'}
@@ -92,7 +92,7 @@ export const BackgroundBeamsWithCollision = ({
             parentRef={parentRef}
             isHomePage={isHomePage}
           />
-        ))}
+        ))} */}
 
       {children}
       <div

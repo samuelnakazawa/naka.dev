@@ -21,7 +21,7 @@
   "contact": {
     "title": "Let's chat!",
     "description": "Feel free to reach out if you want to chat about tech, accessibility, performance, or UX - I'm always happy to connect!",
-    "messageAnswer": "Don't worry - you'll always get a personal reply from me!",
+    "messageAnswer": "you'll always get a personal reply from me!",
     "form": {
       "name": "Name",
       "name-placeholder": "John Cena",

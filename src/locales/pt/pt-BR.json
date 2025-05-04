@@ -19,8 +19,8 @@
   },
   "contact": {
     "title": "Bora trocar uma ideia?",
-    "description": "Se quiser tirar dúvidas técnicas ou simplesmente trocar ideias sobre tecnologia, acessibilidade, performance ou experiencia do usuário, minha caixa de entrada está sempre aberta.",
-    "messageAnswer": "Pode ficar tranquilo(a)! Eu respondo todas as mensagens pessoalmente",
+    "description": "Fique à vontade para entrar em contato se quiser conversar sobre tecnologia, acessibilidade, performance ou UX - será um prazer ajudar!",
+    "messageAnswer": "Eu respondo todas as mensagens pessoalmente",
     "form": {
       "name": "Nome",
       "name-placeholder": "Rock Lee",
