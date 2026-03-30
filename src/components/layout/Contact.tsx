@@ -4,79 +4,85 @@ import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { useTranslations } from 'next-intl';
 import { sendEmail } from '@/app/actions/send-email';
-import { useLanguageStore } from '@/stores/language';
 import { SocialIcons } from '@/components/ui';
 
-const formSchema = (t: any) =>
-  z.object({
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export function ContactForm() {
+  const t = useTranslations('contact');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+
+  const formSchema = z.object({
     name: z
       .string()
       .trim()
-      .min(1, { message: t.contact.formValidation['name-required'] })
-      .min(3, { message: t.contact.formValidation['name-min-length'] }),
+      .min(1, { message: t('formValidation.name-required') })
+      .min(3, { message: t('formValidation.name-min-length') }),
     email: z
       .string()
-      .email({ message: t.contact.formValidation['email-invalid'] })
+      .email({ message: t('formValidation.email-invalid') })
       .trim()
-      .min(1, { message: t.contact.formValidation['email-required'] }),
+      .min(1, { message: t('formValidation.email-required') }),
     message: z
       .string()
       .trim()
-      .min(1, { message: t.contact.formValidation['message-required'] })
-      .min(10, { message: t.contact.formValidation['message-min-length'] }),
+      .min(1, { message: t('formValidation.message-required') })
+      .min(10, { message: t('formValidation.message-min-length') }),
   });
-
-export function ContactForm() {
-  const { t } = useLanguageStore();
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
-    resolver: zodResolver(formSchema(t)),
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
+    setSubmitError(false);
     try {
       await sendEmail(data);
       setSubmitSuccess(true);
       reset();
-    } catch (error) {
-      console.error(error);
+    } catch {
+      setSubmitError(true);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section className="min-h-[calc(100vh-80px)] flex flex-col relative z-10 w-full py-8 pt-32">
-      <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
-        <div className="md:w-1/2 space-y-6">
+    <section className="relative z-10 flex min-h-[calc(100vh-80px)] w-full flex-col py-8 pt-32">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 md:flex-row">
+        <div className="space-y-6 md:w-1/2">
           <div className="space-y-4">
             <div className="relative inline-block">
-              <span className="relative z-10 text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#c95bf5] via-[#a84ef9] to-[#9a4dff]">
-                {t.contact.title}
+              <span className="relative z-10 bg-gradient-to-r from-[#c95bf5] via-[#a84ef9] to-[#9a4dff] bg-clip-text text-2xl font-bold text-transparent sm:text-3xl">
+                {t('title')}
               </span>
             </div>
 
-            <p className="text-[#d8c7ff] text-lg leading-relaxed">{t.contact.description}</p>
+            <p className="text-lg leading-relaxed text-[#d8c7ff]">{t('description')}</p>
 
             <div className="py-2">
-              <span className="inline-block px-4 py-2 bg-[#1a0a2a] border border-[#c95bf5]/30 rounded-full text-[#e2d9f3] text-sm font-medium">
-                {`✉️  ${t.contact.messageAnswer}`}
+              <span className="inline-block rounded-full border border-[#c95bf5]/30 bg-[#1a0a2a] px-4 py-2 text-sm font-medium text-[#e2d9f3]">
+                {t('messageAnswer')}
               </span>
             </div>
           </div>
 
           <div className="pt-8">
-            <p className="text-[#d8c7ff] mb-4 text-lg">{t.contact['follow-me']}</p>
+            <p className="mb-4 text-lg text-[#d8c7ff]">{t('follow-me')}</p>
             <div className="flex">
               <SocialIcons />
             </div>
@@ -84,10 +90,10 @@ export function ContactForm() {
         </div>
 
         <div className="md:w-1/2">
-          <div className="bg-[#1a0a2a] w-full border border-[#2d1b4a] rounded-xl p-6 sm:p-8 shadow-lg backdrop-blur-sm bg-opacity-70">
+          <div className="w-full rounded-xl border border-[#2d1b4a] bg-[#1a0a2a] bg-opacity-70 p-6 shadow-lg backdrop-blur-sm sm:p-8">
             {submitSuccess ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-[#c95bf5]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="py-8 text-center">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#c95bf5]/10">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
@@ -96,33 +102,32 @@ export function ContactForm() {
                     fill="none"
                     stroke="#c95bf5"
                     strokeWidth="2"
+                    aria-hidden="true"
                   >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-[#f8f5ff] mb-2">
-                  {t.contact['success-message']}
-                </h3>
-                <p className="text-[#b8a2e0] mb-6">{t.contact['thank-you-message']}</p>
+                <h3 className="mb-2 text-2xl font-bold text-[#f8f5ff]">{t('success-message')}</h3>
+                <p className="mb-6 text-[#b8a2e0]">{t('thank-you-message')}</p>
                 <button
                   onClick={() => setSubmitSuccess(false)}
-                  className="px-5 py-2 rounded-lg bg-[#c95bf5] hover:bg-[#b74ae5] text-white font-medium transition-colors"
+                  className="cursor-pointer rounded-lg bg-[#c95bf5] px-5 py-2 font-medium text-white transition-colors hover:bg-[#b74ae5]"
                 >
-                  {t.contact.form['send-new-message']}
+                  {t('form.send-new-message')}
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[#e2d9f3] mb-2">
-                    {t.contact.form.name}
+                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-[#e2d9f3]">
+                    {t('form.name')}
                   </label>
                   <input
                     id="name"
                     {...register('name')}
-                    className="w-full px-4 py-3 bg-[#12071f] border border-[#3a2a5a] rounded-lg focus:ring-2 focus:ring-[#c95bf5]/50 focus:border-[#c95bf5] outline-none text-[#f8f5ff] placeholder-[#5d4a7a] transition-all"
-                    placeholder={t.contact.form['name-placeholder']}
+                    className="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
+                    placeholder={t('form.name-placeholder')}
                   />
                   {errors.name && (
                     <p className="mt-2 text-sm text-[#ff6b6b]">{errors.name.message}</p>
@@ -130,15 +135,15 @@ export function ContactForm() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-[#e2d9f3] mb-2">
-                    {t.contact.form.email}
+                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-[#e2d9f3]">
+                    {t('form.email')}
                   </label>
                   <input
                     id="email"
                     type="email"
                     {...register('email')}
-                    className="w-full px-4 py-3 bg-[#12071f] border border-[#3a2a5a] rounded-lg focus:ring-2 focus:ring-[#c95bf5]/50 focus:border-[#c95bf5] outline-none text-[#f8f5ff] placeholder-[#5d4a7a] transition-all"
-                    placeholder={t.contact.form['email-placeholder']}
+                    className="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
+                    placeholder={t('form.email-placeholder')}
                   />
                   {errors.email && (
                     <p className="mt-2 text-sm text-[#ff6b6b]">{errors.email.message}</p>
@@ -148,35 +153,38 @@ export function ContactForm() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-[#e2d9f3] mb-2"
+                    className="mb-2 block text-sm font-medium text-[#e2d9f3]"
                   >
-                    {t.contact.form.message}
+                    {t('form.message')}
                   </label>
                   <textarea
                     id="message"
                     rows={5}
                     {...register('message')}
-                    className="w-full px-4 py-3 bg-[#12071f] border border-[#3a2a5a] rounded-lg focus:ring-2 focus:ring-[#c95bf5]/50 focus:border-[#c95bf5] outline-none text-[#f8f5ff] placeholder-[#5d4a7a] transition-all"
-                    placeholder={t.contact.form['message-placeholder']}
-                  ></textarea>
+                    className="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
+                    placeholder={t('form.message-placeholder')}
+                  />
                   {errors.message && (
                     <p className="mt-2 text-sm text-[#ff6b6b]">{errors.message.message}</p>
                   )}
                 </div>
 
+                {submitError && <p className="text-sm text-[#ff6b6b]">{t('error-message')}</p>}
+
                 <div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3 px-6 bg-[#c95bf5] hover:bg-[#b74ae5] text-white font-medium rounded-lg transition-colors disabled:opacity-70 flex items-center justify-center cursor-pointer"
+                    className="flex w-full cursor-pointer items-center justify-center rounded-lg bg-[#c95bf5] px-6 py-3 font-medium text-white transition-colors hover:bg-[#b74ae5] disabled:opacity-70"
                   >
                     {isSubmitting ? (
                       <>
                         <svg
-                          className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                          className="-ml-1 mr-3 h-5 w-5 animate-spin text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
+                          aria-hidden="true"
                         >
                           <circle
                             className="opacity-25"
@@ -185,17 +193,17 @@ export function ContactForm() {
                             r="10"
                             stroke="currentColor"
                             strokeWidth="4"
-                          ></circle>
+                          />
                           <path
                             className="opacity-75"
                             fill="currentColor"
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                          ></path>
+                          />
                         </svg>
-                        {t.contact.form['submit-loading']}
+                        {t('form.submit-loading')}
                       </>
                     ) : (
-                      <span>{t.contact.form['submit-button']}</span>
+                      <span>{t('form.submit-button')}</span>
                     )}
                   </button>
                 </div>

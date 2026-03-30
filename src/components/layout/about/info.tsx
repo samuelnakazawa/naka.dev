@@ -1,33 +1,32 @@
 'use client';
 
 import { AiOutlineDownload } from 'react-icons/ai';
-import { useLanguageStore } from '@/stores/language';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export function InfoSection() {
-  const { t } = useLanguageStore();
-
-  const pdfFile = '/documents/samuel-nakazawa-resume.pdf';
+  const t = useTranslations('about');
 
   return (
-    <div className="flex flex-col gap-4 justify-center items-center py-24 mb:py-12">
-      <p className="text-3xl md:text-4xl font-bold mb-8 text-[#e2d9f3]"> {t.about.info.h1} </p>
-      <div className="flex flex-row justify-center gap-16 w-full">
+    <div className="flex flex-col items-center justify-center gap-4 py-24 md:py-12">
+      <p className="mb-8 text-3xl font-bold text-[#e2d9f3] md:text-4xl">{t('info.h1')}</p>
+      <div className="flex w-full flex-row justify-center gap-16">
         <div className="w-full max-w-xs">
           <a
-            href={pdfFile}
-            download="Samuel-Nakazawa-Curriculo.pdf"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] text-white rounded-lg hover:from-[#b142e8] hover:to-[#8a3df5] transition-all shadow-lg w-full text-center"
+            href="/documents/samuel-nakazawa-resume.pdf"
+            download="Samuel-Nakazawa-Resume.pdf"
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] px-6 py-3 text-center text-white shadow-lg transition-all hover:from-[#b142e8] hover:to-[#8a3df5]"
           >
-            <AiOutlineDownload size={18} /> {t.about.info['cv-button']}
+            <AiOutlineDownload size={18} /> {t('info.cv-button')}
           </a>
         </div>
         <div className="w-full max-w-xs">
-          <a
+          <Link
             href="/contact"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] text-white rounded-lg hover:from-[#b142e8] hover:to-[#8a3df5] transition-all shadow-lg w-full text-center"
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] px-6 py-3 text-center text-white shadow-lg transition-all hover:from-[#b142e8] hover:to-[#8a3df5]"
           >
-            {t.about.info.chat}
-          </a>
+            {t('info.chat')}
+          </Link>
         </div>
       </div>
     </div>

@@ -1,19 +1,17 @@
-const nextConfig = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.pdf$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            publicPath: '/_next',
-            name: 'static/media/[name].[hash].[ext]',
-          },
-        },
-      ],
-    });
-    return config;
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
+
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media2.giphy.com',
+      },
+    ],
   },
 };
 
-module.exports = nextConfig;
+export default withNextIntl(nextConfig);

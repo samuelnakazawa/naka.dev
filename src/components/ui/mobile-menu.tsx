@@ -1,14 +1,14 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { MenuItem, SocialIcons } from './';
-import { menuItems } from '@/components/constants';
-import { useLanguageStore } from '@/stores/language';
 
 export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const { t } = useLanguageStore();
+  const t = useTranslations('header');
+
+  const menuKeys = Object.keys(t.raw('items') as Record<string, unknown>) as Array<string>;
 
   return (
     <AnimatePresence>
@@ -18,9 +18,9 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 h-screen bg-[#0f0524]/25 backdrop-blur-lg z-40"
+            className="fixed inset-0 z-40 h-screen bg-[#0f0524]/25 backdrop-blur-lg"
             onClick={onClose}
-            aria-label={t.header['menu-open']}
+            aria-label={t('menu-open')}
           />
 
           <motion.div
@@ -28,25 +28,26 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="fixed inset-y-0 right-0 w-full max-w-xs bg-[#0f0524]/95 backdrop-blur-lg z-50 shadow-2xl border-l border-[#c95bf5]/10"
+            className="fixed inset-y-0 right-0 z-50 w-full max-w-xs border-l border-[#c95bf5]/10 bg-[#0f0524]/95 shadow-2xl backdrop-blur-lg"
           >
-            <div className="h-screen flex flex-col">
-              <div className="p-6 border-b border-[#c95bf5]/10">
-                <div className="flex justify-between items-center mb-4">
+            <div className="flex h-screen flex-col">
+              <div className="border-b border-[#c95bf5]/10 p-6">
+                <div className="mb-4 flex items-center justify-between">
                   <Link className="text-2xl font-bold text-white" href="/" onClick={onClose}>
                     中澤
                   </Link>
 
                   <button
                     onClick={onClose}
-                    className="p-2 rounded-full hover:bg-[#c95bf5]/20 transition-colors"
-                    aria-label={t.header['menu-close']}
+                    className="cursor-pointer rounded-full p-2 transition-colors hover:bg-[#c95bf5]/20"
+                    aria-label={t('menu-close')}
                   >
                     <svg
-                      className="w-6 h-6 text-gray-300"
+                      className="h-6 w-6 text-gray-300"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -61,24 +62,18 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 
               <div className="flex-1 overflow-y-auto p-6">
                 <nav className="flex flex-col gap-2">
-                  {Object.keys(t.header.items).map((type, index) => (
-                    <MenuItem
-                      key={index}
-                      type={type}
-                      className="text-gray-200 hover:text-white text-lg py-4 px-4 rounded-lg hover:bg-[#c95bf5]/10 transition-all duration-200 border-l-4 border-transparent hover:border-[#c95bf5]"
-                      onClick={onClose}
-                      hideIcon
-                    />
+                  {menuKeys.map(type => (
+                    <MenuItem key={type} type={type} onClick={onClose} />
                   ))}
                 </nav>
               </div>
 
-              <div className="p-6 border-t border-[#c95bf5]/10">
-                <div className="flex justify-center gap-6 mb-4">
+              <div className="border-t border-[#c95bf5]/10 p-6">
+                <div className="mb-4 flex justify-center gap-6">
                   <SocialIcons />
                 </div>
                 <p className="text-center text-xs text-gray-500">
-                  © {new Date().getFullYear()} Samuel Nakazawa. All rights reserved.
+                  &copy; {new Date().getFullYear()} Samuel Nakazawa
                 </p>
               </div>
             </div>

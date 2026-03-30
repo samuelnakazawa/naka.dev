@@ -1,43 +1,45 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { profileLinks } from '@/components/constants';
-import { useLanguageStore } from '@/stores/language';
 
 export const Footer = () => {
-  const { t } = useLanguageStore();
-  return (
-    <footer className="w-full text-white pt-4 pb-6 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-transparent via-[#1a0a2a]/80 to-[#251240]">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 ">
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-[#c95bf5]/30 to-transparent mb-8"></div>
+  const t = useTranslations('footer');
 
-        <div className="flex flex-col md:flex-row justify-between text-center md:text-left backdrop-blur-sm ">
+  return (
+    <footer className="w-full bg-gradient-to-b from-transparent via-[#1a0a2a]/80 to-[#251240] px-4 pb-6 pt-4 text-white md:px-8 lg:px-16">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mb-8 h-px w-full bg-gradient-to-r from-transparent via-[#c95bf5]/30 to-transparent" />
+
+        <div className="flex flex-col justify-between text-center backdrop-blur-sm md:flex-row md:text-left">
           <p className="text-sm text-[#e2d9f3]">
-            &copy; {`${new Date().getFullYear()} ${t.footer.rightsHolder}`}
+            &copy; {new Date().getFullYear()} {t('rightsHolder')}
           </p>
 
-          <div className="flex gap-6 mt-4 md:mt-0 justify-center md:justify-end">
+          <div className="mt-4 flex justify-center gap-6 md:mt-0 md:justify-end">
             <a
-              href={profileLinks['github']}
+              href={profileLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#d8c7ff] hover:text-[#c95bf5] transition duration-300 flex items-center gap-1"
+              className="flex items-center gap-1 text-[#d8c7ff] transition duration-300 hover:text-[#c95bf5]"
             >
               <span className="hidden sm:inline">GitHub</span>
             </a>
             <a
-              href={profileLinks['linkedin']}
+              href={profileLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#d8c7ff] hover:text-[#c95bf5] transition duration-300 flex items-center gap-1"
+              className="flex items-center gap-1 text-[#d8c7ff] transition duration-300 hover:text-[#c95bf5]"
             >
               <span className="hidden sm:inline">LinkedIn</span>
             </a>
-            <a
+            <Link
               href="/contact"
-              className="text-[#d8c7ff] hover:text-[#c95bf5] transition duration-300 flex items-center gap-1"
+              className="flex items-center gap-1 text-[#d8c7ff] transition duration-300 hover:text-[#c95bf5]"
             >
               <span className="hidden sm:inline">E-mail</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

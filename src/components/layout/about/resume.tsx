@@ -1,53 +1,76 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { motion, useTransform, useScroll } from 'framer-motion';
-import {
-  useTranslatedExperiences,
-  useTranslatedEducation,
-  useTranslatedCardSkills,
-} from '@/hooks/useTranslatedContent';
+import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Card } from '@/components/ui';
-import { useLanguageStore } from '@/stores/language';
+
+interface ExperienceItem {
+  id: number;
+  role: string;
+  company: string;
+  period?: string;
+  description: unknown[];
+}
 
 export function ResumeSection() {
-  const ref = useRef(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  const t = useTranslations('about');
 
-  const handleCardHover = (id: number | null) => {
-    setHoveredCard(id);
+  const handleCardHover = (id: number | null) => setHoveredCard(id);
+
+  const experienceItems = t.raw('experience.items') as Record<
+    string,
+    {
+      role: string;
+      company: string;
+      period: string;
+      description: unknown[];
+    }
+  >;
+
+  const experiences: ExperienceItem[] = Object.entries(experienceItems).map(([, item], index) => ({
+    id: index + 1,
+    role: item.role,
+    company: item.company,
+    period: item.period,
+    description: item.description,
+  }));
+
+  const educationItem = t.raw('education.item') as {
+    institution: string;
+    period: string;
+    description: string[];
   };
 
-  const experiences = useTranslatedExperiences();
-  const education = useTranslatedEducation();
-  const cardSkills = useTranslatedCardSkills();
+  const education: ExperienceItem = {
+    id: experiences.length + 1,
+    role: t('education.role'),
+    company: educationItem.institution,
+    period: educationItem.period,
+    description: educationItem.description,
+  };
 
-  const { t } = useLanguageStore();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  });
+  const languagesData = t.raw('languages') as {
+    title: string;
+    description: string[];
+  };
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const cardSkills = {
+    id: experiences.length + 2,
+    role: languagesData.title,
+    description: languagesData.description,
+  };
 
   return (
     <>
-      <section className="mb-32" aria-labelledby="experience-heading" ref={ref}>
-        <motion.h2
-          id="experience-heading"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          viewport={{ once: true, margin: '-100px' }}
-          className="text-3xl md:text-4xl font-bold mb-12 text-[#e2d9f3]"
-        >
-          {t.about.card.resume}
-        </motion.h2>
+      <section className="mb-32" aria-labelledby="experience-heading">
+        <h2 id="experience-heading" className="mb-12 text-3xl font-bold text-[#e2d9f3] md:text-4xl">
+          {t('card.resume')}
+        </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-          {experiences.map((exp) => (
+        <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {experiences.map(exp => (
             <Card
               key={exp.id}
               id={exp.id}
@@ -64,10 +87,9 @@ export function ResumeSection() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <section className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <div className="lg:col-span-1">
           <Card
-            key={education.id}
             id={education.id}
             role={education.role}
             company={education.company}
@@ -82,10 +104,8 @@ export function ResumeSection() {
 
         <div className="lg:col-span-2">
           <Card
-            key={cardSkills.id}
             id={cardSkills.id}
             role={cardSkills.role}
-            company={cardSkills.company}
             description={cardSkills.description}
             hoveredCard={hoveredCard}
             setHoveredCard={handleCardHover}

@@ -5,16 +5,15 @@ export type SkillName =
   | 'Node.js'
   | 'Next.js'
   | 'Python'
-  | 'PostgreSQL';
-  | 'MongoDB';
+  | 'PostgreSQL'
+  | 'MongoDB'
   | 'Google Cloud'
   | 'Github'
-  | 'Grafana'
-
+  | 'Grafana';
 
 export interface Skill {
-  name: SkillName,
-  iconPath: string
+  name: SkillName;
+  iconPath: string;
 }
 
-export type MenuItemType = 'home' | 'about' | 'projects' |  'blog';
+export type MenuItemType = 'home' | 'about' | 'contact';

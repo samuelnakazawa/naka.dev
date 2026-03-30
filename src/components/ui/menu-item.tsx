@@ -1,31 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { useLanguageStore } from '@/stores/language';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
 
 interface MenuItemProps {
-  type: keyof typeof menuItems;
+  type: string;
   onClick?: () => void;
+  className?: string;
 }
 
 export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const { t } = useLanguageStore();
+  const t = useTranslations('header');
   const pathname = usePathname();
 
-  const { text, path } = t.header.items[type];
+  const text = t(`items.${type}.text`);
+  const path = t(`items.${type}.path`);
   const isActive = pathname === path || (path !== '/' && pathname.startsWith(path));
 
   return (
-    <div
-      className="relative group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
-    >
+    <div className="group relative" onClick={onClick}>
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,8 +28,8 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
       >
         <Link href={path} className="flex flex-col items-center">
           <p
-            className={`text-[1.2em] px-2 ${
-              isActive ? 'text-[#c95bf5] font-medium' : 'text-white hover:text-[#c95bf5]'
+            className={`px-2 text-[1.2em] ${
+              isActive ? 'font-medium text-[#c95bf5]' : 'text-white hover:text-[#c95bf5]'
             }`}
           >
             {text}

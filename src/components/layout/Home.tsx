@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useLanguageStore } from '@/stores/language';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export const HomeSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -9,9 +10,9 @@ export const HomeSection = () => {
   const [showText, setShowText] = useState(false);
   const [typedText, setTypedText] = useState('');
   const [isClient, setIsClient] = useState(false);
-  const { t } = useLanguageStore();
+  const t = useTranslations('home');
 
-  const typeText = `${t.home.text}`;
+  const typeText = t('text');
 
   useEffect(() => {
     setIsClient(true);
@@ -45,7 +46,7 @@ export const HomeSection = () => {
 
     const interval = setInterval(cycleAnimation, cycleDuration);
     return () => clearInterval(interval);
-  }, []);
+  }, [typeText]);
 
   useEffect(() => {
     if (!isClient) return;
@@ -75,7 +76,6 @@ export const HomeSection = () => {
         const layerDepth = index * 0.1;
         const translateX = currentRotateY * 8 * (1 + layerDepth);
         const translateY = currentRotateX * 8 * (1 + layerDepth);
-
         const glowIntensity = index === 0 ? 0.8 : 0.5 - index * 0.1;
 
         el.style.transform = `
@@ -88,11 +88,12 @@ export const HomeSection = () => {
         `;
         el.style.opacity = `${1 - index * 0.08}`;
         el.style.filter = `
-          blur(${index * 0.2}px) 
+          blur(${index * 0.2}px)
           drop-shadow(0 0 10px rgba(201, 91, 245, ${glowIntensity}))
           drop-shadow(0 0 20px rgba(201, 91, 245, ${glowIntensity * 0.5}))
         `;
-        el.style.transition = `transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99), opacity 0.6s ease`;
+        el.style.transition =
+          'transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99), opacity 0.6s ease';
       });
 
       animationFrameId = requestAnimationFrame(updateAnimations);
@@ -110,15 +111,17 @@ export const HomeSection = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-screen w-full flex flex-col items-center justify-center "
+      className="relative flex h-screen w-full flex-col items-center justify-center"
     >
-      <div className="flex flex-col items-center justify-center flex-grow w-full">
-        <div className="relative flex flex-col items-center justify-center min-h-[300px] w-full">
+      <div className="flex w-full flex-grow flex-col items-center justify-center">
+        <div className="relative flex min-h-[300px] w-full flex-col items-center justify-center">
           {isClient &&
             [...Array(4)].map((_, layer) => (
               <div
                 key={layer}
-                ref={(el) => (kanjiRefs.current[layer] = el)}
+                ref={el => {
+                  kanjiRefs.current[layer] = el;
+                }}
                 className="absolute"
                 style={{
                   transformStyle: 'preserve-3d',
@@ -135,6 +138,7 @@ export const HomeSection = () => {
                   style={{
                     filter: layer === 0 ? 'url(#glow)' : 'none',
                   }}
+                  aria-hidden="true"
                 >
                   {layer === 0 && (
                     <>
@@ -162,20 +166,20 @@ export const HomeSection = () => {
             ))}
 
           {isClient && showText && (
-            <div className="text-[#c95bf5] text-4xl md:text-5xl font-mono tracking-wider text-center max-w-2xl px-4">
+            <div className="max-w-2xl px-4 text-center font-mono text-4xl tracking-wider text-[#c95bf5] md:text-5xl">
               {typedText}
             </div>
           )}
         </div>
       </div>
 
-      <div className="w-full flex justify-center pb-20">
-        <a
+      <div className="flex w-full justify-center pb-20">
+        <Link
           href="/about"
           className="
-            inline-block px-8 py-3 border-2 border-[#c95bf5] text-[#c95bf5]
-            rounded-lg hover:bg-[#c95bf5] hover:text-[#0d0d0d] transition-all
-            duration-300 transform hover:scale-105 focus:outline-none
+            inline-block transform rounded-lg border-2 border-[#c95bf5] px-8
+            py-3 text-[#c95bf5] transition-all duration-300
+            hover:scale-105 hover:bg-[#c95bf5] hover:text-[#0d0d0d] focus:outline-none
             focus:ring-2 focus:ring-[#e384ff] focus:ring-opacity-50
           "
           style={{
@@ -183,8 +187,8 @@ export const HomeSection = () => {
             boxShadow: '0 0 15px rgba(201, 91, 245, 0.3)',
           }}
         >
-          {t.home.button}
-        </a>
+          {t('button')}
+        </Link>
       </div>
     </div>
   );

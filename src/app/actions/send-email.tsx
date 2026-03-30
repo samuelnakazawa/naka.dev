@@ -5,7 +5,13 @@ import { EmailTemplate } from '@/components/templates/EmailTemplate';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendEmail(data) {
+interface SendEmailData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export async function sendEmail(data: SendEmailData) {
   try {
     await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
@@ -13,7 +19,7 @@ export async function sendEmail(data) {
       subject: `New message from ${data.name}`,
       react: EmailTemplate(data),
     });
-  } catch (error) {
+  } catch {
     throw new Error('Failed to send email');
   }
 }

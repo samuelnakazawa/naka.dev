@@ -2,7 +2,31 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
-import { useLanguageStore } from '@/stores/language';
+import { useTranslations } from 'next-intl';
+
+interface DescriptionSubitem {
+  text: string;
+  subitems: string[];
+}
+
+interface DescriptionGroup {
+  main: string;
+  items: (string | DescriptionSubitem)[];
+}
+
+type DescriptionItem = string | DescriptionGroup;
+
+interface CardProps {
+  id: number;
+  role: string;
+  company?: string;
+  period?: string;
+  description: unknown[];
+  hoveredCard: number | null;
+  setHoveredCard: (id: number | null) => void;
+  activeCard: number | null;
+  setActiveCard: (id: number | null) => void;
+}
 
 export function Card({
   id,
@@ -14,16 +38,13 @@ export function Card({
   setHoveredCard,
   activeCard,
   setActiveCard,
-}) {
+}: CardProps) {
   const [isMobile, setIsMobile] = useState(false);
-  const cardRef = useRef(null);
-  const { t } = useLanguageStore();
+  const cardRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('about');
 
   useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
+    const checkIfMobile = () => setIsMobile(window.innerWidth < 768);
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
     return () => window.removeEventListener('resize', checkIfMobile);
@@ -35,7 +56,6 @@ export function Card({
         setActiveCard(null);
       } else {
         setActiveCard(id);
-
         setTimeout(() => {
           cardRef.current?.scrollIntoView({
             behavior: 'smooth',
@@ -48,17 +68,19 @@ export function Card({
 
   const isActive = isMobile ? activeCard === id : hoveredCard === id;
 
-  const renderDescriptionItem = (item, index) => {
+  const renderDescriptionItem = (item: DescriptionItem, index: number) => {
     if (typeof item === 'string') {
       return (
         <li key={index} className="flex items-start">
-          <span className="mr-2 mt-1">•</span>
+          <span className="mr-2 mt-1" aria-hidden="true">
+            &bull;
+          </span>
           {item}
         </li>
       );
     }
 
-    if (item.main) {
+    if ('main' in item && item.main) {
       return (
         <li key={index} className="mt-2">
           <p className="font-medium">{item.main}</p>
@@ -67,19 +89,23 @@ export function Card({
               if (typeof subitem === 'string') {
                 return (
                   <li key={subIndex} className="flex items-start">
-                    <span className="mr-2 mt-1">-</span>
+                    <span className="mr-2 mt-1" aria-hidden="true">
+                      -
+                    </span>
                     {subitem}
                   </li>
                 );
               }
-              if (subitem.text && subitem.subitems) {
+              if ('text' in subitem && subitem.subitems) {
                 return (
                   <li key={subIndex} className="mt-1">
                     <p>{subitem.text}</p>
                     <ul className="ml-4 mt-1 space-y-1">
-                      {subitem.subitems.map((subsubitem, subsubIndex) => (
+                      {subitem.subitems.map((subsubitem: string, subsubIndex: number) => (
                         <li key={subsubIndex} className="flex items-start">
-                          <span className="mr-2 mt-1">◦</span>
+                          <span className="mr-2 mt-1" aria-hidden="true">
+                            &#9702;
+                          </span>
                           {subsubitem}
                         </li>
                       ))}
@@ -103,17 +129,17 @@ export function Card({
       onMouseEnter={!isMobile ? () => setHoveredCard(id) : undefined}
       onMouseLeave={!isMobile ? () => setHoveredCard(null) : undefined}
       onClick={handleCardInteraction}
-      className={`relative p-6 rounded-xl transition-all duration-300 h-full cursor-pointer ${
+      className={`relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 ${
         isActive
           ? 'bg-gradient-to-br from-[#9a4dff] to-[#c95bf5] text-white shadow-lg'
-          : 'bg-[#1a0a2a] border border-[#2d1b4a] hover:border-[#a84ef9]'
+          : 'border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]'
       }`}
     >
-      <h3 className="text-xl font-bold mb-2">{role}</h3>
-      <p className={`mb-3 ${isActive ? 'text-white' : 'text-[#c95bf5]'}`}>{company}</p>
+      <h3 className="mb-2 text-xl font-bold">{role}</h3>
+      {company && <p className={`mb-3 ${isActive ? 'text-white' : 'text-[#c95bf5]'}`}>{company}</p>}
       {period && (
         <span
-          className={`inline-block px-3 py-1 rounded-full text-sm mb-4 ${
+          className={`mb-4 inline-block rounded-full px-3 py-1 text-sm ${
             isActive ? 'bg-black/20' : 'bg-[#47434c] text-[#e2d9f3]'
           }`}
         >
@@ -137,7 +163,7 @@ export function Card({
             transition={{ duration: 0.3 }}
             className="mt-4 space-y-2 overflow-hidden"
           >
-            {description.map((item, i) => renderDescriptionItem(item, i))}
+            {(description as DescriptionItem[]).map((item, i) => renderDescriptionItem(item, i))}
           </motion.ul>
         ) : (
           <motion.div
@@ -151,9 +177,9 @@ export function Card({
                 height: { duration: 0.3, ease: 'easeInOut' },
               },
             }}
-            className="text-[#d8c7ff] text-sm mt-2"
+            className="mt-2 text-sm text-[#d8c7ff]"
           >
-            {isMobile ? `${t.about.card.click}` : `${t.about.card.hover}`}
+            {isMobile ? t('card.click') : t('card.hover')}
           </motion.div>
         )}
       </AnimatePresence>
