@@ -2,55 +2,16 @@
 
 import NextLink from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { socialLinks } from '@/components/constants';
 
 export const SocialIcons = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 10,
-      },
-    },
-    hover: {
-      y: -5,
-      scale: 1.1,
-      transition: {
-        type: 'spring',
-        stiffness: 300,
-        damping: 10,
-      },
-    },
-    tap: {
-      scale: 0.9,
-    },
-  };
-
   return (
-    <motion.div
-      className="mt-8 flex items-center justify-center gap-6 md:justify-start"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    <div className="mt-8 flex items-center justify-center gap-6 md:justify-start">
       {socialLinks.map(link => (
-        <motion.div key={link.name} variants={itemVariants} whileHover="hover" whileTap="tap">
+        <div
+          key={link.name}
+          className="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+        >
           <NextLink
             href={link.url}
             target="_blank"
@@ -73,8 +34,8 @@ export const SocialIcons = () => {
               {link.name}
             </span>
           </NextLink>
-        </motion.div>
+        </div>
       ))}
-    </motion.div>
+    </div>
   );
 };

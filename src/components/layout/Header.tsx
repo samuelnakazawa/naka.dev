@@ -16,6 +16,8 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLElement | null>(null);
+  const rafRef = useRef<number>(0);
   const t = useTranslations('header');
 
   useEffect(() => {
@@ -24,23 +26,36 @@ export const Header = () => {
     window.addEventListener('resize', checkIfMobile);
 
     const handleScroll = () => {
-      if (headerRef.current && !isMobile) {
+      if (rafRef.current) return;
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = 0;
+        if (!headerRef.current) return;
+
         const scrollY = window.scrollY;
         setScrolled(scrollY > 10);
+
+        if (isMobile) return;
+
+        const content =
+          contentRef.current ??
+          (contentRef.current = headerRef.current.querySelector(
+            '.header-content'
+          ) as HTMLElement | null);
+        if (!content) return;
 
         const scale = String(1 - Math.min(scrollY * 0.002, 0.05));
         const opacity = String(1 - Math.min(scrollY * 0.005, 0.2));
         headerRef.current.style.transform = `scaleY(${1 - Math.min(scrollY * 0.002, 0.1)})`;
-        const content = headerRef.current.querySelector('.header-content') as HTMLElement | null;
-        content?.style.setProperty('--scale', scale);
-        content?.style.setProperty('--opacity', opacity);
-      }
+        content.style.setProperty('--scale', scale);
+        content.style.setProperty('--opacity', opacity);
+      });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('resize', checkIfMobile);
       window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [isMobile]);
 

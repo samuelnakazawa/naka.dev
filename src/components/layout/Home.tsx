@@ -76,7 +76,6 @@ export const HomeSection = () => {
         const layerDepth = index * 0.1;
         const translateX = currentRotateY * 8 * (1 + layerDepth);
         const translateY = currentRotateX * 8 * (1 + layerDepth);
-        const glowIntensity = index === 0 ? 0.8 : 0.5 - index * 0.1;
 
         el.style.transform = `
           perspective(1500px)
@@ -86,14 +85,6 @@ export const HomeSection = () => {
           translateY(${translateY}px)
           translateZ(${index * 40}px)
         `;
-        el.style.opacity = `${1 - index * 0.08}`;
-        el.style.filter = `
-          blur(${index * 0.2}px)
-          drop-shadow(0 0 10px rgba(201, 91, 245, ${glowIntensity}))
-          drop-shadow(0 0 20px rgba(201, 91, 245, ${glowIntensity * 0.5}))
-        `;
-        el.style.transition =
-          'transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99), opacity 0.6s ease';
       });
 
       animationFrameId = requestAnimationFrame(updateAnimations);
@@ -116,54 +107,60 @@ export const HomeSection = () => {
       <div className="flex w-full flex-grow flex-col items-center justify-center">
         <div className="relative flex min-h-[300px] w-full flex-col items-center justify-center">
           {isClient &&
-            [...Array(4)].map((_, layer) => (
-              <div
-                key={layer}
-                ref={el => {
-                  kanjiRefs.current[layer] = el;
-                }}
-                className="absolute"
-                style={{
-                  transformStyle: 'preserve-3d',
-                  willChange: 'transform, opacity',
-                  backfaceVisibility: 'hidden',
-                  display: showText ? 'none' : 'block',
-                }}
-              >
-                <svg
-                  width="300"
-                  height="200"
-                  viewBox="0 0 100 100"
-                  className="text-[#c95bf5]"
-                  style={{
-                    filter: layer === 0 ? 'url(#glow)' : 'none',
+            [...Array(4)].map((_, layer) => {
+              const glowIntensity = layer === 0 ? 0.8 : 0.5 - layer * 0.1;
+              return (
+                <div
+                  key={layer}
+                  ref={el => {
+                    kanjiRefs.current[layer] = el;
                   }}
-                  aria-hidden="true"
+                  className="absolute"
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden',
+                    display: showText ? 'none' : 'block',
+                    opacity: 1 - layer * 0.08,
+                    filter: `blur(${layer * 0.2}px) drop-shadow(0 0 10px rgba(201, 91, 245, ${glowIntensity})) drop-shadow(0 0 20px rgba(201, 91, 245, ${glowIntensity * 0.5}))`,
+                    transition: 'transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99)',
+                  }}
                 >
-                  {layer === 0 && (
-                    <>
-                      <defs>
-                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                          <feGaussianBlur stdDeviation="4" result="blur" />
-                          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                        </filter>
-                      </defs>
-                      <text
-                        x="50%"
-                        y="50%"
-                        dy="0.35em"
-                        textAnchor="middle"
-                        fill="currentColor"
-                        fontSize="60"
-                        fontFamily="sans-serif"
-                      >
-                        中澤
-                      </text>
-                    </>
-                  )}
-                </svg>
-              </div>
-            ))}
+                  <svg
+                    width="300"
+                    height="200"
+                    viewBox="0 0 100 100"
+                    className="text-[#c95bf5]"
+                    style={{
+                      filter: layer === 0 ? 'url(#glow)' : 'none',
+                    }}
+                    aria-hidden="true"
+                  >
+                    {layer === 0 && (
+                      <>
+                        <defs>
+                          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                          </filter>
+                        </defs>
+                        <text
+                          x="50%"
+                          y="50%"
+                          dy="0.35em"
+                          textAnchor="middle"
+                          fill="currentColor"
+                          fontSize="60"
+                          fontFamily="sans-serif"
+                        >
+                          中澤
+                        </text>
+                      </>
+                    )}
+                  </svg>
+                </div>
+              );
+            })}
 
           {isClient && showText && (
             <div className="max-w-2xl px-4 text-center font-mono text-4xl tracking-wider text-[#c95bf5] md:text-5xl">

@@ -8,7 +8,7 @@ export const Footer = () => {
   const t = useTranslations('footer');
 
   return (
-    <footer className="w-full bg-gradient-to-b from-transparent via-[#1a0a2a]/80 to-[#251240] px-4 pb-6 pt-4 text-white md:px-8 lg:px-16">
+    <footer className="min-h-[120px] w-full bg-gradient-to-b from-transparent via-[#1a0a2a]/80 to-[#251240] px-4 pb-6 pt-4 text-white md:px-8 lg:px-16">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mb-8 h-px w-full bg-gradient-to-r from-transparent via-[#c95bf5]/30 to-transparent" />
 

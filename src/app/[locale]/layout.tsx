@@ -88,6 +88,15 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          href="/images/samuelnakazawa.jpeg"
+          as="image"
+          type="image/jpeg"
+          fetchPriority="high"
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <ClientLayout>{children}</ClientLayout>

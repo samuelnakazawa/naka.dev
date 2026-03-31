@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 
@@ -21,11 +20,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
 
   return (
     <div className="group relative" onClick={onClick}>
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-      >
+      <div className="animate-slide-down">
         <Link href={path} className="flex flex-col items-center">
           <p
             className={`px-2 text-[1.2em] ${
@@ -35,7 +30,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
             {text}
           </p>
         </Link>
-      </motion.div>
+      </div>
     </div>
   );
 };

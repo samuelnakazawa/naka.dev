@@ -1,6 +1,17 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { HeroSection, ResumeSection, SkillSection, InfoSection } from '@/components/layout/about';
+import { HeroSection } from '@/components/layout/about';
+
+const ResumeSection = dynamic(() =>
+  import('@/components/layout/about/resume').then(mod => ({ default: mod.ResumeSection }))
+);
+const SkillSection = dynamic(() =>
+  import('@/components/layout/about/skillset').then(mod => ({ default: mod.SkillSection }))
+);
+const InfoSection = dynamic(() =>
+  import('@/components/layout/about/info').then(mod => ({ default: mod.InfoSection }))
+);
 
 export async function generateMetadata({
   params,
