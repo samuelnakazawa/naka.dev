@@ -1,0 +1,228 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HeroSection > snapshot 1`] = `
+<section
+  class="animate-fade-in mx-auto mb-32 max-w-6xl pb-20 pt-32"
+>
+  <div
+    class="flex flex-col items-start gap-12 md:flex-row"
+  >
+    <div
+      class="flex-1 space-y-8"
+    >
+      <h1
+        class="text-4xl font-bold leading-tight text-[#f0e9ff] md:text-5xl"
+      >
+        Hi, I'm
+         
+        <span
+          class="text-[#c95bf5]"
+        >
+          Samuel Nakazawa
+        </span>
+      </h1>
+      <div
+        class="space-y-6 text-lg leading-relaxed text-[#d8c7ff]"
+      >
+        <p
+          class="max-w-2xl"
+        >
+          I'm a 
+          <span
+            class="font-medium text-[#c95bf5]"
+          >
+            Software Engineer
+          </span>
+           
+          with X years of experience.
+        </p>
+        <p>
+          Currently working at
+           
+          <span
+            class="font-medium text-[#c95bf5]"
+          >
+            Globo
+          </span>
+          .
+        </p>
+        <p
+          class="max-w-2xl"
+        >
+          I love building
+           
+          <span
+            class="font-medium text-[#c95bf5]"
+          >
+            great products
+          </span>
+        </p>
+        <div
+          class="rounded-lg border-t border-[#2d1b4a]/50 pt-6"
+        >
+          <p
+            class="text-[#b8a2e0]"
+          >
+            Let's connect!
+          </p>
+        </div>
+        <div
+          class="pt-2"
+        >
+          <div
+            class="mt-8 flex items-center justify-center gap-6 md:justify-start"
+          >
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="GitHub"
+                class="group relative"
+                href="https://github.com/samuelnakazawa"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/github-2.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  GitHub
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="LinkedIn"
+                class="group relative"
+                href="https://www.linkedin.com/in/samuel-nakazawa-960301141/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/linkedin.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  LinkedIn
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="Instagram"
+                class="group relative"
+                href="https://www.instagram.com/samuelnkz/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/instagram.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  Instagram
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="Medium"
+                class="group relative"
+                href="https://medium.com/@samuelnakazawa895"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/medium.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  Medium
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative mr-2 mt-2 hidden h-64 w-64 md:block lg:h-72 lg:w-72"
+    >
+      <div
+        class="animate-slide-up group relative h-full w-full transition-transform duration-300 hover:-translate-y-1"
+      >
+        <div
+          class="group-hover:blur-xs absolute -inset-0.5 rounded-lg bg-gradient-to-r from-[#c95bf5] to-[#7a36f4] opacity-0 blur-sm transition-all duration-300 group-hover:opacity-70"
+        />
+        <div
+          class="absolute inset-0 rounded-lg bg-[#0a0512] shadow-[0_25px_50px_-12px_rgba(201,91,245,0.25)] transition-all duration-300 group-hover:shadow-[0_35px_60px_-15px_rgba(201,91,245,0.3)]"
+        />
+        <div
+          class="relative z-10 h-full w-full overflow-hidden rounded-lg bg-[#0a0512] shadow-[0_10px_30px_-10px_rgba(201,91,245,0.3)]"
+        >
+          <img
+            alt="Samuel Nakazawa"
+            class="h-full w-full object-cover"
+            fetchpriority="high"
+            height="288"
+            quality="85"
+            sizes="(max-width: 768px) 0px, (max-width: 1024px) 256px, 288px"
+            src="/images/samuelnakazawa.jpeg"
+            width="288"
+          />
+        </div>
+        <div
+          class="pointer-events-none absolute inset-0 rounded-lg border border-[#2d1b4a]/50"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;

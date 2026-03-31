@@ -1,0 +1,65 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer > snapshot 1`] = `
+<footer
+  class="min-h-[120px] w-full bg-gradient-to-b from-transparent via-[#1a0a2a]/80 to-[#251240] px-4 pb-6 pt-4 text-white md:px-8 lg:px-16"
+>
+  <div
+    class="mx-auto max-w-6xl px-6 lg:px-8"
+  >
+    <div
+      class="mb-8 h-px w-full bg-gradient-to-r from-transparent via-[#c95bf5]/30 to-transparent"
+    />
+    <div
+      class="flex flex-col justify-between text-center backdrop-blur-sm md:flex-row md:text-left"
+    >
+      <p
+        class="text-sm text-[#e2d9f3]"
+      >
+        © 
+        2026
+         
+        Samuel Nakazawa. All rights reserved.
+      </p>
+      <div
+        class="mt-4 flex justify-center gap-6 md:mt-0 md:justify-end"
+      >
+        <a
+          class="flex items-center gap-1 text-[#d8c7ff] transition duration-300 hover:text-[#c95bf5]"
+          href="https://github.com/samuelnakazawa"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            class="hidden sm:inline"
+          >
+            GitHub
+          </span>
+        </a>
+        <a
+          class="flex items-center gap-1 text-[#d8c7ff] transition duration-300 hover:text-[#c95bf5]"
+          href="https://www.linkedin.com/in/samuel-nakazawa-960301141/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            class="hidden sm:inline"
+          >
+            LinkedIn
+          </span>
+        </a>
+        <a
+          class="flex items-center gap-1 text-[#d8c7ff] transition duration-300 hover:text-[#c95bf5]"
+          href="/contact"
+        >
+          <span
+            class="hidden sm:inline"
+          >
+            E-mail
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+`;

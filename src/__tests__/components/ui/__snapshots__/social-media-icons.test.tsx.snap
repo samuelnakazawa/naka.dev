@@ -1,0 +1,124 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SocialIcons > snapshot 1`] = `
+<div
+  class="mt-8 flex items-center justify-center gap-6 md:justify-start"
+>
+  <div
+    class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+  >
+    <a
+      aria-label="GitHub"
+      class="group relative"
+      href="https://github.com/samuelnakazawa"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+          height="24"
+          src="/github-2.svg"
+          width="24"
+        />
+      </div>
+      <span
+        class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+      >
+        GitHub
+      </span>
+    </a>
+  </div>
+  <div
+    class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+  >
+    <a
+      aria-label="LinkedIn"
+      class="group relative"
+      href="https://www.linkedin.com/in/samuel-nakazawa-960301141/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+          height="24"
+          src="/linkedin.svg"
+          width="24"
+        />
+      </div>
+      <span
+        class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+      >
+        LinkedIn
+      </span>
+    </a>
+  </div>
+  <div
+    class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+  >
+    <a
+      aria-label="Instagram"
+      class="group relative"
+      href="https://www.instagram.com/samuelnkz/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+          height="24"
+          src="/instagram.svg"
+          width="24"
+        />
+      </div>
+      <span
+        class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+      >
+        Instagram
+      </span>
+    </a>
+  </div>
+  <div
+    class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+  >
+    <a
+      aria-label="Medium"
+      class="group relative"
+      href="https://medium.com/@samuelnakazawa895"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+          height="24"
+          src="/medium.svg"
+          width="24"
+        />
+      </div>
+      <span
+        class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+      >
+        Medium
+      </span>
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ClientLayout > snapshot - home page 1`] = `
+<div
+  class="relative flex min-h-screen w-full flex-col justify-center overflow-hidden bg-[#0d0d0d]"
+>
+  <div
+    class="grid min-h-screen w-full grid-rows-[auto_1fr_auto] bg-transparent"
+  >
+    <header
+      data-testid="header"
+    >
+      Header
+    </header>
+    <main
+      class="animate-fade-in flex flex-col"
+    >
+      <div>
+        Home Content
+      </div>
+    </main>
+  </div>
+</div>
+`;

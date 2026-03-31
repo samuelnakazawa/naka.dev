@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MenuItem > snapshot - active 1`] = `
+<div
+  class="group relative"
+>
+  <div
+    class="animate-slide-down"
+  >
+    <a
+      class="flex flex-col items-center"
+      href="/"
+    >
+      <p
+        class="px-2 text-[1.2em] font-medium text-[#c95bf5]"
+      >
+        Home
+      </p>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`MenuItem > snapshot - inactive 1`] = `
+<div
+  class="group relative"
+>
+  <div
+    class="animate-slide-down"
+  >
+    <a
+      class="flex flex-col items-center"
+      href="/about"
+    >
+      <p
+        class="px-2 text-[1.2em] text-white hover:text-[#c95bf5]"
+      >
+        About
+      </p>
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,135 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomeSection > snapshot 1`] = `
+<div
+  class="relative flex h-screen w-full flex-col items-center justify-center"
+>
+  <div
+    class="flex w-full flex-grow flex-col items-center justify-center"
+  >
+    <div
+      class="relative flex min-h-[300px] w-full flex-col items-center justify-center"
+    >
+      <div
+        class="absolute"
+        style="transform-style: preserve-3d; will-change: transform; backface-visibility: hidden; display: block; opacity: 1; filter: blur(0px) drop-shadow(0 0 10px rgba(201, 91, 245, 0.8)) drop-shadow(0 0 20px rgba(201, 91, 245, 0.4)); transition: transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99); transform: perspective(1500px)
+          rotateX(0deg)
+          rotateY(0deg)
+          translateX(0px)
+          translateY(0px)
+          translateZ(0px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="text-[#c95bf5]"
+          height="200"
+          style="filter: url(#glow);"
+          viewBox="0 0 100 100"
+          width="300"
+        >
+          <defs>
+            <filter
+              height="200%"
+              id="glow"
+              width="200%"
+              x="-50%"
+              y="-50%"
+            >
+              <fegaussianblur
+                result="blur"
+                stdDeviation="4"
+              />
+              <fecomposite
+                in="SourceGraphic"
+                in2="blur"
+                operator="over"
+              />
+            </filter>
+          </defs>
+          <text
+            dy="0.35em"
+            fill="currentColor"
+            font-family="sans-serif"
+            font-size="60"
+            text-anchor="middle"
+            x="50%"
+            y="50%"
+          >
+            中澤
+          </text>
+        </svg>
+      </div>
+      <div
+        class="absolute"
+        style="transform-style: preserve-3d; will-change: transform; backface-visibility: hidden; display: block; opacity: 0.92; filter: blur(0.2px) drop-shadow(0 0 10px rgba(201, 91, 245, 0.4)) drop-shadow(0 0 20px rgba(201, 91, 245, 0.2)); transition: transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99); transform: perspective(1500px)
+          rotateX(0deg)
+          rotateY(0deg)
+          translateX(0px)
+          translateY(0px)
+          translateZ(40px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="text-[#c95bf5]"
+          height="200"
+          style="filter: none;"
+          viewBox="0 0 100 100"
+          width="300"
+        />
+      </div>
+      <div
+        class="absolute"
+        style="transform-style: preserve-3d; will-change: transform; backface-visibility: hidden; display: block; opacity: 0.84; filter: blur(0.4px) drop-shadow(0 0 10px rgba(201, 91, 245, 0.3)) drop-shadow(0 0 20px rgba(201, 91, 245, 0.15)); transition: transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99); transform: perspective(1500px)
+          rotateX(0deg)
+          rotateY(0deg)
+          translateX(0px)
+          translateY(0px)
+          translateZ(80px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="text-[#c95bf5]"
+          height="200"
+          style="filter: none;"
+          viewBox="0 0 100 100"
+          width="300"
+        />
+      </div>
+      <div
+        class="absolute"
+        style="transform-style: preserve-3d; will-change: transform; backface-visibility: hidden; display: block; opacity: 0.76; filter: blur(0.6000000000000001px) drop-shadow(0 0 10px rgba(201, 91, 245, 0.19999999999999996)) drop-shadow(0 0 20px rgba(201, 91, 245, 0.09999999999999998)); transition: transform 1s cubic-bezier(0.03, 0.68, 0.25, 0.99); transform: perspective(1500px)
+          rotateX(0deg)
+          rotateY(0deg)
+          translateX(0px)
+          translateY(0px)
+          translateZ(120px);"
+      >
+        <svg
+          aria-hidden="true"
+          class="text-[#c95bf5]"
+          height="200"
+          style="filter: none;"
+          viewBox="0 0 100 100"
+          width="300"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex w-full justify-center pb-20"
+  >
+    <a
+      class="
+            inline-block transform rounded-lg border-2 border-[#c95bf5] px-8
+            py-3 text-[#c95bf5] transition-all duration-300
+            hover:scale-105 hover:bg-[#c95bf5] hover:text-[#0d0d0d] focus:outline-none
+            focus:ring-2 focus:ring-[#e384ff] focus:ring-opacity-50
+          "
+      href="/about"
+      style="box-shadow: 0 0 15px rgba(201, 91, 245, 0.3);"
+    >
+      About me
+    </a>
+  </div>
+</div>
+`;

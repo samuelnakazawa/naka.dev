@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SkillCard > snapshot - with className 1`] = `
+<div
+  aria-label="Skill: React"
+  class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] test-class"
+  style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+>
+  <div
+    class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+  >
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+    />
+  </div>
+  <div
+    class="relative z-[2] flex flex-col items-center"
+  >
+    <div
+      class="mb-4 flex h-16 w-16 items-center justify-center"
+    >
+      <img
+        alt="React icon"
+        class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+        height="64"
+        src="/react.svg"
+        style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+        width="64"
+      />
+    </div>
+    <h3
+      class="mb-2 px-3 text-xl font-semibold text-white"
+    >
+      React
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`SkillCard > snapshot 1`] = `
+<div
+  aria-label="Skill: React"
+  class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+  style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+>
+  <div
+    class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+  >
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+    />
+  </div>
+  <div
+    class="relative z-[2] flex flex-col items-center"
+  >
+    <div
+      class="mb-4 flex h-16 w-16 items-center justify-center"
+    >
+      <img
+        alt="React icon"
+        class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+        height="64"
+        src="/react.svg"
+        style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+        width="64"
+      />
+    </div>
+    <h3
+      class="mb-2 px-3 text-xl font-semibold text-white"
+    >
+      React
+    </h3>
+  </div>
+</div>
+`;

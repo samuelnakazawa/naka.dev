@@ -1,0 +1,119 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ResumeSection > snapshot 1`] = `
+<div>
+  <section
+    aria-labelledby="experience-heading"
+    class="mb-32"
+  >
+    <h2
+      class="mb-12 text-3xl font-bold text-[#e2d9f3] md:text-4xl"
+      id="experience-heading"
+    >
+      Experience
+    </h2>
+    <div
+      class="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-3"
+    >
+      <div
+        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+      >
+        <h3
+          class="mb-2 text-xl font-bold"
+        >
+          Software Engineer
+        </h3>
+        <p
+          class="mb-3 text-[#c95bf5]"
+        >
+          Globo
+        </p>
+        <span
+          class="mb-4 inline-block rounded-full px-3 py-1 text-sm bg-[#47434c] text-[#e2d9f3]"
+        >
+          2022 - Present
+        </span>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff]"
+        >
+          Hover for details
+        </div>
+      </div>
+      <div
+        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+      >
+        <h3
+          class="mb-2 text-xl font-bold"
+        >
+          Junior Developer
+        </h3>
+        <p
+          class="mb-3 text-[#c95bf5]"
+        >
+          Startup Inc
+        </p>
+        <span
+          class="mb-4 inline-block rounded-full px-3 py-1 text-sm bg-[#47434c] text-[#e2d9f3]"
+        >
+          2020 - 2022
+        </span>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff]"
+        >
+          Hover for details
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="grid grid-cols-1 gap-6 lg:grid-cols-3"
+  >
+    <div
+      class="lg:col-span-1"
+    >
+      <div
+        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+      >
+        <h3
+          class="mb-2 text-xl font-bold"
+        >
+          Computer Science
+        </h3>
+        <p
+          class="mb-3 text-[#c95bf5]"
+        >
+          University XYZ
+        </p>
+        <span
+          class="mb-4 inline-block rounded-full px-3 py-1 text-sm bg-[#47434c] text-[#e2d9f3]"
+        >
+          2016 - 2020
+        </span>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff]"
+        >
+          Hover for details
+        </div>
+      </div>
+    </div>
+    <div
+      class="lg:col-span-2"
+    >
+      <div
+        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+      >
+        <h3
+          class="mb-2 text-xl font-bold"
+        >
+          Languages
+        </h3>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff]"
+        >
+          Hover for details
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,248 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MobileMenu > snapshot - open 1`] = `
+<div>
+  <div
+    aria-label="Open menu"
+    class="fixed inset-0 z-40 h-screen bg-[#0f0524]/25 backdrop-blur-lg"
+  />
+  <div
+    class="fixed inset-y-0 right-0 z-50 w-full max-w-xs border-l border-[#c95bf5]/10 bg-[#0f0524]/95 shadow-2xl backdrop-blur-lg"
+  >
+    <div
+      class="flex h-screen flex-col"
+    >
+      <div
+        class="border-b border-[#c95bf5]/10 p-6"
+      >
+        <div
+          class="mb-4 flex items-center justify-between"
+        >
+          <a
+            class="text-2xl font-bold text-white"
+            href="/"
+          >
+            中澤
+          </a>
+          <button
+            aria-label="Close menu"
+            class="cursor-pointer rounded-full p-2 transition-colors hover:bg-[#c95bf5]/20"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-6 w-6 text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex-1 overflow-y-auto p-6"
+      >
+        <nav
+          class="flex flex-col gap-2"
+        >
+          <div
+            class="group relative"
+          >
+            <div
+              class="animate-slide-down"
+            >
+              <a
+                class="flex flex-col items-center"
+                href="/"
+              >
+                <p
+                  class="px-2 text-[1.2em] font-medium text-[#c95bf5]"
+                >
+                  Home
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative"
+          >
+            <div
+              class="animate-slide-down"
+            >
+              <a
+                class="flex flex-col items-center"
+                href="/about"
+              >
+                <p
+                  class="px-2 text-[1.2em] text-white hover:text-[#c95bf5]"
+                >
+                  About
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative"
+          >
+            <div
+              class="animate-slide-down"
+            >
+              <a
+                class="flex flex-col items-center"
+                href="/contact"
+              >
+                <p
+                  class="px-2 text-[1.2em] text-white hover:text-[#c95bf5]"
+                >
+                  Contact
+                </p>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="border-t border-[#c95bf5]/10 p-6"
+      >
+        <div
+          class="mb-4 flex justify-center gap-6"
+        >
+          <div
+            class="mt-8 flex items-center justify-center gap-6 md:justify-start"
+          >
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="GitHub"
+                class="group relative"
+                href="https://github.com/samuelnakazawa"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/github-2.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  GitHub
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="LinkedIn"
+                class="group relative"
+                href="https://www.linkedin.com/in/samuel-nakazawa-960301141/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/linkedin.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  LinkedIn
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="Instagram"
+                class="group relative"
+                href="https://www.instagram.com/samuelnkz/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/instagram.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  Instagram
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="Medium"
+                class="group relative"
+                href="https://medium.com/@samuelnakazawa895"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/medium.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  Medium
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p
+          class="text-center text-xs text-gray-500"
+        >
+          © 
+          2026
+           Samuel Nakazawa
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
