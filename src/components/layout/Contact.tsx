@@ -62,7 +62,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="relative z-10 flex min-h-[calc(100vh-80px)] w-full flex-col py-8 pt-32">
+    <section className="relative z-10 flex min-h-[calc(100vh-80px)] w-full flex-col py-8 pt-16">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 md:flex-row">
         <div className="space-y-6 md:w-1/2">
           <div className="space-y-4">
@@ -73,12 +73,6 @@ export function ContactForm() {
             </div>
 
             <p className="text-lg leading-relaxed text-[#d8c7ff]">{t('description')}</p>
-
-            <div className="py-2">
-              <span className="inline-block rounded-full border border-[#c95bf5]/30 bg-[#1a0a2a] px-4 py-2 text-sm font-medium text-[#e2d9f3]">
-                {t('messageAnswer')}
-              </span>
-            </div>
           </div>
 
           <div className="pt-8">
@@ -110,12 +104,6 @@ export function ContactForm() {
                 </div>
                 <h3 className="mb-2 text-2xl font-bold text-[#f8f5ff]">{t('success-message')}</h3>
                 <p className="mb-6 text-[#b8a2e0]">{t('thank-you-message')}</p>
-                <button
-                  onClick={() => setSubmitSuccess(false)}
-                  className="cursor-pointer rounded-lg bg-[#c95bf5] px-5 py-2 font-medium text-white transition-colors hover:bg-[#b74ae5]"
-                >
-                  {t('form.send-new-message')}
-                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">

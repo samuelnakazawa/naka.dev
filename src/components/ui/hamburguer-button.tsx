@@ -6,7 +6,7 @@ export const HamburgerButton = ({ isOpen, onClick }: { isOpen: boolean; onClick:
   const t = useTranslations('header');
 
   return (
-    <div className="z-20 flex flex-1 justify-center md:hidden">
+    <div className="z-20 flex flex-1 justify-self-end md:hidden">
       <button
         className="cursor-pointer focus:outline-none"
         onClick={onClick}

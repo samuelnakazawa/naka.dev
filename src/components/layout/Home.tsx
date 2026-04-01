@@ -170,11 +170,11 @@ export const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex w-full justify-center pb-20">
+      <div className="absolute bottom-8 left-0 right-0 flex w-full justify-center">
         <Link
           href="/about"
           className="
-            inline-block transform rounded-lg border-2 border-[#c95bf5] px-8
+            inline-block whitespace-nowrap rounded-lg border-2 border-[#c95bf5] px-8
             py-3 text-[#c95bf5] transition-all duration-300
             hover:scale-105 hover:bg-[#c95bf5] hover:text-[#0d0d0d] focus:outline-none
             focus:ring-2 focus:ring-[#e384ff] focus:ring-opacity-50

@@ -2,7 +2,7 @@
 
 exports[`HamburgerButton > snapshot - closed 1`] = `
 <div
-  class="z-20 flex flex-1 justify-center md:hidden"
+  class="z-20 flex flex-1 justify-self-end md:hidden"
 >
   <button
     aria-label="Open menu"
@@ -27,7 +27,7 @@ exports[`HamburgerButton > snapshot - closed 1`] = `
 
 exports[`HamburgerButton > snapshot - open 1`] = `
 <div
-  class="z-20 flex flex-1 justify-center md:hidden"
+  class="z-20 flex flex-1 justify-self-end md:hidden"
 >
   <button
     aria-label="Close menu"

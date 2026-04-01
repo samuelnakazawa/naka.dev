@@ -24,7 +24,7 @@ export const LanguageSwitcher = () => {
     <button
       onClick={switchLocale}
       disabled={isPending}
-      className="animate-slide-up relative ml-[20px] inline-flex h-[4em] w-[4em] cursor-pointer items-center justify-center rounded-lg border border-white bg-transparent from-[#c95bf5] to-[#8a2be2] px-4 py-3 font-semibold text-white transition-all duration-500 ease-in-out hover:border-transparent hover:bg-gradient-to-tr hover:shadow-lg hover:shadow-[#c95bf5]/50 disabled:opacity-70"
+      className="animate-slide-up relative z-10 inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-transparent font-semibold text-white transition-all duration-300 ease-in-out hover:opacity-80 disabled:opacity-70"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={locale === 'en' ? 'Switch to Portuguese' : 'Mudar para Inglês'}

@@ -23,7 +23,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ type, onClick }) => {
       <div className="animate-slide-down">
         <Link href={path} className="flex flex-col items-center">
           <p
-            className={`px-2 text-[1.2em] ${
+            className={`px-1 text-sm uppercase tracking-wide sm:px-2 sm:text-[1.2em] sm:normal-case sm:tracking-normal ${
               isActive ? 'font-medium text-[#c95bf5]' : 'text-white hover:text-[#c95bf5]'
             }`}
           >

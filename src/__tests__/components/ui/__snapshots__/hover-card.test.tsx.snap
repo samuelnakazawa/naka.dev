@@ -2,7 +2,7 @@
 
 exports[`Card (HoverCard) > snapshot - active 1`] = `
 <div
-  class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 bg-gradient-to-br from-[#9a4dff] to-[#c95bf5] text-white shadow-lg"
+  class="relative h-full rounded-xl p-6 transition-all duration-300 cursor-pointer bg-gradient-to-br from-[#9a4dff] to-[#c95bf5] text-white shadow-lg"
 >
   <h3
     class="mb-2 text-xl font-bold"
@@ -20,7 +20,7 @@ exports[`Card (HoverCard) > snapshot - active 1`] = `
     2022 - Present
   </span>
   <div
-    class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+    class="transition-[height,opacity] duration-300 ease-in-out"
     style="height: 0px; opacity: 1;"
   >
     <ul
@@ -55,7 +55,7 @@ exports[`Card (HoverCard) > snapshot - active 1`] = `
 
 exports[`Card (HoverCard) > snapshot - inactive 1`] = `
 <div
-  class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+  class="relative h-full rounded-xl p-6 transition-all duration-300 cursor-pointer border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
 >
   <h3
     class="mb-2 text-xl font-bold"
@@ -73,7 +73,7 @@ exports[`Card (HoverCard) > snapshot - inactive 1`] = `
     2022 - Present
   </span>
   <div
-    class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+    class="transition-[height,opacity] duration-300 ease-in-out"
     style="height: 0px; opacity: 0;"
   >
     <ul

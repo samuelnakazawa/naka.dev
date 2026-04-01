@@ -4,7 +4,7 @@ exports[`ResumeSection > snapshot 1`] = `
 <div>
   <section
     aria-labelledby="experience-heading"
-    class="mb-32"
+    class="mb-24 md:mb-16"
   >
     <h2
       class="mb-12 text-3xl font-bold text-[#e2d9f3] md:text-4xl"
@@ -16,7 +16,7 @@ exports[`ResumeSection > snapshot 1`] = `
       class="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-3"
     >
       <div
-        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+        class="relative h-full rounded-xl p-6 transition-all duration-300 cursor-pointer border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
       >
         <h3
           class="mb-2 text-xl font-bold"
@@ -34,7 +34,7 @@ exports[`ResumeSection > snapshot 1`] = `
           2022 - Present
         </span>
         <div
-          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          class="transition-[height,opacity] duration-300 ease-in-out"
           style="height: 0px; opacity: 0;"
         >
           <ul
@@ -71,7 +71,7 @@ exports[`ResumeSection > snapshot 1`] = `
         </div>
       </div>
       <div
-        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+        class="relative h-full rounded-xl p-6 transition-all duration-300 cursor-pointer border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
       >
         <h3
           class="mb-2 text-xl font-bold"
@@ -89,7 +89,7 @@ exports[`ResumeSection > snapshot 1`] = `
           2020 - 2022
         </span>
         <div
-          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          class="transition-[height,opacity] duration-300 ease-in-out"
           style="height: 0px; opacity: 0;"
         >
           <ul
@@ -123,7 +123,7 @@ exports[`ResumeSection > snapshot 1`] = `
       class="lg:col-span-1"
     >
       <div
-        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+        class="relative h-full rounded-xl p-6 transition-all duration-300 cursor-pointer border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
       >
         <h3
           class="mb-2 text-xl font-bold"
@@ -141,7 +141,7 @@ exports[`ResumeSection > snapshot 1`] = `
           2016 - 2020
         </span>
         <div
-          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          class="transition-[height,opacity] duration-300 ease-in-out"
           style="height: 0px; opacity: 0;"
         >
           <ul
@@ -171,7 +171,7 @@ exports[`ResumeSection > snapshot 1`] = `
       class="lg:col-span-2"
     >
       <div
-        class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+        class="relative h-full rounded-xl p-6 transition-all duration-300 cursor-pointer border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
       >
         <h3
           class="mb-2 text-xl font-bold"
@@ -179,7 +179,7 @@ exports[`ResumeSection > snapshot 1`] = `
           Languages
         </h3>
         <div
-          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          class="transition-[height,opacity] duration-300 ease-in-out"
           style="height: 0px; opacity: 0;"
         >
           <ul

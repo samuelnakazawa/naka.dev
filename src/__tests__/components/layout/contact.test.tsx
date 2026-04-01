@@ -168,25 +168,8 @@ describe('ContactForm', () => {
       await user.click(screen.getByText('Send Message'));
 
       await waitFor(() => {
-        expect(screen.getByText('Send another message')).toBeInTheDocument();
+        expect(screen.getByText('Message sent!')).toBeInTheDocument();
       });
-    });
-
-    it('returns to form when "Send another message" is clicked', async () => {
-      const user = userEvent.setup();
-      render(<ContactForm />);
-
-      await user.type(screen.getByLabelText('Name'), 'John Doe');
-      await user.type(screen.getByLabelText('Email'), 'john@example.com');
-      await user.type(screen.getByLabelText('Message'), 'Hello, this is a test message');
-      await user.click(screen.getByText('Send Message'));
-
-      await waitFor(() => {
-        expect(screen.getByText('Send another message')).toBeInTheDocument();
-      });
-
-      await user.click(screen.getByText('Send another message'));
-      expect(screen.getByLabelText('Name')).toBeInTheDocument();
     });
 
     it('shows error message on submission failure', async () => {
@@ -214,14 +197,8 @@ describe('ContactForm', () => {
       await user.click(screen.getByText('Send Message'));
 
       await waitFor(() => {
-        expect(screen.getByText('Send another message')).toBeInTheDocument();
+        expect(screen.getByText('Message sent!')).toBeInTheDocument();
       });
-
-      await user.click(screen.getByText('Send another message'));
-
-      expect(screen.getByLabelText('Name')).toHaveValue('');
-      expect(screen.getByLabelText('Email')).toHaveValue('');
-      expect(screen.getByLabelText('Message')).toHaveValue('');
     });
   });
 

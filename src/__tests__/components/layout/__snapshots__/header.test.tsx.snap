@@ -14,18 +14,18 @@ exports[`Header > snapshot 1`] = `
     <div
       class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c95bf5]/30 to-transparent opacity-70 transition-opacity duration-300"
     />
-    <div
-      class="header-content relative mx-auto grid h-full max-w-6xl grid-cols-[1fr_auto_1fr] items-center transition-transform duration-500"
+    <nav
+      class="header-content relative mx-auto flex h-full max-w-6xl items-center justify-between transition-transform duration-500"
       style="--scale: 1; --opacity: 1; transform: scale(var(--scale)); opacity: NaN;"
     >
       <a
-        class="z-10 justify-self-start text-2xl font-medium text-gray-200 transition-colors duration-300 hover:text-[#c95bf5]"
+        class="z-10 text-2xl font-medium text-gray-200 transition-colors duration-300 hover:text-[#c95bf5]"
         href="/"
       >
         中澤
       </a>
       <div
-        class="z-10 hidden items-center gap-8 md:flex"
+        class="z-10 flex items-center gap-6 sm:gap-8"
       >
         <div
           class="group relative"
@@ -38,7 +38,7 @@ exports[`Header > snapshot 1`] = `
               href="/"
             >
               <p
-                class="px-2 text-[1.2em] font-medium text-[#c95bf5]"
+                class="px-1 text-sm uppercase tracking-wide sm:px-2 sm:text-[1.2em] sm:normal-case sm:tracking-normal font-medium text-[#c95bf5]"
               >
                 Home
               </p>
@@ -56,7 +56,7 @@ exports[`Header > snapshot 1`] = `
               href="/about"
             >
               <p
-                class="px-2 text-[1.2em] text-white hover:text-[#c95bf5]"
+                class="px-1 text-sm uppercase tracking-wide sm:px-2 sm:text-[1.2em] sm:normal-case sm:tracking-normal text-white hover:text-[#c95bf5]"
               >
                 About
               </p>
@@ -74,7 +74,7 @@ exports[`Header > snapshot 1`] = `
               href="/contact"
             >
               <p
-                class="px-2 text-[1.2em] text-white hover:text-[#c95bf5]"
+                class="px-1 text-sm uppercase tracking-wide sm:px-2 sm:text-[1.2em] sm:normal-case sm:tracking-normal text-white hover:text-[#c95bf5]"
               >
                 Contact
               </p>
@@ -82,65 +82,23 @@ exports[`Header > snapshot 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="z-10 flex items-center gap-5 justify-self-end"
+      <button
+        aria-label="Switch to Portuguese"
+        class="animate-slide-up relative z-10 inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-transparent font-semibold text-white transition-all duration-300 ease-in-out hover:opacity-80 disabled:opacity-70"
       >
-        <button
-          aria-label="Switch to Portuguese"
-          class="animate-slide-up relative ml-[20px] inline-flex h-[4em] w-[4em] cursor-pointer items-center justify-center rounded-lg border border-white bg-transparent from-[#c95bf5] to-[#8a2be2] px-4 py-3 font-semibold text-white transition-all duration-500 ease-in-out hover:border-transparent hover:bg-gradient-to-tr hover:shadow-lg hover:shadow-[#c95bf5]/50 disabled:opacity-70"
-        >
-          <div
-            class="relative flex h-8 w-8 items-center justify-center overflow-hidden"
-          >
-            <img
-              alt="US Flag"
-              class="h-8 w-8 object-cover"
-              height="32"
-              src="/us.svg"
-              width="32"
-            />
-          </div>
-        </button>
-        <a
-          aria-label="Star on GitHub"
-          class="animate-slide-up relative ml-[20px] inline-flex h-[4em] w-[4em] items-center justify-center rounded-lg border border-white bg-transparent from-[#c95bf5] to-[#8a2be2] px-4 py-3 font-semibold text-white transition-all duration-500 ease-in-out hover:border-transparent hover:bg-gradient-to-tr hover:shadow-lg hover:shadow-[#c95bf5]/50"
-          href="https://github.com/samuelnakazawa/naka.dev"
-          rel="noopener noreferrer"
-          target="_blank"
+        <div
+          class="relative flex h-8 w-8 items-center justify-center overflow-hidden"
         >
           <img
-            alt=""
-            aria-hidden="true"
-            class="h-[2em] w-[2em] transition-transform duration-500 ease-in-out hover:scale-110"
+            alt="US Flag"
+            class="h-8 w-8 object-cover"
             height="32"
-            src="/star.svg"
+            src="/us.svg"
             width="32"
           />
-        </a>
-        <div
-          class="z-20 flex flex-1 justify-center md:hidden"
-        >
-          <button
-            aria-label="Open menu"
-            class="cursor-pointer focus:outline-none"
-          >
-            <div
-              class="flex w-6 flex-col gap-1.5"
-            >
-              <span
-                class="h-0.5 rounded-full bg-gray-300"
-              />
-              <span
-                class="h-0.5 rounded-full bg-gray-300"
-              />
-              <span
-                class="h-0.5 rounded-full bg-gray-300"
-              />
-            </div>
-          </button>
         </div>
-      </div>
-    </div>
+      </button>
+    </nav>
   </div>
 </header>
 `;

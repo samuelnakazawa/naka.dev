@@ -64,7 +64,7 @@ export function ResumeSection() {
 
   return (
     <>
-      <section className="mb-32" aria-labelledby="experience-heading">
+      <section className="mb-24 md:mb-16" aria-labelledby="experience-heading">
         <h2 id="experience-heading" className="mb-12 text-3xl font-bold text-[#e2d9f3] md:text-4xl">
           {t('card.resume')}
         </h2>

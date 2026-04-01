@@ -12,7 +12,7 @@ export function SkillSection() {
   const t = useTranslations('skill');
 
   return (
-    <section className="min-h-screen py-24 md:min-h-[calc(100vh-80px)] md:py-12">
+    <section className="py-8 md:py-12">
       <h2 className="mb-12 items-center text-3xl font-bold text-[#c95bf5]">{t('skillset')}</h2>
 
       <div className="hidden grid-cols-2 gap-6 md:grid lg:grid-cols-3 xl:grid-cols-4">

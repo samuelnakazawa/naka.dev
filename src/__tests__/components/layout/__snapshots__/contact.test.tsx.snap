@@ -2,7 +2,7 @@
 
 exports[`ContactForm > snapshot - form state 1`] = `
 <section
-  class="relative z-10 flex min-h-[calc(100vh-80px)] w-full flex-col py-8 pt-32"
+  class="relative z-10 flex min-h-[calc(100vh-80px)] w-full flex-col py-8 pt-16"
 >
   <div
     class="mx-auto flex w-full max-w-6xl flex-col gap-12 md:flex-row"
@@ -27,15 +27,6 @@ exports[`ContactForm > snapshot - form state 1`] = `
         >
           Send me a message
         </p>
-        <div
-          class="py-2"
-        >
-          <span
-            class="inline-block rounded-full border border-[#c95bf5]/30 bg-[#1a0a2a] px-4 py-2 text-sm font-medium text-[#e2d9f3]"
-          >
-            I usually respond within 24 hours
-          </span>
-        </div>
       </div>
       <div
         class="pt-8"

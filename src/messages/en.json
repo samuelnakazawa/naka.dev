@@ -41,11 +41,11 @@
     "messageAnswer": "you'll always get a personal reply from me!",
     "form": {
       "name": "Name",
-      "name-placeholder": "John Cena",
+      "name-placeholder": "Rock Lee",
       "email": "Email",
-      "email-placeholder": "johncena@wwe.com",
+      "email-placeholder": "rocklee@konoha.com",
       "message": "Message",
-      "message-placeholder": "U can see me?",
+      "message-placeholder": "How can i open my Eight Inner Gates?",
       "submit-button": "Send Message",
       "send-new-message": "Send new message",
       "submit-loading": "Sending..."
@@ -81,19 +81,18 @@
     "hero": {
       "h1": "Hello, I'm",
       "im": "I'm a ",
-      "span1": "Frontend Engineer",
-      "span2": "React, TypeScript, Design Systems and Web Optimization",
-      "text1": "passionate about creating digital experiences with focus on performance and accessibility.",
-      "text2": "Currently building products and platforms at",
+      "span1": "Software Engineer",
+      "span2": "Accessibility, Projects, Platform Development and Web Optimization",
+      "text1": "passionate about creating accessible and performant digital experiences.",
+      "text2": "Currently developing and evolving platforms at",
       "text3": "Let's talk about",
-      "text4": "Outside of work, I enjoy exploring new web technologies, craft something, play retro games and pet my 5 cats.",
-      "carousel": ["React & Typescript", "Sleepyhead", "Cat Person", "Knowledge Seeker"]
+      "text4": "Outside of work, I enjoy cooking, building and assembling things, playing with friends and taking care of my 6 cats."
     },
     "experience": {
       "title": "Professional Experience",
       "items": {
         "globo": {
-          "role": "Software Engineer",
+          "role": "Senior Software Engineer",
           "company": "Globo",
           "period": "April 2023 – Present",
           "description": [
@@ -101,15 +100,11 @@
             {
               "main": "During my tenure, I:",
               "items": [
-                "Developed AI-integrated interfaces for content production and distribution",
-                "Built microservices for large-scale applications",
+                "Developed AI assistants focused on improving publishing speed with quality and reliability, automating tasks such as spell-checking and article summary generation.",
+                "Led the delivery of real-time vote counting on G1, handling over 2.7 million simultaneous streaming channels while maintaining high availability and reliability.",
                 {
                   "text": "Maintained, engineered, and provisioned systems for critical event coverage including:",
-                  "subitems": [
-                    "Brazilian municipal elections",
-                    "The Olympics",
-                    "Big Brother Brasil"
-                  ]
+                  "subitems": ["World Cup", "The Olympics", "Big Brother Brasil", "Rock in Rio"]
                 }
               ]
             }
@@ -127,12 +122,12 @@
                 {
                   "text": "Designed automation systems including:",
                   "subitems": [
-                    "Data processing with Python",
-                    "Content distribution system for Globo.com (Brazil's 3rd most-visited website)"
+                    "Created automated article registration script using Python",
+                    "Content distribution system for Globo.com (Brazil's 3rd most-visited website) processing over a thousand articles daily, ensuring content to be viewed by millions of users every day."
                   ]
                 },
                 {
-                  "text": "Led technical migrations for the following projects using web scraping techniques:",
+                  "text": "Led database migrations for the following products using web scraping techniques:",
                   "subitems": ["Memória Globo website", "História Globo website"]
                 }
               ]

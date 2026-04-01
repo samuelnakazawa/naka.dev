@@ -1,19 +1,12 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
-import { GitHubButton, HamburgerButton, MenuItem, LanguageSwitcher } from '@/components/ui';
+import { MenuItem, LanguageSwitcher } from '@/components/ui';
 import { Link } from '@/i18n/navigation';
-
-const MobileMenu = dynamic(
-  () => import('@/components/ui/mobile-menu').then(mod => ({ default: mod.MobileMenu })),
-  { ssr: false }
-);
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLElement | null>(null);
@@ -66,12 +59,6 @@ export const Header = () => {
       ref={headerRef}
       className="fixed left-0 right-0 top-0 z-50 h-20 origin-top transition-all duration-500 ease-out"
     >
-      {/* <a
-        href="#main-content"
-        className="absolute left-4 top-4 z-[60] -translate-y-full rounded-lg bg-[#c95bf5] px-4 py-2 text-sm font-medium text-white transition-transform focus:translate-y-0"
-      >
-        Skip to main content
-      </a> */}
       <div className="mx-auto h-full max-w-6xl px-6 lg:px-8">
         <div
           className={`absolute inset-0 bg-[#0a0512]/90 shadow-lg backdrop-blur-md transition-all duration-500`}
@@ -87,8 +74,8 @@ export const Header = () => {
           } transition-opacity duration-300`}
         />
 
-        <div
-          className="header-content relative mx-auto grid h-full max-w-6xl grid-cols-[1fr_auto_1fr] items-center transition-transform duration-500"
+        <nav
+          className="header-content relative mx-auto flex h-full max-w-6xl items-center justify-between transition-transform duration-500"
           style={
             {
               '--scale': 1,
@@ -99,30 +86,20 @@ export const Header = () => {
           }
         >
           <Link
-            className="z-10 justify-self-start text-2xl font-medium text-gray-200 transition-colors duration-300 hover:text-[#c95bf5]"
+            className="z-10 text-2xl font-medium text-gray-200 transition-colors duration-300 hover:text-[#c95bf5]"
             href="/"
           >
             中澤
           </Link>
 
-          <div className="z-10 hidden items-center gap-8 md:flex">
+          <div className="z-10 flex items-center gap-6 sm:gap-8">
             {menuKeys.map(type => (
-              <MenuItem
-                key={type}
-                type={type}
-                className="text-sm text-gray-300 transition-colors duration-300 hover:text-[#c95bf5]"
-              />
+              <MenuItem key={type} type={type} />
             ))}
           </div>
 
-          <div className="z-10 flex items-center gap-5 justify-self-end">
-            <LanguageSwitcher />
-            <GitHubButton />
-            <HamburgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
-          </div>
-        </div>
-
-        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+          <LanguageSwitcher />
+        </nav>
       </div>
     </header>
   );

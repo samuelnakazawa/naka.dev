@@ -2,7 +2,7 @@
 
 exports[`SkillSection > snapshot 1`] = `
 <section
-  class="min-h-screen py-24 md:min-h-[calc(100vh-80px)] md:py-12"
+  class="py-8 md:py-12"
 >
   <h2
     class="mb-12 items-center text-3xl font-bold text-[#c95bf5]"

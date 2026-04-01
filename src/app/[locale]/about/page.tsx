@@ -41,13 +41,15 @@ export default async function About({ params }: { params: Promise<{ locale: stri
 
   return (
     <div className="mx-auto max-w-6xl px-6 pb-16 pt-24 lg:px-8">
-      <div className="relative min-h-screen overflow-hidden text-white">
+      <div className="relative min-h-screen text-white">
         <HeroSection />
-        <div className="container relative z-10 mx-auto py-16">
+        <div className="container relative z-10 mx-auto py-8">
           <ResumeSection />
         </div>
-        <div className="container relative z-10 mx-auto px-6">
+        <div className="container relative z-10 mx-auto px-6 py-16">
           <SkillSection />
+        </div>
+        <div className="container relative z-10 mx-auto px-6">
           <InfoSection />
         </div>
       </div>

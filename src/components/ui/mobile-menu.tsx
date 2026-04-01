@@ -39,9 +39,9 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
           if (!isOpen) setMounted(false);
         }}
       >
-        <div className="flex h-screen flex-col">
+        <div className="flex h-[100dvh] flex-col">
           <div className="border-b border-[#c95bf5]/10 p-6">
-            <div className="mb-4 flex items-center justify-between">
+            <div className="flex items-center justify-between">
               <Link className="text-2xl font-bold text-white" href="/" onClick={onClose}>
                 中澤
               </Link>
@@ -69,15 +69,13 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-6">
-            <nav className="flex flex-col gap-2">
-              {menuKeys.map(type => (
-                <MenuItem key={type} type={type} onClick={onClose} />
-              ))}
-            </nav>
-          </div>
+          <nav className="flex flex-1 flex-col justify-center gap-2 p-6">
+            {menuKeys.map(type => (
+              <MenuItem key={type} type={type} onClick={onClose} />
+            ))}
+          </nav>
 
-          <div className="border-t border-[#c95bf5]/10 p-6">
+          <div className="shrink-0 border-t border-[#c95bf5]/10 p-6">
             <div className="mb-4 flex justify-center gap-6">
               <SocialIcons />
             </div>

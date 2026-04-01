@@ -136,10 +136,10 @@ export function Card({
       onMouseEnter={!isMobile ? () => setHoveredCard(id) : undefined}
       onMouseLeave={!isMobile ? () => setHoveredCard(null) : undefined}
       onClick={handleCardInteraction}
-      className={`relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 ${
+      className={`relative h-full rounded-xl p-6 transition-all duration-300 ${
         isActive
-          ? 'bg-gradient-to-br from-[#9a4dff] to-[#c95bf5] text-white shadow-lg'
-          : 'border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]'
+          ? 'cursor-pointer bg-gradient-to-br from-[#9a4dff] to-[#c95bf5] text-white shadow-lg'
+          : 'cursor-pointer border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]'
       }`}
     >
       <h3 className="mb-2 text-xl font-bold">{role}</h3>
@@ -155,7 +155,7 @@ export function Card({
       )}
 
       <div
-        className="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+        className="transition-[height,opacity] duration-300 ease-in-out"
         style={{ height: isActive ? contentHeight : 0, opacity: isActive ? 1 : 0 }}
       >
         <ul ref={contentRef} className="mt-4 space-y-2">

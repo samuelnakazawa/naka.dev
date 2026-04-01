@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { Header } from '@/components/layout/Header';
 
 describe('Header', () => {
@@ -30,27 +29,6 @@ describe('Header', () => {
   it('renders language switcher', () => {
     render(<Header />);
     expect(screen.getByLabelText('Switch to Portuguese')).toBeInTheDocument();
-  });
-
-  it('renders GitHub button', () => {
-    render(<Header />);
-    expect(screen.getByLabelText('Star on GitHub')).toBeInTheDocument();
-  });
-
-  it('renders hamburger button', () => {
-    render(<Header />);
-    expect(screen.getByLabelText('Open menu')).toBeInTheDocument();
-  });
-
-  it('toggles mobile menu on hamburger click', async () => {
-    const user = userEvent.setup();
-    render(<Header />);
-
-    const hamburger = screen.getByLabelText('Open menu');
-    await user.click(hamburger);
-
-    const closeButtons = screen.getAllByLabelText('Close menu');
-    expect(closeButtons.length).toBeGreaterThanOrEqual(1);
   });
 
   it('header has fixed positioning', () => {

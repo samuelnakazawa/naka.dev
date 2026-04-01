@@ -24,9 +24,9 @@ export function InfoSection() {
   const t = useTranslations('about');
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 py-24 md:py-12">
+    <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-12">
       <p className="mb-8 text-3xl font-bold text-[#e2d9f3] md:text-4xl">{t('info.h1')}</p>
-      <div className="flex w-full flex-row justify-center gap-16">
+      <div className="flex w-full flex-col items-center justify-center gap-4 md:flex-row md:gap-16">
         <div className="w-full max-w-xs">
           <a
             href="/documents/samuel-nakazawa-resume.pdf"
