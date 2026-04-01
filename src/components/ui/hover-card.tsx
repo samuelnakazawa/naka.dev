@@ -1,6 +1,5 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
@@ -41,6 +40,8 @@ export function Card({
 }: CardProps) {
   const [isMobile, setIsMobile] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLUListElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
   const t = useTranslations('about');
 
   useEffect(() => {
@@ -49,6 +50,14 @@ export function Card({
     window.addEventListener('resize', checkIfMobile);
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
+
+  const isActive = isMobile ? activeCard === id : hoveredCard === id;
+
+  useEffect(() => {
+    if (isActive && contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [isActive, description]);
 
   const handleCardInteraction = () => {
     if (isMobile) {
@@ -65,8 +74,6 @@ export function Card({
       }
     }
   };
-
-  const isActive = isMobile ? activeCard === id : hoveredCard === id;
 
   const renderDescriptionItem = (item: DescriptionItem, index: number) => {
     if (typeof item === 'string') {
@@ -147,42 +154,20 @@ export function Card({
         </span>
       )}
 
-      <AnimatePresence>
-        {isActive ? (
-          <motion.ul
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{
-              opacity: 0,
-              height: 0,
-              transition: {
-                opacity: { duration: 0.2, ease: 'easeInOut' },
-                height: { duration: 0.3, ease: 'easeInOut' },
-              },
-            }}
-            transition={{ duration: 0.3 }}
-            className="mt-4 space-y-2 overflow-hidden"
-          >
-            {(description as DescriptionItem[]).map((item, i) => renderDescriptionItem(item, i))}
-          </motion.ul>
-        ) : (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{
-              opacity: 0,
-              height: 0,
-              transition: {
-                opacity: { duration: 0.2, ease: 'easeInOut' },
-                height: { duration: 0.3, ease: 'easeInOut' },
-              },
-            }}
-            className="mt-2 text-sm text-[#d8c7ff]"
-          >
-            {isMobile ? t('card.click') : t('card.hover')}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+        style={{ height: isActive ? contentHeight : 0, opacity: isActive ? 1 : 0 }}
+      >
+        <ul ref={contentRef} className="mt-4 space-y-2">
+          {(description as DescriptionItem[]).map((item, i) => renderDescriptionItem(item, i))}
+        </ul>
+      </div>
+
+      {!isActive && (
+        <div className="animate-fade-in mt-2 text-sm text-[#d8c7ff]">
+          {isMobile ? t('card.click') : t('card.hover')}
+        </div>
+      )}
     </div>
   );
 }

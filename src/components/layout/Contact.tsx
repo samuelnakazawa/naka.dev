@@ -118,7 +118,7 @@ export function ContactForm() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
                 <div>
                   <label htmlFor="name" className="mb-2 block text-sm font-medium text-[#e2d9f3]">
                     {t('form.name')}
@@ -126,11 +126,18 @@ export function ContactForm() {
                   <input
                     id="name"
                     {...register('name')}
+                    required
+                    aria-required="true"
+                    autoComplete="name"
+                    aria-invalid={!!errors.name}
+                    aria-describedby={errors.name ? 'name-error' : undefined}
                     className="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
                     placeholder={t('form.name-placeholder')}
                   />
                   {errors.name && (
-                    <p className="mt-2 text-sm text-[#ff6b6b]">{errors.name.message}</p>
+                    <p id="name-error" role="alert" className="mt-2 text-sm text-[#ff6b6b]">
+                      {errors.name.message}
+                    </p>
                   )}
                 </div>
 
@@ -142,11 +149,18 @@ export function ContactForm() {
                     id="email"
                     type="email"
                     {...register('email')}
+                    required
+                    aria-required="true"
+                    autoComplete="email"
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? 'email-error' : undefined}
                     className="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
                     placeholder={t('form.email-placeholder')}
                   />
                   {errors.email && (
-                    <p className="mt-2 text-sm text-[#ff6b6b]">{errors.email.message}</p>
+                    <p id="email-error" role="alert" className="mt-2 text-sm text-[#ff6b6b]">
+                      {errors.email.message}
+                    </p>
                   )}
                 </div>
 
@@ -161,11 +175,17 @@ export function ContactForm() {
                     id="message"
                     rows={5}
                     {...register('message')}
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.message}
+                    aria-describedby={errors.message ? 'message-error' : undefined}
                     className="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
                     placeholder={t('form.message-placeholder')}
                   />
                   {errors.message && (
-                    <p className="mt-2 text-sm text-[#ff6b6b]">{errors.message.message}</p>
+                    <p id="message-error" role="alert" className="mt-2 text-sm text-[#ff6b6b]">
+                      {errors.message.message}
+                    </p>
                   )}
                 </div>
 

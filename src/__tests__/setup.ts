@@ -209,46 +209,6 @@ vi.mock('next/link', () => ({
   },
 }));
 
-vi.mock('framer-motion', () => ({
-  motion: new Proxy(
-    {},
-    {
-      get: (_target, prop: string) => {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const React = require('react');
-        // eslint-disable-next-line react/display-name
-        return React.forwardRef(
-          (
-            { children, ...props }: { children?: React.ReactNode; [key: string]: unknown },
-            ref: React.Ref<unknown>
-          ) => {
-            const filteredProps: Record<string, unknown> = {};
-            for (const [key, value] of Object.entries(props)) {
-              if (
-                ![
-                  'initial',
-                  'animate',
-                  'exit',
-                  'transition',
-                  'variants',
-                  'whileHover',
-                  'whileTap',
-                  'whileInView',
-                  'style',
-                ].includes(key)
-              ) {
-                filteredProps[key] = value;
-              }
-            }
-            return React.createElement(prop, { ...filteredProps, ref }, children);
-          }
-        );
-      },
-    }
-  ),
-  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
-}));
-
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: vi.fn().mockImplementation((query: string) => ({

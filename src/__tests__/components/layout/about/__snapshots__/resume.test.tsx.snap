@@ -34,7 +34,38 @@ exports[`ResumeSection > snapshot 1`] = `
           2022 - Present
         </span>
         <div
-          class="mt-2 text-sm text-[#d8c7ff]"
+          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          style="height: 0px; opacity: 0;"
+        >
+          <ul
+            class="mt-4 space-y-2"
+          >
+            <li
+              class="flex items-start"
+            >
+              <span
+                aria-hidden="true"
+                class="mr-2 mt-1"
+              >
+                •
+              </span>
+              Built APIs
+            </li>
+            <li
+              class="flex items-start"
+            >
+              <span
+                aria-hidden="true"
+                class="mr-2 mt-1"
+              >
+                •
+              </span>
+              Led migrations
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
         >
           Hover for details
         </div>
@@ -58,7 +89,27 @@ exports[`ResumeSection > snapshot 1`] = `
           2020 - 2022
         </span>
         <div
-          class="mt-2 text-sm text-[#d8c7ff]"
+          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          style="height: 0px; opacity: 0;"
+        >
+          <ul
+            class="mt-4 space-y-2"
+          >
+            <li
+              class="flex items-start"
+            >
+              <span
+                aria-hidden="true"
+                class="mr-2 mt-1"
+              >
+                •
+              </span>
+              Developed features
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
         >
           Hover for details
         </div>
@@ -90,7 +141,27 @@ exports[`ResumeSection > snapshot 1`] = `
           2016 - 2020
         </span>
         <div
-          class="mt-2 text-sm text-[#d8c7ff]"
+          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          style="height: 0px; opacity: 0;"
+        >
+          <ul
+            class="mt-4 space-y-2"
+          >
+            <li
+              class="flex items-start"
+            >
+              <span
+                aria-hidden="true"
+                class="mr-2 mt-1"
+              >
+                •
+              </span>
+              Graduated with honors
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
         >
           Hover for details
         </div>
@@ -108,7 +179,38 @@ exports[`ResumeSection > snapshot 1`] = `
           Languages
         </h3>
         <div
-          class="mt-2 text-sm text-[#d8c7ff]"
+          class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+          style="height: 0px; opacity: 0;"
+        >
+          <ul
+            class="mt-4 space-y-2"
+          >
+            <li
+              class="flex items-start"
+            >
+              <span
+                aria-hidden="true"
+                class="mr-2 mt-1"
+              >
+                •
+              </span>
+              Portuguese - Native
+            </li>
+            <li
+              class="flex items-start"
+            >
+              <span
+                aria-hidden="true"
+                class="mr-2 mt-1"
+              >
+                •
+              </span>
+              English - Fluent
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
         >
           Hover for details
         </div>

@@ -179,6 +179,7 @@ exports[`ContactForm > snapshot - form state 1`] = `
       >
         <form
           class="space-y-6"
+          novalidate=""
         >
           <div>
             <label
@@ -188,10 +189,14 @@ exports[`ContactForm > snapshot - form state 1`] = `
               Name
             </label>
             <input
+              aria-invalid="false"
+              aria-required="true"
+              autocomplete="name"
               class="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
               id="name"
               name="name"
               placeholder="Your name"
+              required=""
             />
           </div>
           <div>
@@ -202,10 +207,14 @@ exports[`ContactForm > snapshot - form state 1`] = `
               Email
             </label>
             <input
+              aria-invalid="false"
+              aria-required="true"
+              autocomplete="email"
               class="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
               id="email"
               name="email"
               placeholder="your@email.com"
+              required=""
               type="email"
             />
           </div>
@@ -217,10 +226,13 @@ exports[`ContactForm > snapshot - form state 1`] = `
               Message
             </label>
             <textarea
+              aria-invalid="false"
+              aria-required="true"
               class="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
               id="message"
               name="message"
               placeholder="Your message"
+              required=""
               rows="5"
             />
           </div>

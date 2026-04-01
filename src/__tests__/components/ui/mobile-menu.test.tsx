@@ -50,9 +50,9 @@ describe('MobileMenu', () => {
   it('calls onClose when backdrop is clicked', async () => {
     const onClose = vi.fn();
     const user = userEvent.setup();
-    render(<MobileMenu isOpen={true} onClose={onClose} />);
+    const { container } = render(<MobileMenu isOpen={true} onClose={onClose} />);
 
-    const backdrop = screen.getByLabelText('Open menu');
+    const backdrop = container.querySelector('[aria-hidden="true"]')!;
     await user.click(backdrop);
     expect(onClose).toHaveBeenCalledTimes(1);
   });

@@ -18,7 +18,9 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
     >
       <div className="grid min-h-screen w-full grid-rows-[auto_1fr_auto] bg-transparent">
         <Header />
-        <main className="animate-fade-in flex flex-col">{children}</main>
+        <main id="main-content" className="animate-fade-in flex flex-col">
+          {children}
+        </main>
         {!isHomePage && <Footer />}
       </div>
     </div>

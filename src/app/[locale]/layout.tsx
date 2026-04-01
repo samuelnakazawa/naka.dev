@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
@@ -9,12 +9,6 @@ import '../globals.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -55,11 +49,24 @@ export async function generateMetadata({
       siteName: 'Samuel Nakazawa',
       title: t('title'),
       description: t('description'),
+      images: [
+        {
+          url: 'https://naka.dev/images/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Samuel Nakazawa - Frontend Engineer',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
+      images: ['https://naka.dev/images/og-image.png'],
+    },
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/apple-touch-icon.png',
     },
     alternates: {
       canonical: 'https://naka.dev',
@@ -97,7 +104,23 @@ export default async function LocaleLayout({
           fetchPriority="high"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Samuel Nakazawa',
+              jobTitle: 'Frontend Engineer',
+              url: 'https://naka.dev',
+              sameAs: [
+                'https://github.com/samuelnakazawa',
+                'https://www.linkedin.com/in/samuel-nakazawa-960301141/',
+              ],
+            }),
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <ClientLayout>{children}</ClientLayout>
         </NextIntlClientProvider>

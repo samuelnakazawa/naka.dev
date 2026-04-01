@@ -3,11 +3,11 @@
 exports[`MobileMenu > snapshot - open 1`] = `
 <div>
   <div
-    aria-label="Open menu"
-    class="fixed inset-0 z-40 h-screen bg-[#0f0524]/25 backdrop-blur-lg"
+    aria-hidden="true"
+    class="fixed inset-0 z-40 h-screen bg-[#0f0524]/25 backdrop-blur-lg transition-opacity duration-300 opacity-0"
   />
   <div
-    class="fixed inset-y-0 right-0 z-50 w-full max-w-xs border-l border-[#c95bf5]/10 bg-[#0f0524]/95 shadow-2xl backdrop-blur-lg"
+    class="fixed inset-y-0 right-0 z-50 w-full max-w-xs border-l border-[#c95bf5]/10 bg-[#0f0524]/95 shadow-2xl backdrop-blur-lg transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] translate-x-full"
   >
     <div
       class="flex h-screen flex-col"

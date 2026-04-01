@@ -15,11 +15,11 @@ exports[`Header > snapshot 1`] = `
       class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c95bf5]/30 to-transparent opacity-70 transition-opacity duration-300"
     />
     <div
-      class="header-content relative mx-auto flex h-full max-w-6xl items-center justify-between transition-transform duration-500"
+      class="header-content relative mx-auto grid h-full max-w-6xl grid-cols-[1fr_auto_1fr] items-center transition-transform duration-500"
       style="--scale: 1; --opacity: 1; transform: scale(var(--scale)); opacity: NaN;"
     >
       <a
-        class="z-10 text-2xl font-medium text-gray-200 transition-colors duration-300 hover:text-[#c95bf5]"
+        class="z-10 justify-self-start text-2xl font-medium text-gray-200 transition-colors duration-300 hover:text-[#c95bf5]"
         href="/"
       >
         中澤
@@ -83,7 +83,7 @@ exports[`Header > snapshot 1`] = `
         </div>
       </div>
       <div
-        class="z-10 flex items-center gap-5"
+        class="z-10 flex items-center justify-self-end gap-5"
       >
         <button
           aria-label="Switch to Portuguese"

@@ -3,14 +3,21 @@ import dynamic from 'next/dynamic';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HeroSection } from '@/components/layout/about';
 
-const ResumeSection = dynamic(() =>
-  import('@/components/layout/about/resume').then(mod => ({ default: mod.ResumeSection }))
+function SectionSkeleton() {
+  return <div className="h-64 animate-pulse rounded-xl bg-[#1a0a2a]" />;
+}
+
+const ResumeSection = dynamic(
+  () => import('@/components/layout/about/resume').then(mod => ({ default: mod.ResumeSection })),
+  { loading: () => <SectionSkeleton /> }
 );
-const SkillSection = dynamic(() =>
-  import('@/components/layout/about/skillset').then(mod => ({ default: mod.SkillSection }))
+const SkillSection = dynamic(
+  () => import('@/components/layout/about/skillset').then(mod => ({ default: mod.SkillSection })),
+  { loading: () => <SectionSkeleton /> }
 );
-const InfoSection = dynamic(() =>
-  import('@/components/layout/about/info').then(mod => ({ default: mod.InfoSection }))
+const InfoSection = dynamic(
+  () => import('@/components/layout/about/info').then(mod => ({ default: mod.InfoSection })),
+  { loading: () => <SectionSkeleton /> }
 );
 
 export async function generateMetadata({
