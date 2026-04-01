@@ -30,7 +30,6 @@
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-slot": "^1.2.0",
-    "@tailwindcss/oxide-darwin-arm64": "^4.2.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.483.0",
