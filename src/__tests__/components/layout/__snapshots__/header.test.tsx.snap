@@ -83,7 +83,7 @@ exports[`Header > snapshot 1`] = `
         </div>
       </div>
       <div
-        class="z-10 flex items-center justify-self-end gap-5"
+        class="z-10 flex items-center gap-5 justify-self-end"
       >
         <button
           aria-label="Switch to Portuguese"

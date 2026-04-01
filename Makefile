@@ -19,6 +19,12 @@ help: ## Exibe esta mensagem de ajuda
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  $(GREEN)%-15s$(NC) %s\n", $$1, $$2}'
 
 setup: ## Instala todas as dependências do projeto
+	@if command -v nvm > /dev/null 2>&1 || [ -s "$$NVM_DIR/nvm.sh" ]; then \
+		echo "$(YELLOW)Ativando Node.js $$(cat .nvmrc) via nvm...$(NC)"; \
+		. "$$NVM_DIR/nvm.sh" && nvm install && nvm use; \
+	else \
+		echo "$(YELLOW)nvm não encontrado, usando Node.js do sistema: $$(node -v)$(NC)"; \
+	fi
 	@echo "$(YELLOW)Instalando dependências...$(NC)"
 	$(NPM) install
 	@echo "$(GREEN)✓ Dependências instaladas com sucesso!$(NC)"

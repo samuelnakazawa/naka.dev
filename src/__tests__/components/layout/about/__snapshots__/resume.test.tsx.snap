@@ -65,7 +65,7 @@ exports[`ResumeSection > snapshot 1`] = `
           </ul>
         </div>
         <div
-          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
+          class="animate-fade-in mt-2 text-sm text-[#d8c7ff]"
         >
           Hover for details
         </div>
@@ -109,7 +109,7 @@ exports[`ResumeSection > snapshot 1`] = `
           </ul>
         </div>
         <div
-          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
+          class="animate-fade-in mt-2 text-sm text-[#d8c7ff]"
         >
           Hover for details
         </div>
@@ -161,7 +161,7 @@ exports[`ResumeSection > snapshot 1`] = `
           </ul>
         </div>
         <div
-          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
+          class="animate-fade-in mt-2 text-sm text-[#d8c7ff]"
         >
           Hover for details
         </div>
@@ -210,7 +210,7 @@ exports[`ResumeSection > snapshot 1`] = `
           </ul>
         </div>
         <div
-          class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
+          class="animate-fade-in mt-2 text-sm text-[#d8c7ff]"
         >
           Hover for details
         </div>
