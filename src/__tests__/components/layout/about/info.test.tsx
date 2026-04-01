@@ -17,8 +17,8 @@ describe('InfoSection', () => {
   it('CV download link points to correct PDF', () => {
     render(<InfoSection />);
     const downloadLink = screen.getByText('Download CV', { exact: false }).closest('a');
-    expect(downloadLink).toHaveAttribute('href', '/documents/samuel-nakazawa-resume.pdf');
-    expect(downloadLink).toHaveAttribute('download', 'Samuel-Nakazawa-Resume.pdf');
+    expect(downloadLink).toHaveAttribute('href', '/documents/Samuel_Nakazawa_Resume_SWE-en.pdf');
+    expect(downloadLink).toHaveAttribute('download', 'Samuel-Nakazawa-Resume-en.pdf');
   });
 
   it('renders the chat link', () => {

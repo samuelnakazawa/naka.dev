@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://naka.dev';
+const BASE_URL = 'https://samuelnakazawa.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ['', '/about', '/contact'];

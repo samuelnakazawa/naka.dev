@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/documents/'],
     },
-    sitemap: 'https://naka.dev/sitemap.xml',
+    sitemap: 'https://samuelnakazawa.com/sitemap.xml',
   };
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
 const DownloadIcon = () => (
@@ -22,6 +22,10 @@ const DownloadIcon = () => (
 
 export function InfoSection() {
   const t = useTranslations('about');
+  const locale = useLocale();
+
+  const resumeHref = `/documents/Samuel_Nakazawa_Resume_SWE-${locale}.pdf`;
+  const resumeDownloadName = `Samuel-Nakazawa-Resume-${locale}.pdf`;
 
   return (
     <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-12">
@@ -29,8 +33,8 @@ export function InfoSection() {
       <div className="flex w-full flex-col items-center justify-center gap-4 md:flex-row md:gap-16">
         <div className="w-full max-w-xs">
           <a
-            href="/documents/samuel-nakazawa-resume.pdf"
-            download="Samuel-Nakazawa-Resume.pdf"
+            href={resumeHref}
+            download={resumeDownloadName}
             className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] px-6 py-3 text-center text-white shadow-lg transition-all hover:from-[#b142e8] hover:to-[#8a3df5]"
           >
             <DownloadIcon /> {t('info.cv-button')}
