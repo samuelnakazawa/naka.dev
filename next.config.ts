@@ -7,7 +7,7 @@ const withNextIntl = createNextIntlPlugin();
 const isDev = process.env.NODE_ENV === 'development';
 
 const securityHeaders = [
-  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
   { key: 'X-DNS-Prefetch-Control', value: 'on' },
@@ -20,7 +20,7 @@ const securityHeaders = [
       "img-src 'self' media2.giphy.com data: blob:",
       "font-src 'self'",
       `connect-src 'self'${isDev ? ' ws: wss:' : ''}`,
-      "frame-ancestors 'none'",
+      "frame-ancestors 'self'",
     ].join('; '),
   },
 ];

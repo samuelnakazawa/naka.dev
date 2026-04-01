@@ -2,7 +2,7 @@
 
 exports[`HomeSection > snapshot 1`] = `
 <div
-  class="relative flex h-screen w-full flex-col items-center justify-center"
+  class="relative mt-20 flex h-[calc(100dvh-5rem)] w-full flex-col items-center justify-center"
 >
   <div
     class="flex w-full flex-grow flex-col items-center justify-center"

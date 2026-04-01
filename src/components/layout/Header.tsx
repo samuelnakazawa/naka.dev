@@ -18,6 +18,11 @@ export const Header = () => {
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
 
+    // Reset transform on mount/navigation to prevent stale shrink
+    if (headerRef.current) {
+      headerRef.current.style.transform = '';
+    }
+
     const handleScroll = () => {
       if (rafRef.current) return;
       rafRef.current = requestAnimationFrame(() => {
@@ -27,7 +32,10 @@ export const Header = () => {
         const scrollY = window.scrollY;
         setScrolled(scrollY > 10);
 
-        if (isMobile) return;
+        if (isMobile) {
+          headerRef.current.style.transform = '';
+          return;
+        }
 
         const content =
           contentRef.current ??
@@ -57,9 +65,9 @@ export const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="fixed left-0 right-0 top-0 z-50 h-20 origin-top transition-all duration-500 ease-out"
+      className="fixed left-0 right-0 top-0 z-50 h-20 origin-top transition-[opacity,backdrop-filter] duration-500 ease-out"
     >
-      <div className="mx-auto h-full max-w-6xl px-6 lg:px-8">
+      <div className="mx-auto h-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div
           className={`absolute inset-0 bg-[#0a0512]/90 shadow-lg backdrop-blur-md transition-all duration-500`}
           style={{
@@ -92,7 +100,7 @@ export const Header = () => {
             中澤
           </Link>
 
-          <div className="z-10 flex items-center gap-6 sm:gap-8">
+          <div className="z-10 flex items-center gap-4 sm:gap-6 md:gap-8">
             {menuKeys.map(type => (
               <MenuItem key={type} type={type} />
             ))}

@@ -102,7 +102,7 @@ export const HomeSection = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex h-screen w-full flex-col items-center justify-center"
+      className="relative mt-20 flex h-[calc(100dvh-5rem)] w-full flex-col items-center justify-center"
     >
       <div className="flex w-full flex-grow flex-col items-center justify-center">
         <div className="relative flex min-h-[300px] w-full flex-col items-center justify-center">
