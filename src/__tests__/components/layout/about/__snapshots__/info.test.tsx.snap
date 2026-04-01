@@ -1,0 +1,62 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InfoSection > snapshot 1`] = `
+<div
+  class="flex flex-col items-center justify-center gap-4 py-24 md:py-12"
+>
+  <p
+    class="mb-8 text-3xl font-bold text-[#e2d9f3] md:text-4xl"
+  >
+    Want to know more?
+  </p>
+  <div
+    class="flex w-full flex-row justify-center gap-16"
+  >
+    <div
+      class="w-full max-w-xs"
+    >
+      <a
+        class="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] px-6 py-3 text-center text-white shadow-lg transition-all hover:from-[#b142e8] hover:to-[#8a3df5]"
+        download="Samuel-Nakazawa-Resume.pdf"
+        href="/documents/samuel-nakazawa-resume.pdf"
+      >
+        <svg
+          fill="none"
+          height="18"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="18"
+        >
+          <path
+            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+          />
+          <polyline
+            points="7 10 12 15 17 10"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="15"
+            y2="3"
+          />
+        </svg>
+         
+        Download CV
+      </a>
+    </div>
+    <div
+      class="w-full max-w-xs"
+    >
+      <a
+        class="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#c95bf5] to-[#9a4dff] px-6 py-3 text-center text-white shadow-lg transition-all hover:from-[#b142e8] hover:to-[#8a3df5]"
+        href="/contact"
+      >
+        Let's chat
+      </a>
+    </div>
+  </div>
+</div>
+`;

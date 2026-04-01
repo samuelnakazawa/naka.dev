@@ -1,0 +1,585 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SkillSection > snapshot 1`] = `
+<section
+  class="min-h-screen py-24 md:min-h-[calc(100vh-80px)] md:py-12"
+>
+  <h2
+    class="mb-12 items-center text-3xl font-bold text-[#c95bf5]"
+  >
+    Skillset
+  </h2>
+  <div
+    class="hidden grid-cols-2 gap-6 md:grid lg:grid-cols-3 xl:grid-cols-4"
+  >
+    <div
+      aria-label="Skill: JavaScript"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="JavaScript icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/javascript.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          JavaScript
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: TypeScript"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="TypeScript icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/typescript.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          TypeScript
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: React"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="React icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/react.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          React
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: Node.js"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="Node.js icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/node.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          Node.js
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: Next.js"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="Next.js icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/nextjs.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          Next.js
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: Python"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="Python icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/python.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          Python
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: PostgreSQL"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="PostgreSQL icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/postgresql.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          PostgreSQL
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: MongoDB"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="MongoDB icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/mongodb.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          MongoDB
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: Google Cloud"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="Google Cloud icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/gcp.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          Google Cloud
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: Github"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="Github icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/github.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          Github
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: Grafana"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="Grafana icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/grafana.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          Grafana
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div
+    class="grid grid-cols-2 gap-6 md:hidden"
+  >
+    <div
+      aria-label="Skill: JavaScript"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="JavaScript icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/javascript.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          JavaScript
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: TypeScript"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="TypeScript icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/typescript.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          TypeScript
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: React"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="React icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/react.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          React
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-label="Skill: Node.js"
+      class="group relative rounded-xl border border-gray-800 p-6 transition-all duration-300 hover:border-[#c95bf5] "
+      style="box-shadow: 0 0 0 1px rgba(201, 91, 245, 0.1),
+          0 2px 4px rgba(201, 91, 245, 0.1),
+          0 8px 24px rgba(201, 91, 245, 0.2),
+          0 16px 48px rgba(201, 91, 245, 0.2); background: transparent;"
+    >
+      <div
+        class="absolute inset-0 overflow-hidden rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,91,245,0.1)_0%,_transparent_70%)]"
+        />
+      </div>
+      <div
+        class="relative z-[2] flex flex-col items-center"
+      >
+        <div
+          class="mb-4 flex h-16 w-16 items-center justify-center"
+        >
+          <img
+            alt="Node.js icon"
+            class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
+            height="64"
+            src="/node.svg"
+            style="filter: drop-shadow(0 0 12px rgba(201, 91, 245, 0.5));"
+            width="64"
+          />
+        </div>
+        <h3
+          class="mb-2 px-3 text-xl font-semibold text-white"
+        >
+          Node.js
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-8 flex justify-center md:hidden"
+  >
+    <button
+      class="cursor-pointer rounded-full border border-[#c95bf5]/30 bg-[#1a0a2a] px-6 py-2 font-medium text-[#c95bf5] transition-all duration-300 hover:border-[#c95bf5]/50 hover:bg-[#2d0b4a]"
+    >
+      Show more +7
+    </button>
+  </div>
+</section>
+`;

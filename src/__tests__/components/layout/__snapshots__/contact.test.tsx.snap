@@ -1,0 +1,254 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContactForm > snapshot - form state 1`] = `
+<section
+  class="relative z-10 flex min-h-[calc(100vh-80px)] w-full flex-col py-8 pt-32"
+>
+  <div
+    class="mx-auto flex w-full max-w-6xl flex-col gap-12 md:flex-row"
+  >
+    <div
+      class="space-y-6 md:w-1/2"
+    >
+      <div
+        class="space-y-4"
+      >
+        <div
+          class="relative inline-block"
+        >
+          <span
+            class="relative z-10 bg-gradient-to-r from-[#c95bf5] via-[#a84ef9] to-[#9a4dff] bg-clip-text text-2xl font-bold text-transparent sm:text-3xl"
+          >
+            Get in Touch
+          </span>
+        </div>
+        <p
+          class="text-lg leading-relaxed text-[#d8c7ff]"
+        >
+          Send me a message
+        </p>
+        <div
+          class="py-2"
+        >
+          <span
+            class="inline-block rounded-full border border-[#c95bf5]/30 bg-[#1a0a2a] px-4 py-2 text-sm font-medium text-[#e2d9f3]"
+          >
+            I usually respond within 24 hours
+          </span>
+        </div>
+      </div>
+      <div
+        class="pt-8"
+      >
+        <p
+          class="mb-4 text-lg text-[#d8c7ff]"
+        >
+          Follow me
+        </p>
+        <div
+          class="flex"
+        >
+          <div
+            class="mt-8 flex items-center justify-center gap-6 md:justify-start"
+          >
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="GitHub"
+                class="group relative"
+                href="https://github.com/samuelnakazawa"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/github-2.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  GitHub
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="LinkedIn"
+                class="group relative"
+                href="https://www.linkedin.com/in/samuel-nakazawa-960301141/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/linkedin.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  LinkedIn
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="Instagram"
+                class="group relative"
+                href="https://www.instagram.com/samuelnkz/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/instagram.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  Instagram
+                </span>
+              </a>
+            </div>
+            <div
+              class="transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-110 active:scale-90"
+            >
+              <a
+                aria-label="Medium"
+                class="group relative"
+                href="https://medium.com/@samuelnakazawa895"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="rounded-full bg-gradient-to-br from-[#c95bf5]/10 to-[#c95bf5]/5 p-3 shadow-lg transition-all duration-300 group-hover:from-[#c95bf5]/20 group-hover:to-[#c95bf5]/10 group-hover:shadow-[#c95bf5]/20"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="text-white/80 transition-colors duration-300 group-hover:text-[#c95bf5]"
+                    height="24"
+                    src="/medium.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                >
+                  Medium
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="md:w-1/2"
+    >
+      <div
+        class="w-full rounded-xl border border-[#2d1b4a] bg-[#1a0a2a] bg-opacity-70 p-6 shadow-lg backdrop-blur-sm sm:p-8"
+      >
+        <form
+          class="space-y-6"
+          novalidate=""
+        >
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-[#e2d9f3]"
+              for="name"
+            >
+              Name
+            </label>
+            <input
+              aria-invalid="false"
+              aria-required="true"
+              autocomplete="name"
+              class="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required=""
+            />
+          </div>
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-[#e2d9f3]"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              aria-invalid="false"
+              aria-required="true"
+              autocomplete="email"
+              class="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+            />
+          </div>
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-[#e2d9f3]"
+              for="message"
+            >
+              Message
+            </label>
+            <textarea
+              aria-invalid="false"
+              aria-required="true"
+              class="w-full rounded-lg border border-[#3a2a5a] bg-[#12071f] px-4 py-3 text-[#f8f5ff] placeholder-[#5d4a7a] outline-none transition-all focus:border-[#c95bf5] focus:ring-2 focus:ring-[#c95bf5]/50"
+              id="message"
+              name="message"
+              placeholder="Your message"
+              required=""
+              rows="5"
+            />
+          </div>
+          <div>
+            <button
+              class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-[#c95bf5] px-6 py-3 font-medium text-white transition-colors hover:bg-[#b74ae5] disabled:opacity-70"
+              type="submit"
+            >
+              <span>
+                Send Message
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+`;

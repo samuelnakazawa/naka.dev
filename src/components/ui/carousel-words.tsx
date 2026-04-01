@@ -1,26 +1,28 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
-import { useLanguageStore } from '@/stores/language';
+import { useTranslations } from 'next-intl';
 
 export const CarouselWords = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { t } = useLanguageStore();
+  const t = useTranslations('about');
+  const words = t.raw('hero.carousel') as string[];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % t.hero.carrousel.length);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % words.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [t.hero.carrousel.length]);
+  }, [words.length]);
 
   return (
-    <div className="relative h-15 overflow-hidden">
-      {t.hero.carrousel.map((word, index) => (
+    <div className="h-15 relative overflow-hidden">
+      {words.map((word, index) => (
         <div
           key={word}
           aria-label={word}
-          className={`absolute top-0 left-0 w-full h-full flex items-left justify-start text-2xl md:text-3xl font-bold text-[#c95bf5] transition-transform duration-500 ease-in-out ${
+          className={`items-left absolute left-0 top-0 flex h-full w-full justify-start text-2xl font-bold text-[#c95bf5] transition-transform duration-500 ease-in-out md:text-3xl ${
             index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
           }`}
         >

@@ -131,7 +131,7 @@
 }
 
 .menu-item::after {
-  @apply content-[''] block bg-[#c95bf5] rounded-[16px] h-[5px] w-0 absolute left-0 -bottom-[1px] transition-all duration-300 ease-out;
+  @apply absolute -bottom-[1px] left-0 block h-[5px] w-0 rounded-[16px] bg-[#c95bf5] transition-all duration-300 ease-out content-[''];
 }
 
 .menu-item:hover::after {
@@ -179,4 +179,95 @@ html {
 
 .skill-icon {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out both;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.5s ease-out both;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out both;
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out 0.2s both;
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in 0.4s ease-out 0.6s both;
+}
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
 }

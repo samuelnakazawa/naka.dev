@@ -1,4 +1,10 @@
-export const EmailTemplate = ({ name, email, message }: FormData) => (
+interface EmailData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export const EmailTemplate = ({ name, email, message }: EmailData) => (
   <div
     style={{
       fontFamily: "'Inter', Arial, sans-serif",
@@ -28,30 +34,16 @@ export const EmailTemplate = ({ name, email, message }: FormData) => (
           background: 'linear-gradient(90deg, #c95bf5 0%, #9a4dff 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
-          textShadow: '0 0 8px rgba(201, 91, 245, 0.3)',
         }}
       >
-        Nova Mensagem Recebida
+        New Message Received
       </h1>
-      <p
-        style={{
-          margin: '8px 0 0',
-          fontSize: '14px',
-          color: '#b8a2e0',
-        }}
-      >
-        Nova mensagem
+      <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#b8a2e0' }}>
+        Via naka.dev contact form
       </p>
     </div>
 
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '100px 1fr',
-        gap: '15px',
-        marginBottom: '20px',
-      }}
-    >
+    <div style={{ marginBottom: '20px' }}>
       <div style={{ marginTop: '25px' }}>
         <div
           style={{
@@ -63,21 +55,9 @@ export const EmailTemplate = ({ name, email, message }: FormData) => (
             gap: '8px',
           }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-          Nome:
+          Name:
         </div>
-
-        <p
-          style={{
-            color: '#9a4dff',
-            textDecoration: 'none',
-            transition: 'all 0.3s',
-          }}
-        >
-          {name}
-        </p>
+        <p style={{ color: '#e2d9f3', margin: 0 }}>{name}</p>
       </div>
 
       <div style={{ marginTop: '25px' }}>
@@ -91,20 +71,9 @@ export const EmailTemplate = ({ name, email, message }: FormData) => (
             gap: '8px',
           }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
           Email:
         </div>
-
-        <a
-          href={`mailto:${email}`}
-          style={{
-            color: '#9a4dff',
-            textDecoration: 'none',
-            transition: 'all 0.3s',
-          }}
-        >
+        <a href={`mailto:${email}`} style={{ color: '#9a4dff', textDecoration: 'none' }}>
           {email}
         </a>
       </div>
@@ -116,15 +85,9 @@ export const EmailTemplate = ({ name, email, message }: FormData) => (
           color: '#c95bf5',
           fontWeight: 600,
           marginBottom: '10px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
         }}
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
-        Mensagem:
+        Message:
       </div>
       <div
         style={{
@@ -150,18 +113,7 @@ export const EmailTemplate = ({ name, email, message }: FormData) => (
         color: '#5d4a7a',
       }}
     >
-      <p>Mensagem enviada através do formulário de contato</p>
-      <p style={{ marginTop: '5px' }}>
-        <a
-          href="https://seusite.com"
-          style={{
-            color: '#9a4dff',
-            textDecoration: 'none',
-          }}
-        >
-          seusite.com
-        </a>
-      </p>
+      <p>Sent via naka.dev contact form</p>
     </div>
   </div>
 );

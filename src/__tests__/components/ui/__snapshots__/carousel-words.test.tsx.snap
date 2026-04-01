@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CarouselWords > snapshot 1`] = `
+<div
+  class="h-15 relative overflow-hidden"
+>
+  <div
+    aria-label="Developer"
+    class="items-left absolute left-0 top-0 flex h-full w-full justify-start text-2xl font-bold text-[#c95bf5] transition-transform duration-500 ease-in-out md:text-3xl translate-y-0 opacity-100"
+  >
+    Developer
+  </div>
+  <div
+    aria-label="Engineer"
+    class="items-left absolute left-0 top-0 flex h-full w-full justify-start text-2xl font-bold text-[#c95bf5] transition-transform duration-500 ease-in-out md:text-3xl translate-y-full opacity-0"
+  >
+    Engineer
+  </div>
+  <div
+    aria-label="Creator"
+    class="items-left absolute left-0 top-0 flex h-full w-full justify-start text-2xl font-bold text-[#c95bf5] transition-transform duration-500 ease-in-out md:text-3xl translate-y-full opacity-0"
+  >
+    Creator
+  </div>
+</div>
+`;

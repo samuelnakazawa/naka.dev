@@ -1,0 +1,112 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card (HoverCard) > snapshot - active 1`] = `
+<div
+  class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 bg-gradient-to-br from-[#9a4dff] to-[#c95bf5] text-white shadow-lg"
+>
+  <h3
+    class="mb-2 text-xl font-bold"
+  >
+    Software Engineer
+  </h3>
+  <p
+    class="mb-3 text-white"
+  >
+    Globo
+  </p>
+  <span
+    class="mb-4 inline-block rounded-full px-3 py-1 text-sm bg-black/20"
+  >
+    2022 - Present
+  </span>
+  <div
+    class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+    style="height: 0px; opacity: 1;"
+  >
+    <ul
+      class="mt-4 space-y-2"
+    >
+      <li
+        class="flex items-start"
+      >
+        <span
+          aria-hidden="true"
+          class="mr-2 mt-1"
+        >
+          •
+        </span>
+        Built APIs
+      </li>
+      <li
+        class="flex items-start"
+      >
+        <span
+          aria-hidden="true"
+          class="mr-2 mt-1"
+        >
+          •
+        </span>
+        Led migrations
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Card (HoverCard) > snapshot - inactive 1`] = `
+<div
+  class="relative h-full cursor-pointer rounded-xl p-6 transition-all duration-300 border border-[#2d1b4a] bg-[#1a0a2a] hover:border-[#a84ef9]"
+>
+  <h3
+    class="mb-2 text-xl font-bold"
+  >
+    Software Engineer
+  </h3>
+  <p
+    class="mb-3 text-[#c95bf5]"
+  >
+    Globo
+  </p>
+  <span
+    class="mb-4 inline-block rounded-full px-3 py-1 text-sm bg-[#47434c] text-[#e2d9f3]"
+  >
+    2022 - Present
+  </span>
+  <div
+    class="overflow-hidden transition-[height,opacity] duration-300 ease-in-out"
+    style="height: 0px; opacity: 0;"
+  >
+    <ul
+      class="mt-4 space-y-2"
+    >
+      <li
+        class="flex items-start"
+      >
+        <span
+          aria-hidden="true"
+          class="mr-2 mt-1"
+        >
+          •
+        </span>
+        Built APIs
+      </li>
+      <li
+        class="flex items-start"
+      >
+        <span
+          aria-hidden="true"
+          class="mr-2 mt-1"
+        >
+          •
+        </span>
+        Led migrations
+      </li>
+    </ul>
+  </div>
+  <div
+    class="mt-2 text-sm text-[#d8c7ff] animate-fade-in"
+  >
+    Hover for details
+  </div>
+</div>
+`;

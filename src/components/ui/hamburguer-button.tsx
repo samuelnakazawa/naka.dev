@@ -1,20 +1,21 @@
 'use client';
-import { motion } from 'framer-motion';
-import { useLanguageStore } from '@/stores/language';
+
+import { useTranslations } from 'next-intl';
 
 export const HamburgerButton = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void }) => {
-  const { t } = useLanguageStore();
+  const t = useTranslations('header');
+
   return (
-    <div className="md:hidden z-20 flex justify-center flex-1">
+    <div className="z-20 flex flex-1 justify-center md:hidden">
       <button
-        className="focus:outline-none cursor-pointer"
+        className="cursor-pointer focus:outline-none"
         onClick={onClick}
-        aria-label={isOpen ? t.header['menu-close'] : t.header['menu-open']}
+        aria-label={isOpen ? t('menu-close') : t('menu-open')}
       >
-        <div className="w-6 flex flex-col gap-1.5">
-          <span className="h-0.5 bg-gray-300 rounded-full" />
-          <span className="h-0.5 bg-gray-300 rounded-full" />
-          <span className="h-0.5 bg-gray-300 rounded-full" />
+        <div className="flex w-6 flex-col gap-1.5">
+          <span className="h-0.5 rounded-full bg-gray-300" />
+          <span className="h-0.5 rounded-full bg-gray-300" />
+          <span className="h-0.5 rounded-full bg-gray-300" />
         </div>
       </button>
     </div>

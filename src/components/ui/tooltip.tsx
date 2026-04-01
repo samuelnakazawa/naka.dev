@@ -23,10 +23,10 @@ export const Tooltip = ({
 
   return (
     <div
-      className={`absolute ${tooltipPosition[position]} bg-[#c95bf5] text-white text-xs font-medium px-2 py-1 rounded whitespace-nowrap z-10`}
+      className={`absolute ${tooltipPosition[position]} z-10 whitespace-nowrap rounded bg-[#c95bf5] px-2 py-1 text-xs font-medium text-white`}
     >
       {text}
-      <div className={`absolute ${arrowPosition[position]} w-0 h-0`}></div>
+      <div className={`absolute ${arrowPosition[position]} h-0 w-0`}></div>
     </div>
   );
 };
